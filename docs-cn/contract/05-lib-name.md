@@ -3,9 +3,9 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [N](docs-cn/ts-lib-extend/05-lib-name#N)                           |将字符串转换为base32编码的uint64。因此，字符串必须遵循以下原则：1、不超过13个字符。2、仅包含“.12345abcdefghijklmnopqrstuvwxyz”3、不是以“”结尾。                             |
-| [RN](docs-cn/ts-lib-extend/05-lib-name#RN)                           |方法n的还原操作                             |
-| [char_to_symbol](docs-cn/ts-lib-extend/05-lib-name#char_to_symbol)                           |将字符转换为符号|
+| [N](docs-cn/ts-lib/05-lib-name#N)                           |将字符串转换为base32编码的uint64。因此，字符串必须遵循以下原则：1、不超过13个字符。2、仅包含“.12345abcdefghijklmnopqrstuvwxyz”3、不是以“”结尾。                             |
+| [RN](docs-cn/ts-lib/05-lib-name#RN)                           |方法n的还原操作                             |
+| [char_to_symbol](docs-cn/ts-lib/05-lib-name#char_to_symbol)                           |将字符转换为符号|
 
 
 ## N

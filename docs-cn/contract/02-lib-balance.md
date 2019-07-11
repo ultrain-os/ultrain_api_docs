@@ -3,8 +3,8 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [CurrencyAccount](docs-cn/ts-lib-extend/02-lib-balance#CurrencyAccount)                          |货币账户类                             |
-| [CurrencyStats](docs-cn/ts-lib-extend/02-lib-balance#CurrencyStats)                          |令牌系统的类货币统计                             |
+| [CurrencyAccount](docs-cn/ts-lib/02-lib-balance#CurrencyAccount)                          |货币账户类                             |
+| [CurrencyStats](docs-cn/ts-lib/02-lib-balance#CurrencyStats)                          |令牌系统的类货币统计                             |
 
 
 ## ArrayMap
@@ -18,7 +18,7 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [queryBalance](docs-cn/ts-lib-extend/02-lib-balance#queryBalance)                           |从ultin token系统查询账户余额                             |
+| [queryBalance](docs-cn/ts-lib/02-lib-balance#queryBalance)                           |从ultin token系统查询账户余额                             |
 
 
 ## queryBalance

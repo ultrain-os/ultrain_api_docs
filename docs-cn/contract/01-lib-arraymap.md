@@ -3,7 +3,7 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [ArrayMap](docs-cn/ts-lib-extend/01-lib-arraymap#ArrayMap)                          |<key,value>映射的数据结构类                             |
+| [ArrayMap](docs-cn/ts-lib/01-lib-arraymap#ArrayMap)                          |<key,value>映射的数据结构类                             |
 
 ## ArrayMap
 <key,value>映射的数据结构

@@ -1,10 +1,11 @@
 ## 类
-超脑TS_lib的MAP的类如下所示
+超脑TS_lib的HEADBLOCK的类如下所示
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Map](docs-cn/ts-lib-extend/04-lib-map#Map)                          |<key,value>映射的数据结构类                             |
+| [HeadBlock](docs-cn/ts-lib/03-lib-headblock#HeadBlock)                          |区块头类                             |
 
-## ArrayMap
-<key,value>映射的数据结构类
+
+## HeadBlock
+区块头类
 
