@@ -84,25 +84,25 @@
                 <p class="content-title" style="border-bottom: 1px solid #979797;">开发者手册</p>
                 <div>
                     <div>
-                        <a href="#/docs-cn/developer/foundation.md">基础篇</a>
+                        <a href="#/docs-cn/developer/foundation.md">基础介绍</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/architecture.md">架构篇</a>
+                        <a href="#/docs-cn/developer/architecture.md">架构设计</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/environment.md">环境篇</a>
+                        <a href="#/docs-cn/developer/environment.md">环境配置</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/tool.md">工具篇</a>
+                        <a href="#/docs-cn/developer/tool.md">开发工具</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/contract.md">合约篇</a>
+                        <a href="#/docs-cn/developer/contract.md">智能合约</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/middleware.md">中间件篇</a>
+                        <a href="#/docs-cn/developer/middleware.md">中间件</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/developer/demo.md">示例篇</a>
+                        <a href="#/docs-cn/developer/demo.md">DAPP示例</a>
                     </div>
                 </div>
             </div>
