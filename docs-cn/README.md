@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <p class="content-title" style="border-bottom: 1px solid #979797;">TSLIB的扩展方法</p>
+                <p class="content-title" style="border-bottom: 1px solid #979797;">Contract API</p>
                 <div>
                     <div>
                         <a href="#/docs-cn/contract/01-lib-arraymap">ARRAYMAP</a>
