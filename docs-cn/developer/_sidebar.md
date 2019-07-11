@@ -1,12 +1,12 @@
 
 - 开发者指南
-    - [基础篇](docs-cn/developer/foundation.md)
-    - [架构篇](docs-cn/developer/architecture.md)
-    - [环境篇](docs-cn/developer/environment.md)
-    - [工具篇](docs-cn/developer/tool.md)
-    - [合约篇](docs-cn/developer/contract.md)
-    - [中间件篇](docs-cn/developer/middleware.md)
-    - [示例篇](docs-cn/developer/demo.md)
+    - [基础介绍](docs-cn/developer/foundation.md)
+    - [架构设计](docs-cn/developer/architecture.md)
+    - [环境配置](docs-cn/developer/environment.md)
+    - [开发工具](docs-cn/developer/tool.md)
+    - [智能合约](docs-cn/developer/contract.md)
+    - [中间件](docs-cn/developer/middleware.md)
+    - [DAPP示例](docs-cn/developer/demo.md)
 
 - DAPP接入规范
     - [流程规范](docs-cn/dapp/flow.md)
