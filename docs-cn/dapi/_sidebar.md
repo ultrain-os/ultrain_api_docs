@@ -30,6 +30,13 @@
     - [TIME](docs-cn/contract/13-ts-time.md)
     - [TRANSACTION](docs-cn/contract/14-ts-transaction.md)
     - [UTILS](docs-cn/contract/15-ts-utils.md)
+    
+    - [ARRAYMAP](docs-cn/contract/01-lib-arraymap.md)
+    - [BALANCE](docs-cn/contract/02-lib-balance.md)
+    - [HEADBLOCK](docs-cn/contract/03-lib-headblock.md)
+    - [MAP](docs-cn/contract/04-lib-map.md)
+    - [NAME](docs-cn/contract/05-lib-name.md)
+    - [NAME_EX](docs-cn/contract/06-lib-name_ex.md)
   
 - U3 API
     - [实时U3接口](docs-cn/u3/01-chain.md)
