@@ -7,31 +7,31 @@
 
 | 方法                                                                                           | 描述                                             |
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
-| [get_currency_balance](docs-cn/rpc/02-online-rpc-api#get_currency_balance)            |获取货币余额                                       |
-| [get_currency_stats](docs-cn/rpc/02-online-rpc-api#get_currency_stats)                |获取代币的发行信息                                  |
-| [get_scheduled_transactions](docs-cn/rpc/02-online-rpc-api#get_scheduled_transactions)|获取已调度的交易信息                                  |
-| [get_chain_info](docs-cn/rpc/02-online-rpc-api#get_chain_info)                        |获取链的相关信息                                  |
-| [get_block_info](docs-cn/rpc/02-online-rpc-api#get_block_info)                        |获取某个区块的相关信息                                  |
-| [get_block_header_state](docs-cn/rpc/02-online-rpc-api#get_block_header_state)        |获取验证区块头所需的最小状态                            |
-| [get_account_info](docs-cn/rpc/02-online-rpc-api#get_account_info)                    |获取账户的相关信息                                  |
-| [get_contract](docs-cn/rpc/02-online-rpc-api#get_contract)                            |获取智能合约的代码                               |
-| [get_abi](docs-cn/rpc/02-online-rpc-api#get_abi)                                      |获取ABI的相关信息                               |
-| [get_raw_code_and_abi](docs-cn/rpc/02-online-rpc-api#get_raw_code_and_abi)            |获取代码和ABI的相关信息                               |
-| [get_table_records](docs-cn/rpc/02-online-rpc-api#get_table_records)                  |从帐户获取智能合约数据                               |
-| [push_tx](docs-cn/rpc/02-online-rpc-api#push_tx)                                      |广播签名后的交易信息                               |
-| [get_table_by_scope](docs-cn/rpc/02-online-rpc-api#get_table_by_scope)                |从帐户获取智能合约数据                               |
-| [abi_json2bin](docs-cn/rpc/02-online-rpc-api#abi_json2bin)                            |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中。                               |
-| [abi_bin2json](docs-cn/rpc/02-online-rpc-api#abi_bin2json)                            |将bin十六进制转换为ABI JSON                              |
-| [get_required_keys](docs-cn/rpc/02-online-rpc-api#get_required_keys)                 |调用返回签名一个交易时需要的公钥清单                             |
-| [push_block](docs-cn/rpc/02-online-rpc-api#push_block)                                 |调用将指定的区块数据提交到链上                              |
-| [push_txs](docs-cn/rpc/02-online-rpc-api#push_txs)                                      |尝试将事务推送到挂起队列中                              |
-| [register_event](docs-cn/rpc/02-online-rpc-api#register_event)                           |订阅Ultrain公链上的事件                              |
-| [unregister_event](docs-cn/rpc/02-online-rpc-api#unregister_event)                       |取消订阅Ultrain公链上的事件                              |
-| [get_producer_info](docs-cn/rpc/02-online-rpc-api#get_producer_info)                     |获取账户创建者的相关信息                              |
-| [create_user](docs-cn/rpc/02-online-rpc-api#create_user)                                 |创建一个账户                              |
-| [deploy](docs-cn/rpc/02-online-rpc-api#deploy)                                           |将智能合约部署到Ultrain链上                              |
-| [sign](docs-cn/rpc/02-online-rpc-api#sign)                                               |签名一个为签名的离线事务                             |
-| [query_resource](docs-cn/rpc/02-online-rpc-api#query_resource)                          |返回账户资源的详细信息                             |
+| [get_currency_balance](docs-cn/rest/02-chain#get_currency_balance)            |获取货币余额                                       |
+| [get_currency_stats](docs-cn/rest/02-chain#get_currency_stats)                |获取代币的发行信息                                  |
+| [get_scheduled_transactions](docs-cn/rest/02-chain#get_scheduled_transactions)|获取已调度的交易信息                                  |
+| [get_chain_info](docs-cn/rest/02-chain#get_chain_info)                        |获取链的相关信息                                  |
+| [get_block_info](docs-cn/rest/02-chain#get_block_info)                        |获取某个区块的相关信息                                  |
+| [get_block_header_state](docs-cn/rest/02-chain#get_block_header_state)        |获取验证区块头所需的最小状态                            |
+| [get_account_info](docs-cn/rest/02-chain#get_account_info)                    |获取账户的相关信息                                  |
+| [get_contract](docs-cn/rest/02-chain#get_contract)                            |获取智能合约的代码                               |
+| [get_abi](docs-cn/rest/02-chain#get_abi)                                      |获取ABI的相关信息                               |
+| [get_raw_code_and_abi](docs-cn/rest/02-chain#get_raw_code_and_abi)            |获取代码和ABI的相关信息                               |
+| [get_table_records](docs-cn/rest/02-chain#get_table_records)                  |从帐户获取智能合约数据                               |
+| [push_tx](docs-cn/rest/02-chain#push_tx)                                      |广播签名后的交易信息                               |
+| [get_table_by_scope](docs-cn/rest/02-chain#get_table_by_scope)                |从帐户获取智能合约数据                               |
+| [abi_json2bin](docs-cn/rest/02-chain#abi_json2bin)                            |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中。                               |
+| [abi_bin2json](docs-cn/rest/02-chain#abi_bin2json)                            |将bin十六进制转换为ABI JSON                              |
+| [get_required_keys](docs-cn/rest/02-chain#get_required_keys)                 |调用返回签名一个交易时需要的公钥清单                             |
+| [push_block](docs-cn/rest/02-chain#push_block)                                 |调用将指定的区块数据提交到链上                              |
+| [push_txs](docs-cn/rest/02-chain#push_txs)                                      |尝试将事务推送到挂起队列中                              |
+| [register_event](docs-cn/rest/02-chain#register_event)                           |订阅Ultrain公链上的事件                              |
+| [unregister_event](docs-cn/rest/02-chain#unregister_event)                       |取消订阅Ultrain公链上的事件                              |
+| [get_producer_info](docs-cn/rest/02-chain#get_producer_info)                     |获取账户创建者的相关信息                              |
+| [create_user](docs-cn/rest/02-chain#create_user)                                 |创建一个账户                              |
+| [deploy](docs-cn/rest/02-chain#deploy)                                           |将智能合约部署到Ultrain链上                              |
+| [sign](docs-cn/rest/02-chain#sign)                                               |签名一个为签名的离线事务                             |
+| [query_resource](docs-cn/rest/02-chain#query_resource)                          |返回账户资源的详细信息                             |
 
 
 

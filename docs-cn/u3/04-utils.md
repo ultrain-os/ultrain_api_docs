@@ -8,19 +8,19 @@ U3工具的相关方法将帮助你更好了解超脑技术的相关信息
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [DecimalImply](docs-cn/u3/04-u3-utils#DecimalImply) |确保正确的尾随零，然后删除小数点                             |
-| [DecimalPad](docs-cn/u3/04-u3-utils#DecimalPad) |确保小数位数固定                          |
-| [DecimalString](docs-cn/u3/04-u3-utils#DecimalString) |规范化和验证十进制字符串（可能是较大的值）                          |
-| [DecimalUnimply](docs-cn/u3/04-u3-utils#DecimalUnimply) |将小数点放回其位置，并返回规范化的数字字符串（去掉任何不必要的零或不必要的小数)                          |
-| [decodeName](docs-cn/u3/04-u3-utils#decodeName) |将u64类型的账户名解码为string类型                          |
-| [decodeNameEx](docs-cn/u3/04-u3-utils#decodeNameEx) |decodeName的扩展类型                          |
-| [decodeSymbolName](docs-cn/u3/04-u3-utils#decodeSymbolName) |将整数样式值解码为资产的符号名称                          |
-| [encodeName](docs-cn/u3/04-u3-utils#encodeName) |将string类型的账户名解码为u64类型                       |
-| [encodeNameEx](docs-cn/u3/04-u3-utils#encodeNameEx) |encodeName的扩展                       |
-| [isName](docs-cn/u3/04-u3-utils#isName) | 检查名称是否合法                         |
-| [parseAsset](docs-cn/u3/04-u3-utils#parseAsset) | 解析所有形式的资产字符串（符号、资产或扩展版本）,如果提供的字符串包含任何其他字符串或似乎包含无效信息，则会引发错误                         |
-| [parseExtendedAsset](docs-cn/u3/04-u3-utils#parseExtendedAsset) | 分析扩展资产                        |
-| [ULong](docs-cn/u3/04-u3-utils#ULong) |                          |
+| [DecimalImply](docs-cn/u3/04-utils#DecimalImply) |确保正确的尾随零，然后删除小数点                             |
+| [DecimalPad](docs-cn/u3/04-utils#DecimalPad) |确保小数位数固定                          |
+| [DecimalString](docs-cn/u3/04-utils#DecimalString) |规范化和验证十进制字符串（可能是较大的值）                          |
+| [DecimalUnimply](docs-cn/u3/04-utils#DecimalUnimply) |将小数点放回其位置，并返回规范化的数字字符串（去掉任何不必要的零或不必要的小数)                          |
+| [decodeName](docs-cn/u3/04-utils#decodeName) |将u64类型的账户名解码为string类型                          |
+| [decodeNameEx](docs-cn/u3/04-utils#decodeNameEx) |decodeName的扩展类型                          |
+| [decodeSymbolName](docs-cn/u3/04-utils#decodeSymbolName) |将整数样式值解码为资产的符号名称                          |
+| [encodeName](docs-cn/u3/04-utils#encodeName) |将string类型的账户名解码为u64类型                       |
+| [encodeNameEx](docs-cn/u3/04-utils#encodeNameEx) |encodeName的扩展                       |
+| [isName](docs-cn/u3/04-utils#isName) | 检查名称是否合法                         |
+| [parseAsset](docs-cn/u3/04-utils#parseAsset) | 解析所有形式的资产字符串（符号、资产或扩展版本）,如果提供的字符串包含任何其他字符串或似乎包含无效信息，则会引发错误                         |
+| [parseExtendedAsset](docs-cn/u3/04-utils#parseExtendedAsset) | 分析扩展资产                        |
+| [ULong](docs-cn/u3/04-utils#ULong) |                          |
 
 
 ## DecimalImply

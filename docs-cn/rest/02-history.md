@@ -7,24 +7,24 @@
 
 | 方法                                                                                        | 描述                                             |
 | :------------------------------------------------------------------------------------------| :------------------------------------------------|
-| [getAccountByName](docs-cn/rpc/01-history-rpc-api#getAccountByName)                |根据账户名称获取账户信息                              |
-| [getActionsByAccount](docs-cn/rpc/01-history-rpc-api#getActionsByAccount)          |根据账户名称查找其所有的交易行为                       |
-| [getActionsByTxid](docs-cn/rpc/01-history-rpc-api#getActionsByTxid)                |根据交易id查找相应的交易行为                          |
-| [getAllAccounts](docs-cn/rpc/01-history-rpc-api#getAllAccounts)                    |获取全部的账户信息                                   |
-| [getAllBlocks](docs-cn/rpc/01-history-rpc-api#getAllBlocks)                        |获取全部的区块信息                                   |
-| [getAllTokens](docs-cn/rpc/01-history-rpc-api#getAllTokens)                        |获取所以的代币信息                                   |
-| [getAllTxs](docs-cn/rpc/01-history-rpc-api#getAllTxs)                              |获取全部的交易信息                                   |
-| [getBaseInfo](docs-cn/rpc/01-history-rpc-api#getBaseInfo)                          |获取基本信息                                        |
-| [getContractByName](docs-cn/rpc/01-history-rpc-api#getContractByName)              |根据合约名称查找完整合约信息                           |
-| [getContracts](docs-cn/rpc/01-history-rpc-api#getContracts)                        |获取全部的合约信息                                   |
-| [getCreateAccountByName](docs-cn/rpc/01-history-rpc-api#getCreateAccountByName)    |根据合约名称查找账户创建者                            |
-| [getHoldersBySymbol](docs-cn/rpc/01-history-rpc-api#getHoldersBySymbol)            |根据代币名称和创建者获取其代币持有者                    |
-| [getTokenBalanceByAccount](docs-cn/rpc/01-history-rpc-api#getTokenBalanceByAccount)|根据账户名获取代币余额                                |
-| [getTokenBySymbol](docs-cn/rpc/01-history-rpc-api#getTokenBySymbol)                |根据代币名称和创建者获取其代币的基本信息                 |
-| [getTxByTxId](docs-cn/rpc/01-history-rpc-api#getTxByTxId)                          |根据交易id查找相应的交易信息                           |
-| [getTxsByBlockNum](docs-cn/rpc/01-history-rpc-api#getTxsByBlockNum)                |根据区块块高查询交易信息                               |
-| [getTxTraceByTxid](docs-cn/rpc/01-history-rpc-api#getTxTraceByTxid)                |根据交易id查找交易信息                                |
-| [search](docs-cn/rpc/01-history-rpc-api#search)                                    |根据账户名、块高、交易hash和合约名查询交易、区块、合约和账户|
+| [getAccountByName](docs-cn/rest/01-history#getAccountByName)                |根据账户名称获取账户信息                              |
+| [getActionsByAccount](docs-cn/rest/01-history#getActionsByAccount)          |根据账户名称查找其所有的交易行为                       |
+| [getActionsByTxid](docs-cn/rest/01-history#getActionsByTxid)                |根据交易id查找相应的交易行为                          |
+| [getAllAccounts](docs-cn/rest/01-history#getAllAccounts)                    |获取全部的账户信息                                   |
+| [getAllBlocks](docs-cn/rest/01-history#getAllBlocks)                        |获取全部的区块信息                                   |
+| [getAllTokens](docs-cn/rest/01-history#getAllTokens)                        |获取所以的代币信息                                   |
+| [getAllTxs](docs-cn/rest/01-history#getAllTxs)                              |获取全部的交易信息                                   |
+| [getBaseInfo](docs-cn/rest/01-history#getBaseInfo)                          |获取基本信息                                        |
+| [getContractByName](docs-cn/rest/01-history#getContractByName)              |根据合约名称查找完整合约信息                           |
+| [getContracts](docs-cn/rest/01-history#getContracts)                        |获取全部的合约信息                                   |
+| [getCreateAccountByName](docs-cn/rest/01-history#getCreateAccountByName)    |根据合约名称查找账户创建者                            |
+| [getHoldersBySymbol](docs-cn/rest/01-history#getHoldersBySymbol)            |根据代币名称和创建者获取其代币持有者                    |
+| [getTokenBalanceByAccount](docs-cn/rest/01-history#getTokenBalanceByAccount)|根据账户名获取代币余额                                |
+| [getTokenBySymbol](docs-cn/rest/01-history#getTokenBySymbol)                |根据代币名称和创建者获取其代币的基本信息                 |
+| [getTxByTxId](docs-cn/rest/01-history#getTxByTxId)                          |根据交易id查找相应的交易信息                           |
+| [getTxsByBlockNum](docs-cn/rest/01-history#getTxsByBlockNum)                |根据区块块高查询交易信息                               |
+| [getTxTraceByTxid](docs-cn/rest/01-history#getTxTraceByTxid)                |根据交易id查找交易信息                                |
+| [search](docs-cn/rest/01-history#search)                                    |根据账户名、块高、交易hash和合约名查询交易、区块、合约和账户|
 
 
 ## getAccountByName

@@ -8,31 +8,31 @@ U3链上的方法将帮助你更好的和Ultrain链进行交互。
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [abiBin2json](docs-cn/u3/01-u3-chain#abiBin2json)                          |将bin十六进制转换为ABI JSON                              |
-| [abiJson2bin](docs-cn/u3/01-u3-chain#abi_json2bin)                         |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中 |
-| [createUser](docs-cn/u3/01-u3-chain#createUser)                            |创建一个账户                                             |
-| [deploy](docs-cn/u3/01-u3-chain#deploy)                                    |将合约部署到Ultrain链上                                             |
-| [getAbi](docs-cn/u3/01-u3-chain#getAbi)                                    |根据账户名查找ABI                                            |
-| [getAccountInfo](docs-cn/u3/01-u3-chain#getAccountInfo)                    |获取区块链帐户                                            |
-| [getBlockHeaderState](docs-cn/u3/01-u3-chain#getBlockHeaderState)          |获取验证事务头所需的最小状态                                            |
-| [getBlockInfo](docs-cn/u3/01-u3-chain#getBlockInfo)                        |从区块链中获取一个区块的信息                                            |
-| [getChainInfo](docs-cn/u3/01-u3-chain#getChainInfo)                        |获取链的信息                                            |
-| [getContract](docs-cn/u3/01-u3-chain#getContract)                        |获取智能合约的代码                                            |
-| [getCurrencyBalance](docs-cn/u3/01-u3-chain#getCurrencyBalance)           |获取货币余额                                           |
-| [getCurrencyStats](docs-cn/u3/01-u3-chain#getCurrencyStats)           |获取货币信息                                          |
-| [getProducerInfo](docs-cn/u3/01-u3-chain#getProducerInfo)           |获取制作者信息                                          |
-| [getRawCodeAndAbi](docs-cn/u3/01-u3-chain#getRawCodeAndAbi)           |获取原始代码和ABI                                          |
-| [getRequiredKeys](docs-cn/u3/01-u3-chain#getRequiredKeys)           |获取所需密钥                                          |
-| [getScheduledTransactions](docs-cn/u3/01-u3-chain#getScheduledTransactions)           |获取计划的事务                                          |
-| [getTableByScope](docs-cn/u3/01-u3-chain#getTableByScope)           |从帐户获取智能合约数据                                          |
-| [getTableRecords](docs-cn/u3/01-u3-chain#getTableRecords)           |从帐户获取智能合约数据                                          |
-| [pushBlock](docs-cn/u3/01-u3-chain#pushBlock)           |将区块追加到链数据库                                          |
-| [pushTx](docs-cn/u3/01-u3-chain#pushTx)           |尝试将事务推入挂起队列                                          |
-| [pushTxs](docs-cn/u3/01-u3-chain#pushTxs)           |尝试将事务推入挂起队列                                          |
-| [queryResource](docs-cn/u3/01-u3-chain#queryResource)           |返回帐户的资源详细信息                                          |
-| [registerEvent](docs-cn/u3/01-u3-chain#registerEvent)           |订阅UltraIn链事件                                          |
-| [sign](docs-cn/u3/01-u3-chain#sign)           |签署未签署的交易                                         |
-| [unregisterEvent](docs-cn/u3/01-u3-chain#unregisterEvent)           |取消订阅UltraIn链事件                                         |
+| [abiBin2json](docs-cn/u3/01-chain#abiBin2json)                          |将bin十六进制转换为ABI JSON                              |
+| [abiJson2bin](docs-cn/u3/01-chain#abi_json2bin)                         |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中 |
+| [createUser](docs-cn/u3/01-chain#createUser)                            |创建一个账户                                             |
+| [deploy](docs-cn/u3/01-chain#deploy)                                    |将合约部署到Ultrain链上                                             |
+| [getAbi](docs-cn/u3/01-chain#getAbi)                                    |根据账户名查找ABI                                            |
+| [getAccountInfo](docs-cn/u3/01-chain#getAccountInfo)                    |获取区块链帐户                                            |
+| [getBlockHeaderState](docs-cn/u3/01-chain#getBlockHeaderState)          |获取验证事务头所需的最小状态                                            |
+| [getBlockInfo](docs-cn/u3/01-chain#getBlockInfo)                        |从区块链中获取一个区块的信息                                            |
+| [getChainInfo](docs-cn/u3/01-chain#getChainInfo)                        |获取链的信息                                            |
+| [getContract](docs-cn/u3/01-chain#getContract)                        |获取智能合约的代码                                            |
+| [getCurrencyBalance](docs-cn/u3/01-chain#getCurrencyBalance)           |获取货币余额                                           |
+| [getCurrencyStats](docs-cn/u3/01-chain#getCurrencyStats)           |获取货币信息                                          |
+| [getProducerInfo](docs-cn/u3/01-chain#getProducerInfo)           |获取制作者信息                                          |
+| [getRawCodeAndAbi](docs-cn/u3/01-chain#getRawCodeAndAbi)           |获取原始代码和ABI                                          |
+| [getRequiredKeys](docs-cn/u3/01-chain#getRequiredKeys)           |获取所需密钥                                          |
+| [getScheduledTransactions](docs-cn/u3/01-chain#getScheduledTransactions)           |获取计划的事务                                          |
+| [getTableByScope](docs-cn/u3/01-chain#getTableByScope)           |从帐户获取智能合约数据                                          |
+| [getTableRecords](docs-cn/u3/01-chain#getTableRecords)           |从帐户获取智能合约数据                                          |
+| [pushBlock](docs-cn/u3/01-chain#pushBlock)           |将区块追加到链数据库                                          |
+| [pushTx](docs-cn/u3/01-chain#pushTx)           |尝试将事务推入挂起队列                                          |
+| [pushTxs](docs-cn/u3/01-chain#pushTxs)           |尝试将事务推入挂起队列                                          |
+| [queryResource](docs-cn/u3/01-chain#queryResource)           |返回帐户的资源详细信息                                          |
+| [registerEvent](docs-cn/u3/01-chain#registerEvent)           |订阅UltraIn链事件                                          |
+| [sign](docs-cn/u3/01-chain#sign)           |签署未签署的交易                                         |
+| [unregisterEvent](docs-cn/u3/01-chain#unregisterEvent)           |取消订阅UltraIn链事件                                         |
 
 
 
