@@ -3,10 +3,10 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [_EventObject](docs-cn/ts-lib/09-ts-events#_EventObject)                          |此类应用于设置事件的消息                             |
+| [_EventObject](docs-cn/contract/09-ts-events#_EventObject)                          |此类应用于设置事件的消息                             |
 
 
-## Cursor
+## _EventObject
 此类应用于设置事件的消息
 
 
@@ -15,8 +15,8 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [EmitEvent](docs-cn/ts-lib/09-ts-events#EmitEvent)                           |发射事件                              |
-| [emit](docs-cn/ts-lib/09-ts-events#emit)                           |发出一个事件                              |
+| [EmitEvent](docs-cn/contract/09-ts-events#EmitEvent)                           |发射事件                              |
+| [emit](docs-cn/contract/09-ts-events#emit)                           |发出一个事件                              |
 
 
 ## EmitEvent
@@ -44,7 +44,7 @@ emit(evtname: string, obj: _EventObject)
 |参数               |类型    |说明                            |是否必填|
 | :----------------| :------| :-----------------------------|:-----|
 |evtname              | string |  要发出的事件的名称，其长度必须小于64个字符                   |是     |
-|obj              | [`_EventObject`](docs-cn/ts-lib/09-ts-events#_EventObject) |EventObject包含消息。内容的序列化长度必须小于配置的协定\事件\字符串\长度，默认的序列化内容长度为128。                     |是     |
+|obj              | [`_EventObject`](docs-cn/contract/09-ts-events#_EventObject) |EventObject包含消息。内容的序列化长度必须小于配置的协定\事件\字符串\长度，默认的序列化内容长度为128。                     |是     |
 
 #### 返回结果类型
 `i32`

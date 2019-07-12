@@ -3,9 +3,9 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Return](docs-cn/ts-lib/12-ts-return#Return)                           |将值设置为返回值。如果您通过https通过post方法调用api，则此值将打印到控制台或在响应中返回。到目前为止，T类型只能是字符串或整数。注：返回值并不意味着交易由区块链提交，而是意味着如果交易被执行，结果就是它                              |
-| [ReturnArray](docs-cn/ts-lib/12-ts-return#ReturnArray)                           |向调用方返回数组。它的行为就像回报                              |
-| [returnObj](docs-cn/ts-lib/12-ts-return#returnObj)                           |向调用方返回OBJECT                              |
+| [Return](docs-cn/contract/12-ts-return#Return)                           |将值设置为返回值。如果您通过https通过post方法调用api，则此值将打印到控制台或在响应中返回。到目前为止，T类型只能是字符串或整数。注：返回值并不意味着交易由区块链提交，而是意味着如果交易被执行，结果就是它                              |
+| [ReturnArray](docs-cn/contract/12-ts-return#ReturnArray)                           |向调用方返回数组。它的行为就像回报                              |
+| [returnObj](docs-cn/contract/12-ts-return#returnObj)                           |向调用方返回OBJECT                              |
 
 
 ## Return
@@ -23,7 +23,7 @@ Return<T>(val: T)
 
 #### 参考示例
 ```nodejs
-import { Return } from "ultrain-ts-lib/src/return";
+import { Return } from "ultrain-contract/src/return";
 ```
 
 #### 返回结果类型
@@ -41,7 +41,7 @@ ReturnArray<T>(val: T[])
 
 #### 参考示例
 ```nodejs
-import { ReturnArray } from "ultrain-ts-lib/src/return";
+import { ReturnArray } from "ultrain-contract/src/return";
 ```
 
 #### 返回结果类型

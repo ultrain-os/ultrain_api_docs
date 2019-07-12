@@ -8,27 +8,27 @@ U3的历史方法将帮助你更好了解超脑的相关技术信息
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [getActionsByAccount](docs-cn/u3/03-history#getActionsByAccount) |按帐户名获取操作                             |
-| [getActionsByTxid](docs-cn/u3/03-history#getActionsByTxid) |按交易ID获取操作                            |
-| [getAllAccounts](docs-cn/u3/03-history#getAllAccounts) |获取所有的账户信息                            |
-| [getAllBlocks](docs-cn/u3/03-history#getAllBlocks) |获取所有的区块信息                            |
-| [getAllBlocksHeader](docs-cn/u3/03-history#getAllBlocksHeader) |按符号和创建者获取持有者                            |
-| [getAllTokens](docs-cn/u3/03-history#getAllTokens) |获取所有的代币信息                            |
-| [getAllTxs](docs-cn/u3/03-history#getAllTxs) |获取所有的交易信息                            |
-| [getBalanceByAccount](docs-cn/u3/03-history#getBalanceByAccount) |按帐户获取余额                            |
-| [getBaseInfo](docs-cn/u3/03-history#getBaseInfo) |获取代币基本信息                            |
-| [getBlocksByContract](docs-cn/u3/03-history#getBlocksByContract) |按块编号、帐户名称、合约名称、合约方法获取块                           |
-| [getContractByName](docs-cn/u3/03-history#getContractByName) |按名称获取合约                           |
-| [getContracts](docs-cn/u3/03-history#getContracts) |获取所有的合约信息                           |
-| [getCreateAccountByName](docs-cn/u3/03-history#getCreateAccountByName) |按名称获取创建帐户                           |
-| [getExistAccount](docs-cn/u3/03-history#getExistAccount) |按帐户名称获取帐户信息                           |
-| [getHoldersBySymbol](docs-cn/u3/03-history#getHoldersBySymbol) |按符号和创建者获取持有者                           |
-| [getProposerList](docs-cn/u3/03-history#getProposerList) |获取提议者列表                           |
-| [getTokenBySymbol](docs-cn/u3/03-history#getTokenBySymbol) |通过代币和创建者获取令牌                          |
-| [getTxByTxId](docs-cn/u3/03-history#getTxByTxId) |按交易ID获取交易信息                         |
-| [getTxsByBlockNum](docs-cn/u3/03-history#getTxsByBlockNum) |按块高查询交易信息                         |
-| [getTxTraceByTxid](docs-cn/u3/03-history#getTxTraceByTxid) |按交易ID获取交易跟踪                         |
-| [search](docs-cn/u3/03-history#search) |查询块/交易/帐户                         |
+| [getActionsByAccount](docs-cn/u3/02-history#getActionsByAccount) |按帐户名获取操作                             |
+| [getActionsByTxid](docs-cn/u3/02-history#getActionsByTxid) |按交易ID获取操作                            |
+| [getAllAccounts](docs-cn/u3/02-history#getAllAccounts) |获取所有的账户信息                            |
+| [getAllBlocks](docs-cn/u3/02-history#getAllBlocks) |获取所有的区块信息                            |
+| [getAllBlocksHeader](docs-cn/u3/02-history#getAllBlocksHeader) |按符号和创建者获取持有者                            |
+| [getAllTokens](docs-cn/u3/02-history#getAllTokens) |获取所有的代币信息                            |
+| [getAllTxs](docs-cn/u3/02-history#getAllTxs) |获取所有的交易信息                            |
+| [getBalanceByAccount](docs-cn/u3/02-history#getBalanceByAccount) |按帐户获取余额                            |
+| [getBaseInfo](docs-cn/u3/02-history#getBaseInfo) |获取代币基本信息                            |
+| [getBlocksByContract](docs-cn/u3/02-history#getBlocksByContract) |按块编号、帐户名称、合约名称、合约方法获取块                           |
+| [getContractByName](docs-cn/u3/02-history#getContractByName) |按名称获取合约                           |
+| [getContracts](docs-cn/u3/02-history#getContracts) |获取所有的合约信息                           |
+| [getCreateAccountByName](docs-cn/u3/02-history#getCreateAccountByName) |按名称获取创建帐户                           |
+| [getExistAccount](docs-cn/u3/02-history#getExistAccount) |按帐户名称获取帐户信息                           |
+| [getHoldersBySymbol](docs-cn/u3/02-history#getHoldersBySymbol) |按符号和创建者获取持有者                           |
+| [getProposerList](docs-cn/u3/02-history#getProposerList) |获取提议者列表                           |
+| [getTokenBySymbol](docs-cn/u3/02-history#getTokenBySymbol) |通过代币和创建者获取令牌                          |
+| [getTxByTxId](docs-cn/u3/02-history#getTxByTxId) |按交易ID获取交易信息                         |
+| [getTxsByBlockNum](docs-cn/u3/02-history#getTxsByBlockNum) |按块高查询交易信息                         |
+| [getTxTraceByTxid](docs-cn/u3/02-history#getTxTraceByTxid) |按交易ID获取交易跟踪                         |
+| [search](docs-cn/u3/02-history#search) |查询块/交易/帐户                         |
 
 
 

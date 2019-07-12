@@ -18,25 +18,25 @@ Ultrain主要通过如下两种机制保证链上随机数的安全可靠：
 #### NIST SP800-22测试的具体内容  
 该测试一共有15项。这里解释几种比较重要的测试项目：  
 
->** 1.	Frequency Test（频率测试）和 Block Frequency Test（块频率测试)**  
+>**1	.Frequency Test（频率测试）和 Block Frequency Test（块频率测试)**  
 这两项测试会对一串随机的0 1进行统计，假如其中一个数目明显多余另外一个，那么测试不通过。区别在于，
 Block测试会对整个序列的任一特定长度为M的字符串进行测试，只要有一些出现0 1一个过多，测试也会不通过。  
-** 2.	Runs Test和longest Runs Test（连续0/1测试）**  
+**2.	Runs Test和longest Runs Test（连续0/1测试）**  
 这两项测试会对连续出现的0或者1序列进行统计。出现过多或者过少，甚至分布不符合统计特性的连续字符串，
 都被认为测试不通过。longest测试会对整个序列的任一特定长度为M的字符串中的最长0或者1进行统计，分布不合理的会被视为不通过。  
-** 3.	Binary Matrix Rank Test**  
+**3.	Binary Matrix Rank Test**  
 将整个序列分为若干个不相邻的子矩阵，然后对矩阵的阶进行测试。该测试的目的是为了发现序列中是否存在相关性，
 即是不是通过某些序列能推测出其他序列，这会严重影响随机数的不可预测性。  
-** 4.	Discrete FFT Test（离散FFT测试）**  
+**4.	Discrete FFT Test（离散FFT测试）**  
 有时候序列的相关性表现在某一频率的字符串出现过多，比如01011。假如出现过多，将会让攻击者可以猜到未来的可能性，
 比如0101出现后，下一比特更有可能是1。这种测试会将序列进行离散FFT变换到频域，然后观测是不是有一种字符串出现了异常的峰值。  
-** 5.	Non-overlapping/ overlapping Template Matching Test（重叠或者非重叠模板测试）**  
+**5.	Non-overlapping/ overlapping Template Matching Test（重叠或者非重叠模板测试）**  
 该测试通过一个比特一个比特地移动窗口，找到周期或者非周期性出现的字符串。一般可以遍历所有可能出现的某种长度的字符串，
 比如对于宽度为4的，可以查找0000, 0001, 0010, …, 1111共16种。假如任何一个出现频率异常了，都会认为不通过。  
-** 6.	Universal Statistical Test**  
+**6.	Universal Statistical Test**  
 该测试是通过对字符串的可压缩性进行测试。假如一个字符串能压缩更短的话，那么说明该字符串本身就是冗余和自相关的，也
 就是可以预测的，所以也是不能被认为随机的。  
-** 7.	Cumulative Sums/ Random Excursion(Variant)测试**  
+**7.	Cumulative Sums/ Random Excursion(Variant)测试**  
 随机游走测试，即将0看作-1，然后从0点开始，左右游走，比如010相当于走到了-1。该系列测试会研究任何一个序列游走的
 最大长度和游走经过的点的停留频率，任何一种不符合统计的情况，都会被认为未通过测试。  
 

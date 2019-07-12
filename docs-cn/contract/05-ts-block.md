@@ -3,13 +3,13 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Block](docs-cn/ts-lib/05-ts-block#Block)                          |检索头块信息                             |
+| [Block](docs-cn/contract/05-ts-block#Block)                          |检索头块信息                             |
 
 ## Block
 检索头块信息
 
 #### 使用示例
 ```nodejs
-import { Block } from "ultrain-ts-lib/src/block";
+import { Block } from "ultrain-contract/src/block";
 ```
 

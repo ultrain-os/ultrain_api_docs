@@ -3,11 +3,11 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [bn_cmp](docs-cn/ts-lib/04-ts-bigNumber#bn_cmp)                           |比较p，q大小。-1：p<q;0:p=q;1:p>q;                              |
-| [bn_gcd](docs-cn/ts-lib/04-ts-bigNumber#bn_gcd)                           |求p，q公约数                            |
-| [bn_is_probab_prime](docs-cn/ts-lib/04-ts-bigNumber#bn_is_probab_prime)                           |判断是否为素数。返回0为合数，1为素数，2可能为素数。p有4^(-reps)概率为合数。                            |
-| [bn_mul](docs-cn/ts-lib/04-ts-bigNumber#bn_mul)                           |求p，q乘积                            |
-| [bn_pow_mod](docs-cn/ts-lib/04-ts-bigNumber#bn_pow_mod)                           |求m^e%n                            |
+| [bn_cmp](docs-cn/contract/04-ts-bigNumber#bn_cmp)                           |比较p，q大小。-1：p<q;0:p=q;1:p>q;                              |
+| [bn_gcd](docs-cn/contract/04-ts-bigNumber#bn_gcd)                           |求p，q公约数                            |
+| [bn_is_probab_prime](docs-cn/contract/04-ts-bigNumber#bn_is_probab_prime)                           |判断是否为素数。返回0为合数，1为素数，2可能为素数。p有4^(-reps)概率为合数。                            |
+| [bn_mul](docs-cn/contract/04-ts-bigNumber#bn_mul)                           |求p，q乘积                            |
+| [bn_pow_mod](docs-cn/contract/04-ts-bigNumber#bn_pow_mod)                           |求m^e%n                            |
 
 
 ## bn_cmp
@@ -25,7 +25,7 @@
 
 #### 参考示例
 ```nodejs
-import { bn_cmp } from "ultrain-ts-lib/src/big_number";
+import { bn_cmp } from "ultrain-contract/src/big_number";
 ```
 
 ## bn_gcd
@@ -43,7 +43,7 @@ import { bn_cmp } from "ultrain-ts-lib/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_gcd } from "ultrain-ts-lib/src/big_number";
+import { bn_gcd } from "ultrain-contract/src/big_number";
 ```
 
 ## bn_is_probab_prime
@@ -61,7 +61,7 @@ import { bn_gcd } from "ultrain-ts-lib/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_is_probab_prime } from "ultrain-ts-lib/src/big_number";
+import { bn_is_probab_prime } from "ultrain-contract/src/big_number";
 ```
 
 ## bn_mul
@@ -79,7 +79,7 @@ import { bn_is_probab_prime } from "ultrain-ts-lib/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_mul } from "ultrain-ts-lib/src/big_number";
+import { bn_mul } from "ultrain-contract/src/big_number";
 ```
 
 ## bn_pow_mod
@@ -98,5 +98,5 @@ import { bn_mul } from "ultrain-ts-lib/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_pow_mod } from "ultrain-ts-lib/src/big_number";
+import { bn_pow_mod } from "ultrain-contract/src/big_number";
 ```

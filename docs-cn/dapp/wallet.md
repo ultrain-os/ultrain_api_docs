@@ -21,7 +21,7 @@ https://xxxx?chainId=rX9r2wf&userId=Xju1da5&phoneNum=008615857169999&accountName
 注意：上述四个参数都具有唯一性。
 
 如果DAPP需要获取用户的头像、邮箱、姓名等其它信息，则需要通过单独的授权接口请求。开发者在个人中心添加DAPP时，需要选择对应的数据请求接口做授权。
-相关操作流程请参考[流程规范](./flow.md)章节，相关接口文档请参考[DAPP API](https://developer.ultrain.io/documents)。
+相关操作流程请参考[流程规范](/docs-cn/dapp/flow.md)章节，相关接口文档请参考[DAPP API](/docs-cn/u3/01-chain.md)。
 
 #### DAPP唤起UltrainOne单笔转账
 

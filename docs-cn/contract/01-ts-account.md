@@ -3,14 +3,14 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Account](docs-cn/ts-lib/01-ts-account#Account)                          | 类帐户代表帐户名，它包装操作余额的方法。                             |
+| [Account](docs-cn/contract/01-ts-account#Account类)                          | 类帐户代表帐户名，它包装操作余额的方法。                             |
 
-## Account
+## Account类
 类帐户代表帐户名，它包装操作余额的方法。
 
 #### 使用示例
 ```nodejs
-import { Account } from "ultrain-ts-lib/src/account";
+import { Account } from "ultrain-contract/src/account";
 ```
 
 ## 方法列表
@@ -18,9 +18,9 @@ import { Account } from "ultrain-ts-lib/src/account";
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [ACCOUNT](docs-cn/ts-lib/01-ts-account#ACCOUNT)                          |将字符串转换为类帐户                              |
-| [NAME](docs-cn/ts-lib/01-ts-account#NAME)                                |将字符串转换为帐户名，即U64                              |
-| [RNAME](docs-cn/ts-lib/01-ts-account#RNAME)                              |将帐户名转换为字符串                              |
+| [ACCOUNT](docs-cn/contract/01-ts-account#ACCOUNT)                          |将字符串转换为类帐户                              |
+| [NAME](docs-cn/contract/01-ts-account#NAME)                                |将字符串转换为帐户名，即U64                              |
+| [RNAME](docs-cn/contract/01-ts-account#RNAME)                              |将帐户名转换为字符串                              |
 
 ## ACCOUNT
 ```
@@ -36,7 +36,7 @@ import { Account } from "ultrain-ts-lib/src/account";
 
 #### 参考示例
 ```nodejs
-import { ACCOUNT } from "ultrain-ts-lib/src/account";
+import { ACCOUNT } from "ultrain-contract/src/account";
  let ceo = ACCOUNT("jack.ma");
  let employ = ACCOUNT("miny");
  ceo.transfer(employ.code, "1000.000 UGS", "your annual award.");
@@ -44,7 +44,7 @@ import { ACCOUNT } from "ultrain-ts-lib/src/account";
 
 
 #### 返回结果类型
-[`Account`](docs-cn/ts-lib/01-ts-account#Account)
+[`Account`](docs-cn/contract/01-ts-account#Account)
 
 
 ## NAME
@@ -61,7 +61,7 @@ import { ACCOUNT } from "ultrain-ts-lib/src/account";
 
 #### 参考示例
 ```nodejs
-import { NAME } from "ultrain-ts-lib/src/account";
+import { NAME } from "ultrain-contract/src/account";
 ```
 
 #### 返回结果类型
@@ -82,7 +82,7 @@ import { NAME } from "ultrain-ts-lib/src/account";
 
 #### 参考示例
 ```nodejs
-import { RNAME } from "ultrain-ts-lib/src/account";
+import { RNAME } from "ultrain-contract/src/account";
 ```
 
 #### 返回结果类型

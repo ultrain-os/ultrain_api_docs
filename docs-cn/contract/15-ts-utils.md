@@ -3,10 +3,10 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [intToString](docs-cn/ts-lib/15-ts-utils#intToString)                           |将int转为string                              |
-| [printstr](docs-cn/ts-lib/15-ts-utils#printstr)                           |在WASM VM退出后，将字符串打印到控制台                              |
-| [string2cstr](docs-cn/ts-lib/15-ts-utils#string2cstr)                           |将字符串转换为usize。这里，uCube在C/C++中喜欢“conchchar”                              |
-| [toUTF8Array](docs-cn/ts-lib/15-ts-utils#toUTF8Array)                           |将utf-16转换为utf-8字符串数组                              |
+| [intToString](docs-cn/contract/15-ts-utils#intToString)                           |将int转为string                              |
+| [printstr](docs-cn/contract/15-ts-utils#printstr)                           |在WASM VM退出后，将字符串打印到控制台                              |
+| [string2cstr](docs-cn/contract/15-ts-utils#string2cstr)                           |将字符串转换为usize。这里，uCube在C/C++中喜欢“conchchar”                              |
+| [toUTF8Array](docs-cn/contract/15-ts-utils#toUTF8Array)                           |将utf-16转换为utf-8字符串数组                              |
 
 
 ## intToString
@@ -23,7 +23,7 @@ intToString(_int: u64, leftPadWith0?: u32)
 
 #### 参考示例
 ```nodejs
-import { intToString } from "ultrain-ts-lib/src/utils";
+import { intToString } from "ultrain-contract/src/utils";
 ```
 
 #### 返回结果类型
@@ -42,7 +42,7 @@ printstr(str: string)
 
 #### 参考示例
 ```nodejs
-import { printstr } from "ultrain-ts-lib/src/utils";
+import { printstr } from "ultrain-contract/src/utils";
 ```
 
 #### 返回结果类型
@@ -61,7 +61,7 @@ string2cstr(str: string)
 
 #### 参考示例
 ```nodejs
-import { string2cstr } from "ultrain-ts-lib/src/utils";
+import { string2cstr } from "ultrain-contract/src/utils";
 ```
 
 #### 返回结果类型
@@ -80,7 +80,7 @@ toUTF8Array(str: string)
 
 #### 参考示例
 ```nodejs
-import { toUTF8Array } from "ultrain-ts-lib/src/utils";
+import { toUTF8Array } from "ultrain-contract/src/utils";
 ```
 
 #### 返回结果类型

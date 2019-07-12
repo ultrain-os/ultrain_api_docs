@@ -3,8 +3,8 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Cursor](docs-cn/ts-lib/08-ts-dbmanager#Cursor)                          |光标类，代表dbmanger行                             |
-| [DBManager](docs-cn/ts-lib/08-ts-dbmanager#DBManager)                          |dbmanager类应用于合同的Manager持久数据                             |
+| [Cursor](docs-cn/contract/08-ts-dbmanager#Cursor)                          |光标类，代表dbmanger行                             |
+| [DBManager](docs-cn/contract/08-ts-dbmanager#DBManager)                          |dbmanager类应用于合同的Manager持久数据                             |
 
 
 ## Cursor
@@ -19,10 +19,10 @@ dbmanager类应用于合同的Manager持久数据
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [retrieve_db_iterators](docs-cn/ts-lib/08-ts-dbmanager#retrieve_db_iterators)                           |检索数据库的迭代器                              |
+| [retrieve_db_iterators](docs-cn/contract/08-ts-dbmanager#retrieve_db_iterators)                           |检索数据库的迭代器                              |
 
 
-## assert_ripemd160
+## retrieve_db_iterators
 ```
 retrieve_db_iterators(code: u64, table: u64, scope: u64)
 ```

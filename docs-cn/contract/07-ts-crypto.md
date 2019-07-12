@@ -3,12 +3,12 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [Crypto](docs-cn/ts-lib/07-ts-crypto#Block)                          |类加密用于用所需算法散列字符串。它的派生类是sha1、sha256、sha512和ripemd160。                             |
-| [MerkleProof](docs-cn/ts-lib/07-ts-crypto#MerkleProof)                          |梅克尔证明                             |
-| [Ripemd160](docs-cn/ts-lib/07-ts-crypto#Ripemd160)                          |使用ripemd160计算字符串的哈希                             |
-| [SHA1](docs-cn/ts-lib/07-ts-crypto#SHA1)                          |使用SHA1计算字符串的哈希                             |
-| [SHA256](docs-cn/ts-lib/07-ts-crypto#SHA256)                          |使用SHA256计算字符串的哈希                             |
-| [SHA512](docs-cn/ts-lib/07-ts-crypto#SHA512)                          |使用SHA512计算字符串的哈希                             |
+| [Crypto](docs-cn/contract/07-ts-crypto#Crypto)                          |类加密用于用所需算法散列字符串。它的派生类是sha1、sha256、sha512和ripemd160。                             |
+| [MerkleProof](docs-cn/contract/07-ts-crypto#MerkleProof)                          |梅克尔证明                             |
+| [Ripemd160](docs-cn/contract/07-ts-crypto#Ripemd160)                          |使用ripemd160计算字符串的哈希                             |
+| [SHA1](docs-cn/contract/07-ts-crypto#SHA1)                          |使用SHA1计算字符串的哈希                             |
+| [SHA256](docs-cn/contract/07-ts-crypto#SHA256)                          |使用SHA256计算字符串的哈希                             |
+| [SHA512](docs-cn/contract/07-ts-crypto#SHA512)                          |使用SHA512计算字符串的哈希                             |
 
 ## Crypto
 类加密用于用所需算法散列字符串。它的派生类是sha1、sha256、sha512和ripemd160。
@@ -21,7 +21,7 @@
 
 #### 使用示例
 ```nodejs
-import { Ripemd160 } from "ultrain-ts-lib/src/crypto";
+import { Ripemd160 } from "ultrain-contract/src/crypto";
 ```
 
 ## SHA1
@@ -29,7 +29,7 @@ import { Ripemd160 } from "ultrain-ts-lib/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA1 } from "ultrain-ts-lib/src/crypto";
+import { SHA1 } from "ultrain-contract/src/crypto";
 ```
 
 ## SHA256
@@ -37,7 +37,7 @@ import { SHA1 } from "ultrain-ts-lib/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA256 } from "ultrain-ts-lib/src/crypto";
+import { SHA256 } from "ultrain-contract/src/crypto";
 ```
 
 ## SHA512
@@ -45,7 +45,7 @@ import { SHA256 } from "ultrain-ts-lib/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA512 } from "ultrain-ts-lib/src/crypto";
+import { SHA512 } from "ultrain-contract/src/crypto";
 ```
 
 ## 方法列表
@@ -53,15 +53,15 @@ import { SHA512 } from "ultrain-ts-lib/src/crypto";
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [assert_ripemd160](docs-cn/ts-lib/07-ts-crypto#assert_ripemd160)                           |断言源数据是否由ripemd160组成                              |
-| [assert_sha1](docs-cn/ts-lib/07-ts-crypto#assert_sha1)                           |断言源数据是否由sha1组成                              |
-| [assert_sha256](docs-cn/ts-lib/07-ts-crypto#assert_sha256)                           |断言源数据是否由sha256组成                              |
-| [assert_sha512](docs-cn/ts-lib/07-ts-crypto#assert_sha512)                           |断言源数据是否由sha512组成                              |
-| [charcode_to_digital](docs-cn/ts-lib/07-ts-crypto#charcode_to_digital)                           |将字符代码转为数字                             |
-| [from_hex](docs-cn/ts-lib/07-ts-crypto#from_hex)                           |                                 |
-| [get_random_number](docs-cn/ts-lib/07-ts-crypto#get_random_number)       |从系统服务获取随机数。这个数字将在协商一致期间保持不变，因此，如果在一个操作中多次调用这个函数，随机数就不会改变。                             |
-| [to_hex](docs-cn/ts-lib/07-ts-crypto#to_hex)                          | 十六进制字符串的加密结果转换为字符串                            |
-| [verify_with_pk](docs-cn/ts-lib/07-ts-crypto#verify_with_pk)                           |验证pk和证明                             |
+| [assert_ripemd160](docs-cn/contract/07-ts-crypto#assert_ripemd160)                           |断言源数据是否由ripemd160组成                              |
+| [assert_sha1](docs-cn/contract/07-ts-crypto#assert_sha1)                           |断言源数据是否由sha1组成                              |
+| [assert_sha256](docs-cn/contract/07-ts-crypto#assert_sha256)                           |断言源数据是否由sha256组成                              |
+| [assert_sha512](docs-cn/contract/07-ts-crypto#assert_sha512)                           |断言源数据是否由sha512组成                              |
+| [charcode_to_digital](docs-cn/contract/07-ts-crypto#charcode_to_digital)                           |将字符代码转为数字                             |
+| [from_hex](docs-cn/contract/07-ts-crypto#from_hex)                           |                                 |
+| [get_random_number](docs-cn/contract/07-ts-crypto#get_random_number)       |从系统服务获取随机数。这个数字将在协商一致期间保持不变，因此，如果在一个操作中多次调用这个函数，随机数就不会改变。                             |
+| [to_hex](docs-cn/contract/07-ts-crypto#to_hex)                          | 十六进制字符串的加密结果转换为字符串                            |
+| [verify_with_pk](docs-cn/contract/07-ts-crypto#verify_with_pk)                           |验证pk和证明                             |
 
 
 ## assert_ripemd160
@@ -78,7 +78,7 @@ import { SHA512 } from "ultrain-ts-lib/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_ripemd160 } from "ultrain-ts-lib/src/crypto";
+import { assert_ripemd160 } from "ultrain-contract/src/crypto";
 ```
 
 ## assert_sha1
@@ -95,7 +95,7 @@ import { assert_ripemd160 } from "ultrain-ts-lib/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha1 } from "ultrain-ts-lib/src/crypto";
+import { assert_sha1 } from "ultrain-contract/src/crypto";
 ```
 
 ## assert_sha256
@@ -112,7 +112,7 @@ import { assert_sha1 } from "ultrain-ts-lib/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha256 } from "ultrain-ts-lib/src/crypto";
+import { assert_sha256 } from "ultrain-contract/src/crypto";
 ```
 
 ## assert_sha512
@@ -129,7 +129,7 @@ import { assert_sha256 } from "ultrain-ts-lib/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha512 } from "ultrain-ts-lib/src/crypto";
+import { assert_sha512 } from "ultrain-contract/src/crypto";
 ```
 
 ## charcode_to_digital
@@ -213,7 +213,7 @@ to_hex(buffer: usize, buffersize: u32)
 
 #### 参考示例
 ```nodejs
-import { verify_with_pk } from "ultrain-ts-lib/src/crypto";
+import { verify_with_pk } from "ultrain-contract/src/crypto";
 ```
 
 

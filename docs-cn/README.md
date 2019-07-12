@@ -7,6 +7,10 @@
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <style scoped>
+	.sidebar-nav{
+
+list-style:none;
+	}
     h1, h2 {
         font-weight: normal;
     }
@@ -72,7 +76,7 @@
     <div class="content-container" style="background-color: #f4f4f4;padding: 1.2rem 1.2rem 2.4rem;margin: 2.4rem 0;">
         <div class="row content-row">
             <div class="col-sm-6 col-xs-12">
-                <p class="content-title" style="border-bottom: 1px solid #979797;">开发者手册</p>
+                <p class="content-title" style="text-align:center;border-bottom: 1px solid #979797;">开发者手册</p>
                 <div class="row content-row">
                     <div class="col-sm-6 col-xs-12">
                         <div>
@@ -122,16 +126,16 @@
                 <p class="content-title" style="border-bottom: 1px solid #979797;">浏览器钱包</p>
                 <div>
                     <div>
-                        <a href="#/docs-cn/dapp/flow.md">主网浏览器</a>
+                        <a href="#/docs-cn/wallet/01-wallet-main-browser.md">主网浏览器</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/dapp/wallet.md">测试网浏览器</a>
+                        <a href="#/docs-cn/wallet/02-wallet-test-browser.md">测试网浏览器</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/dapp/operation.md">UltrainOne</a>
+                        <a href="#/docs-cn/wallet/03-wallet-ultrainOne.md">UltrainOne</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/dapp/service.md">Cona插件钱包</a>
+                        <a href="#/docs-cn/wallet/04-wallet-cona.md">Cona插件钱包</a>
                     </div>
                 </div>
             </div>
@@ -230,16 +234,15 @@
                 <p class="content-title" style="border-bottom: 1px solid #979797;">DApp API</p>
                 <div>
                     <div>
-                        <a href="#/docs-cn/dapi/01-chain">访问授权</a>
+                        <a href="#/docs-cn/dapi/01-access">访问授权</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/dapi/02-history">数据同步</a>
+                        <a href="#/docs-cn/dapi/02-async">对外接口</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>

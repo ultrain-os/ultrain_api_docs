@@ -3,9 +3,9 @@
 
 | 类                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [OnErrorValue](docs-cn/ts-lib/14-ts-transaction#OnErrorValue)                          |误差值类                             |
-| [Transaction](docs-cn/ts-lib/14-ts-transaction#Transaction)                          |交易类                            |
-| [TransactionHeader](docs-cn/ts-lib/14-ts-transaction#TransactionHeader)                          |交易标题类                            |
+| [OnErrorValue](docs-cn/contract/14-ts-transaction#OnErrorValue)                          |误差值类                             |
+| [Transaction](docs-cn/contract/14-ts-transaction#Transaction)                          |交易类                            |
+| [TransactionHeader](docs-cn/contract/14-ts-transaction#TransactionHeader)                          |交易标题类                            |
 
 
 ## OnErrorValue
@@ -22,8 +22,8 @@
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [getTransactionId](docs-cn/ts-lib/14-ts-transaction#getTransactionId)                           |获取交易id                             |
-| [getTransactionPublishedTime](docs-cn/ts-lib/14-ts-transaction#getTransactionPublishedTime)                           |获取交易发布时间                              |
+| [getTransactionId](docs-cn/contract/14-ts-transaction#getTransactionId)                           |获取交易id                             |
+| [getTransactionPublishedTime](docs-cn/contract/14-ts-transaction#getTransactionPublishedTime)                           |获取交易发布时间                              |
 
 
 ## getTransactionId
