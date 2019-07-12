@@ -1,5 +1,10 @@
 ## 简介
-默认情况下，```对外接口``` 接口域名为[https://dev.ultrain.io/api/user](https://dev.ultrain.io/api/user)。
+
+超脑对外提供的数据接口，需要DAPP通过访问授权接口获取token，并将token信息放在headers的x-access-token属性中带过来。
+
+默认情况下，```对外接口``` 
+正式环境接口域名为[https://dev.ultrain.io/api/user/[methodName]](https://dev.ultrain.io/api/user/[methodName])。
+测试环境接口域名为[https://testnet-dev.ultrain.io/api/user/[methodName]](https://testnet-dev.ultrain.io/api/user/[methodName])。
 
 ## 方法列表
 
@@ -32,16 +37,15 @@
 {
   "method": "post",
   "url":"https://dev.ultrain.io/api/user/asyncOutsideUser",
-  headers: {
-          'content-type': 'application/json'
-        },
+  headers: {'content-type': 'application/x-www-form-urlencoded',
+    'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
   body: JSON.stringify(
-  {
-    "phoneNum": "0086177*****560",
-    "logo":"https://developer.ultrain.io/upload/213432fasd.png",
-	"name": "ben",
-	"email":"98******62@qq.com"
-  }
+      {
+        "phoneNum": "0086177*****560",
+        "logo":"https://developer.ultrain.io/upload/213432fasd.png",
+        "name": "ben",
+        "email":"98******62@qq.com"
+      }
   )
 }
 ```
@@ -87,16 +91,10 @@
 
 ```nodejs
 {
-  "method": "post",
-  "url":"https://dev.ultrain.io/api/user/getUserBasicInfo",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "phoneNum": "00569****1570",
-  }
-  )
+  "method": "get",
+  "url":"https://dev.ultrain.io/api/user/getUserBasicInfo?phoneNum=00569****1570,
+  headers: {'content-type': 'application/x-www-form-urlencoded',
+    'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
 }
 ```
  
