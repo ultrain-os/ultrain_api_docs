@@ -32,11 +32,15 @@
     - [UTILS](docs-cn/contract/15-ts-utils.md)
   
 - U3 API
-    - [实时U3接口](docs-cn/u3/01-chain.md)
-    - [历史U3接口](docs-cn/u3/02-history.md)
-    - [U3加密算法](docs-cn/u3/03-ecc.md)
-    - [U3其它工具](docs-cn/u3/04-utils.md)
+    - [CHAIN](docs-cn/u3/01-chain.md)
+    - [HISTORY](docs-cn/u3/02-history.md)
+    - [ECC加密](docs-cn/u3/03-ecc.md)
+    - [UTILS](docs-cn/u3/04-utils.md)
         
 - REST API
-    - [实时REST接口](docs-cn/rest/01-chain.md)
-    - [历史REST接口](docs-cn/rest/02-history.md)
+    - [CHAIN](docs-cn/rest/01-chain.md)
+    - [HISTORY](docs-cn/rest/02-history.md)
+    
+- DAPP API
+    - [访问授权](docs-cn/dapi/01-access.md)
+    - [数据同步](docs-cn/dapi/02-async.md)
