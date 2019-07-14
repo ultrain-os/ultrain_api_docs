@@ -1,6 +1,51 @@
 ## 简介
-U3的历史方法将帮助你更好了解超脑的相关技术信息
 
+U3接口的配置信息如下
+
+#### 开发环境（单链）
+
+> httpEndpoint: "http://127.0.0.1:8888",  
+httpEndpointHistory: "http://127.0.0.1:3000",  
+chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
+  
+#### 测试网环境（多链）
+
+**主链**
+> httpEndpoint:"http://ultrain.natapp1.cc",  
+ httpEndpointHistory:"http://ultrain-history.natapp1.cc",  
+ chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
+
+**侧链11**
+> httpEndpoint:"http://pioneer.natapp1.cc",  
+ httpEndpointHistory:"http://pioneer-history.natapp1.cc",  
+ chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
+
+**侧链12**
+> httpEndpoint:"http://power.natapp1.cc",  
+ httpEndpointHistory:"http://power-history.natapp1.cc",  
+ chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
+
+#### 主网环境（多链）
+
+**主链**
+> httpEndpoint:"https://ultrain.services",  
+ httpEndpointHistory:"https://history.ultrain.services",  
+ chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
+
+**侧链poineer**
+> httpEndpoint:"https://pioneer.ultrain.services",  
+ httpEndpointHistory:"https://history-pioneer.ultrain.services",  
+ chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
+
+**侧链unitopia**
+> httpEndpoint:"https://unitopia.ultrain.services",  
+ httpEndpointHistory:"https://history-unitopia.ultrain.services",  
+ chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
+
+**侧链new-retail**
+> httpEndpoint:"https://new-retail.ultrain.services",  
+ httpEndpointHistory:"https://history-new-retail.ultrain.services",  
+ chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 
 ## 方法列表
 
@@ -28,7 +73,6 @@ U3的历史方法将帮助你更好了解超脑的相关技术信息
 | [getTxByTxId](docs-cn/u3/02-history#getTxByTxId) |按交易ID获取交易信息                         |
 | [getTxsByBlockNum](docs-cn/u3/02-history#getTxsByBlockNum) |按块高查询交易信息                         |
 | [getTxTraceByTxid](docs-cn/u3/02-history#getTxTraceByTxid) |按交易ID获取交易跟踪                         |
-| [search](docs-cn/u3/02-history#search) |查询块/交易/帐户                         |
 
 
 
@@ -48,7 +92,7 @@ U3的历史方法将帮助你更好了解超脑的相关技术信息
 
 #### 参考示例
 ```nodejs
-import {getActionsByAccount} from "u3.js/src";
+import {getActionsByAccount} from "u3.js";
 const u3 = createU3(config)
 u3.getActionsByAccount({
      'page': 1,
@@ -89,7 +133,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getActionsByTxid} from "u3.js/src";
+import {getActionsByTxid} from "u3.js";
 const u3 = createU3(config)
 u3.getActionsByTxid({
   'trx_id': "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9"
@@ -130,7 +174,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getAllAccounts} from "u3.js/src";
+import {getAllAccounts} from "u3.js";
 const u3 = createU3(config)
 u3.getAllAccounts({
     'page': 1,
@@ -166,7 +210,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getAllBlocks} from "u3.js/src";
+import {getAllBlocks} from "u3.js";
 const u3 = createU3(config)
 u3.getAllBlocks({
     'page': 1,
@@ -222,7 +266,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getHoldersBySymbol({
     'page': 1,
@@ -272,7 +316,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getAllTokens({
     'page': 1,
@@ -316,7 +360,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getAllTxs} from "u3.js/src";
+import {getAllTxs} from "u3.js";
 const u3 = createU3(config)
 let query = { $and: [{ "actions.0.account": "ben" }, { $or: [{ "actions.0.data.id": 1257 }, { "actions.0.data.id": "1257" }] }] };
 u3.getAllTxs({
@@ -384,7 +428,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getBalanceByAccount()
 
@@ -419,7 +463,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getBaseInfo()
 
@@ -450,7 +494,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getBlocksByContract} from "u3.js/src";
+import {getBlocksByContract} from "u3.js";
 const u3 = createU3(config)
 u3.getBlocksByContract({
     'block_num': 1,
@@ -503,7 +547,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getContractByName} from "u3.js/src";
+import {getContractByName} from "u3.js";
 const u3 = createU3(config)
 u3.getContractByName({
     'name': 'utrio.code'
@@ -545,7 +589,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getContracts} from "u3.js/src";
+import {getContracts} from "u3.js";
 const u3 = createU3(config)
 u3.getContracts({
     'page': 1,
@@ -588,7 +632,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getCreateAccountByName} from "u3.js/src";
+import {getCreateAccountByName} from "u3.js";
 const u3 = createU3(config)
 u3.getCreateAccountByName({
      'name': 'utrio.code'
@@ -616,7 +660,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getExistAccount} from "u3.js/src";
+import {getExistAccount} from "u3.js";
 const u3 = createU3(config)
 u3.getExistAccount({
      'name': 'utrio.code'
@@ -650,7 +694,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getHoldersBySymbol({
     'page': 1,
@@ -688,7 +732,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getProposerList({
     'page': 1,
@@ -717,7 +761,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {createU3} from "u3.js/src";
+import {createU3} from "u3.js";
 const u3 = createU3(config)
 u3.getTokenBySymbol("ZTPJ","ben")
 
@@ -753,7 +797,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getTxByTxId} from "u3.js/src";
+import {getTxByTxId} from "u3.js";
 const u3 = createU3(config)
 u3.getTxByTxId({
     'id': '40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9',
@@ -819,7 +863,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getTxsByBlockNum} from "u3.js/src";
+import {getTxsByBlockNum} from "u3.js";
 const u3 = createU3(config)
 u3.getTxsByBlockNum({
     'page': 1,
@@ -888,7 +932,7 @@ json structure:
 
 #### 参考示例
 ```nodejs
-import {getTxTraceByTxid} from "u3.js/src";
+import {getTxTraceByTxid} from "u3.js";
 const u3 = createU3(config)
 u3.getTxTraceByTxid({
     'id': '40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9'
@@ -934,24 +978,4 @@ json structure:
     },
  "createdAt" : ISODate("2018-08-22T07:33:12.469+0000")
  }
-```
-
-## search 
-```
-(async, static) search(param)
-```
-查询块/交易/帐户
-
-#### 参数说明
-|参数               |类型    |说明                            |是否必填|
-| :----------------| :------| :-----------------------------|:-----|
-|param              |String  |账户/区块高度/交易hash/合同账户                    |是     |
-
-
-
-#### 参考示例
-```nodejs
-import {search} from "u3.js/src";
-const u3 = createU3(config)
-u3.search(5b7d11b859bd97fab30ba7f5)
 ```

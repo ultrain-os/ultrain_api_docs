@@ -1,9 +1,39 @@
-## 简介
-默认情况下，```RPC``` 接口域名为[http://ultrain.natapp1.cc/v1/chain](http://ultrain.natapp1.cc/v1/chain)。
+## 简介 
+
+实时REST接口的BaseUrl如下：
+
+开发环境（单链）
+
+> http://127.0.0.1:8888
+  
+测试网环境（多链）
+
+**主链**
+> http://ultrain.natapp1.cc 
+
+**侧链11**
+> http://pioneer.natapp1.cc 
+
+**侧链12**
+> http://power.natapp1.cc
+
+主网环境（多链）
+
+**主链**
+> https://ultrain.services
+
+**侧链poineer**
+> https://pioneer.ultrain.services  
+
+**侧链unitopia**
+> https://unitopia.ultrain.services 
+
+**侧链new-retail**
+> https://new-retail.ultrain.services 
 
 ## 方法列表
 
-超脑线上 RPC 接口所支持的方法如下表所示。
+超脑线上 REST 接口所支持的方法如下表所示。
 
 | 方法                                                                                           | 描述                                             |
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
@@ -12,7 +42,6 @@
 | [get_scheduled_transactions](docs-cn/rest/01-chain#get_scheduled_transactions)|获取已调度的交易信息                                  |
 | [get_chain_info](docs-cn/rest/01-chain#get_chain_info)                        |获取链的相关信息                                  |
 | [get_block_info](docs-cn/rest/01-chain#get_block_info)                        |获取某个区块的相关信息                                  |
-| [get_block_header_state](docs-cn/rest/01-chain#get_block_header_state)        |获取验证区块头所需的最小状态                            |
 | [get_account_info](docs-cn/rest/01-chain#get_account_info)                    |获取账户的相关信息                                  |
 | [get_contract](docs-cn/rest/01-chain#get_contract)                            |获取智能合约的代码                               |
 | [get_abi](docs-cn/rest/01-chain#get_abi)                                      |获取ABI的相关信息                               |
@@ -20,18 +49,10 @@
 | [get_table_records](docs-cn/rest/01-chain#get_table_records)                  |从帐户获取智能合约数据                               |
 | [push_tx](docs-cn/rest/01-chain#push_tx)                                      |广播签名后的交易信息                               |
 | [get_table_by_scope](docs-cn/rest/01-chain#get_table_by_scope)                |从帐户获取智能合约数据                               |
-| [abi_json2bin](docs-cn/rest/01-chain#abi_json2bin)                            |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中。                               |
-| [abi_bin2json](docs-cn/rest/01-chain#abi_bin2json)                            |将bin十六进制转换为ABI JSON                              |
-| [get_required_keys](docs-cn/rest/01-chain#get_required_keys)                 |调用返回签名一个交易时需要的公钥清单                             |
-| [push_block](docs-cn/rest/01-chain#push_block)                                 |调用将指定的区块数据提交到链上                              |
+| [get_key_accounts](docs-cn/rest/01-chain#get_key_accounts)                 |根据公钥查询对应的账号列表                            |
 | [push_txs](docs-cn/rest/01-chain#push_txs)                                      |尝试将事务推送到挂起队列中                              |
 | [register_event](docs-cn/rest/01-chain#register_event)                           |订阅Ultrain公链上的事件                              |
 | [unregister_event](docs-cn/rest/01-chain#unregister_event)                       |取消订阅Ultrain公链上的事件                              |
-| [get_producer_info](docs-cn/rest/01-chain#get_producer_info)                     |获取账户创建者的相关信息                              |
-| [create_user](docs-cn/rest/01-chain#create_user)                                 |创建一个账户                              |
-| [deploy](docs-cn/rest/01-chain#deploy)                                           |将智能合约部署到Ultrain链上                              |
-| [sign](docs-cn/rest/01-chain#sign)                                               |签名一个为签名的离线事务                             |
-| [query_resource](docs-cn/rest/01-chain#query_resource)                          |返回账户资源的详细信息                             |
 
 
 
@@ -46,21 +67,26 @@
 |symbol     |string  |要查询的代币符号  |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_currency_balance",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "code": "utrio.token",
-    "account":"coboultrain1",
-    "symbol":"UGAS"
-  }
-  )
-}
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_currency_balance';
+  var data = {
+    'code': 'utrio.token',
+    'account': 'ben',
+    'symbol': 'UGAS',
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '{"code":"utrio.token","account":"ben","symbol":"UGAS"}' http://127.0.0.1:8888/v1/chain/get_currency_balance
+
 ```
 
 #### 返回结果类型
@@ -83,20 +109,26 @@
 |account    |string  |获取统计信息的账户|是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_currency_stats",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_currency_stats';
+  var data = {
     "code": "utrio.token",
     "symbol":"UGAS"
-  }
-  )
-}
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '{"code":"utrio.token","symbol":"UGAS"}' http://127.0.0.1:8888/v1/chain/get_currency_stats
+
 ```
 
 #### 返回结果类型
@@ -113,33 +145,27 @@
 }
 ```
 
-## get_scheduled_transactions
-获取已调度的交易信息
-
-#### 参数说明
-|参数        |类型    |说明                            |是否必填|
-| :---------| :------| :-----------------------------|:-----|
-|json       |bool    |决定返回的是否为json格式默认为false|否     |
-|lower_bound|string  |时间戳或者交易ID                 |是     |
-|limit      |uint32  |限制信息返回的条数默认为50         |否     |
-
-
 ## get_chain_info
 获取链的相关信息
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_chain_info",
-  headers: {
-          'content-type': 'application/json'
-        }
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_chain_info';
+  await Axios.get(url).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl http://127.0.0.1:8888/v1/chain/get_chain_info
+
+```
 
 #### 返回结果
 ```json
@@ -169,23 +195,26 @@
 |block_num_or_id|string  |区块的块高或者区块的ID            |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_block_info",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "block_num_or_id": "100"
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_block_info';
+  var data = {
+    "block_num_or_id": 100,
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{"block_num_or_id": 100}' http://127.0.0.1:8888/v1/chain/get_block_info
+
+```
 
 #### 返回结果
 ```json
@@ -208,38 +237,6 @@
 }
 ```
 
-## get_block_header_state
-获取验证区块头所需的最小状态
-
-#### 参数说明
-|参数            |类型    |说明                            |是否必填|
-| :-------------| :------| :-----------------------------|:-----|
-|block_num_or_id|string  |区块的块高或者区块的ID            |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_block_header_state",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "block_num_or_id": "4"
-  }
-  )
-}
-```
-
-#### 返回结果类型
-`string`
-
-####返回结果
-```json
-    ...
-```
-
 ## get_account_info
 获取账户的相关信息
 
@@ -249,23 +246,26 @@
 |account_name   |string  |查询账户的账户名                  |是    |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_account_info",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account_name": "ultrainio"
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_account_info';
+  var data = {
+    "account_name": "ben",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{"account_name": "ben"}' http://127.0.0.1:8888/v1/chain/get_account_info
+
+```
 
 #### 返回结果
 ```json
@@ -340,31 +340,35 @@
 |account_name   |string  |查询智能合约的账户名              |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_contract",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account_name": "ultrainio"
-  }
-  )
-}
+
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_contract';
+  var data = {
+    "account_name": "ben",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{"account_name": "ben"}' http://127.0.0.1:8888/v1/chain/get_contract
+
+```
 
 #### 返回结果
-```json
+```
 {
     "account_name": "ultrainio",
     "code_hash": "3dc9db161d1b37d768d0122950105daa3035cc74111872f36863f4d3c90a2d0d",
-    "wast":"智能合约的主体内容"，
-	"wasm": "",
+    "wast":"..."，
+	"wasm": "...",
     "abi": {
         "version": "ultrainio::abi/1.0/1501af",
         "types": [
@@ -444,7 +448,7 @@
                     }
                 
             },
-			内容过多只显示部分内容。
+			...
 				]
 			"ricardian_clauses": [],
             "error_messages": [],
@@ -463,23 +467,26 @@
 |account_name   |string  |查询ABI的账户名                  |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_abi",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account_name": "utrio.bank"
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_abi';
+  var data = {
+    "account_name": "ben",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{"account_name": "ben"}' http://127.0.0.1:8888/v1/chain/get_abi
+
+```
 
 #### 返回结果
 ```json
@@ -578,30 +585,33 @@
 |account_name   |string  |查询代码和ABI的账户名             |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_raw_code_and_abi",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account_name": "utrio.bank"
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_raw_code_and_abi';
+  var data = {
+    "account_name": "ben",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{"account_name": "ben"}' http://127.0.0.1:8888/v1/chain/get_raw_code_and_abi
+
+```
 
 #### 返回结果
 ```json
 {
-    "account_name": "utrio.bank",
-    "wasm": "代码的相关信息",
-    "abi": "ABI的相关信息"
+    "account_name": "ben",
+    "wasm": "...",
+    "abi": "..."
 }
 ```
 
@@ -623,26 +633,29 @@
 |index_position |string  |索引                           |否     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_table_records",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_table_records';
+  var data = {
     "code": "utrio.token",
     "scope": "ultrainio",
     "table": "accounts",
     "json": true
-  }
-  )
-}
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{ "code": "utrio.token","scope": "ultrainio","table": "accounts","json": true}' http://127.0.0.1:8888/v1/chain/get_table_records
+
+```
 
 #### 返回结果
 ```json
@@ -657,29 +670,43 @@
 }
 ```
 
-## push_tx
-广播签名后的交易信息
+
+
+## get_key_accounts
+根据公钥获得其对应的账号列表
 
 #### 参数说明
-|参数               |类型    |说明                            |是否必填|
-| :----------------| :------| :-----------------------------|:-----|
-|signed_transaction|string  |签名后的交易信息                  |是     |
+|参数            |类型    |说明                            |是否必填|
+| :-------------| :------| :-----------------------------|:-----|
+|public_key           |string    |公钥            |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/push_tx",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "signed_transaction": "签名后的交易信息"
-  }
-  )
-}
+
 ```
+  var url = 'http://127.0.0.1:8888/v1/history/get_key_accounts';
+  var data = {
+    "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '{ "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB"}' http://127.0.0.1:8888/v1/history/get_key_accounts
+
+```
+
+#### 返回结果
+```
+{ account_names: [ '44jn5qcnaa2v', 'jack' ] }
+```
+
 
 ## get_table_by_scope
 根据账户获取智能合约数据
@@ -694,24 +721,28 @@
 |limit          |uint32  |限制条件（默认为10）              |否     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_table_by_scope",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
+
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_table_by_scope';
+  var data = {
     "code": "utrio.token",
     "table": "accounts"
-  }
-  )
-}
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{ "code": "utrio.token","table": "accounts"}' http://127.0.0.1:8888/v1/chain/get_table_by_scope
+
+```
 
 #### 返回结果
 ```json
@@ -792,188 +823,60 @@
 }
 ```
 
-## abi_json2bin
-手动将JSON序列化为二进制十六进制。二进制码通常存储在action.data中。
+
+## push_tx
+
+广播签名后的交易信息
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|
 | :----------------| :------| :-----------------------------|:-----|
-|code              |string  |账户名                          |是     |
-|action            |string  |行为参数                         |是     |
-|args              |bytes   |json参数                        |是     |
+|signed_transaction|string  |签名后的交易信息                  |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/abi_json2bin",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "code": "handsome1212",
-    "action": "transfer",
-    "args": {
-      "from": "ultrainio",
-      "to": "ultrainio",
-      "quantity": 1000
-    }
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/push_tx';
+  var data = {
+    "signed_transaction": { compression: 'none',
+                            transaction: 
+                             { expiration: '2019-07-14T01:59:38',
+                               ref_block_num: 4492,
+                               ref_block_prefix: 3817828507,
+                               net_usage_words: 0,
+                               max_cpu_usage_ms: 0,
+                               delay_sec: 0,
+                               context_free_actions: [],
+                               actions: [ [Object] ],
+                               transaction_extensions: [] },
+                            signatures: 
+                             [ 'SIG_K1_JxnJ83HHCfC1JbYq6gUnCFrgjTqLsUN85njNfjhoQ3c8gBBep79Z99ZdPZjbZtfBtHaV8HTKyHk8wtsD9RHbpGJ5Mz3SvW' ] },
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
 
-#### 返回结果
-```json
-{
-  "binargs": "000000008093dd74000000000094dd74e803000000000000",
-  "required_scope": [],
-  "required_auth": []
-}
 ```
+ curl -X POST -d '{ compression: 'none',
+                    transaction: 
+                     { expiration: '2019-07-14T01:59:38',
+                       ref_block_num: 4492,
+                       ref_block_prefix: 3817828507,
+                       net_usage_words: 0,
+                       max_cpu_usage_ms: 0,
+                       delay_sec: 0,
+                       context_free_actions: [],
+                       actions: [ [Object] ],
+                       transaction_extensions: [] },
+                    signatures: 
+                     [ 'SIG_K1_JxnJ83HHCfC1JbYq6gUnCFrgjTqLsUN85njNfjhoQ3c8gBBep79Z99ZdPZjbZtfBtHaV8HTKyHk8wtsD9RHbpGJ5Mz3SvW' ] }' http://127.0.0.1:8888/v1/chain/push_tx
 
-
-## abi_bin2json
-将bin十六进制转换为ABI JSON
-
-#### 参数说明
-|参数               |类型    |说明                            |是否必填|
-| :----------------| :------| :-----------------------------|:-----|
-|code              |string  |智能合约名称                     |是     |
-|action            |string  |行为名称                         |是     |
-|binargs           |bytes   |二进制参数参数                     |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/abi_bin2json",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "code": "ultrainio",
-    "action": "transfer",
-    "binargs": "000000008093dd74000000000094dd74e803000000000000"
-  }
-  )
-}
-```
-
-#### 返回结果类型
-`Object`
-
-#### 返回结果
-```json
-{
-  "args": {
-    "from": "initb",
-    "to": "initc",
-    "quantity": 1000
-  },
-  "required_scope": [],
-  "required_auth": []
-}
-```
-
-
-
-## get_required_keys
-调用返回签名一个交易时需要的公钥清单
-
-#### 参数说明
-|参数               |类型    |说明                            |是否必填|
-| :----------------| :------| :-----------------------------|:-----|
-|transaction       |string  |提供事务对象                     |是     |
-|available_keys    |Array   |提供可用的密钥                    |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_required_keys",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "transaction": {
-      "ref_block_num": "100",
-      "ref_block_prefix": "137469861",
-      "expiration": "2017-09-25T06:28:49",
-      "scope": [
-        "initb",
-        "initc"
-      ],
-      "actions": [
-        {
-          "code": "currency",
-          "type": "transfer",
-          "recipients": [
-            "initb",
-            "initc"
-          ],
-          "authorization": [
-            {
-              "account": "initb",
-              "permission": "active"
-            }
-          ],
-          "data": "000000000041934b000000008041934be803000000000000"
-        }
-      ],
-      "signatures": [],
-      "authorizations": []
-    },
-    "available_keys": [
-      "EOS4toFS3YXEQCkuuw1aqDLrtHim86Gz9u3hBdcBw5KNPZcursVHq",
-      "EOS7d9A3uLe6As66jzN8j44TXJUqJSK3bFjjEEqR4oTvNAB3iM9SA",
-      "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"
-    ]
-  }
-  )
-}
-```
-
-#### 返回结果类型
-`Object`
-
-#### 返回结果
-```json
-{
-  "required_keys": [
-    "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"
-  ]
-}
-```
-
-## push_block
-调用将指定的区块数据提交到链上
-
-#### 参数说明
-|参数               |类型    |说明                            |是否必填|
-| :----------------| :------| :-----------------------------|:-----|
-|block             |string  |签名区块                        |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/push_block",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-   "block":"signed_block"
-  }
-  )
-}
 ```
 
 ## push_txs
@@ -985,21 +888,49 @@
 |signed_transaction[]|Array  |签名后的交易信息                  |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/push_tx",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "signed_transaction":[
-		需要推送的事务信息
-	]
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/push_tx';
+  var data = {
+    "signed_transaction": [{ compression: 'none',
+                            transaction: 
+                             { expiration: '2019-07-14T01:59:38',
+                               ref_block_num: 4492,
+                               ref_block_prefix: 3817828507,
+                               net_usage_words: 0,
+                               max_cpu_usage_ms: 0,
+                               delay_sec: 0,
+                               context_free_actions: [],
+                               actions: [ [Object] ],
+                               transaction_extensions: [] },
+                            signatures: 
+                             [ 'SIG_K1_JxnJ83HHCfC1JbYq6gUnCFrgjTqLsUN85njNfjhoQ3c8gBBep79Z99ZdPZjbZtfBtHaV8HTKyHk8wtsD9RHbpGJ5Mz3SvW' ] }],
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '[{ compression: 'none',
+                    transaction: 
+                     { expiration: '2019-07-14T01:59:38',
+                       ref_block_num: 4492,
+                       ref_block_prefix: 3817828507,
+                       net_usage_words: 0,
+                       max_cpu_usage_ms: 0,
+                       delay_sec: 0,
+                       context_free_actions: [],
+                       actions: [ [Object] ],
+                       transaction_extensions: [] },
+                    signatures: 
+                     [ 'SIG_K1_JxnJ83HHCfC1JbYq6gUnCFrgjTqLsUN85njNfjhoQ3c8gBBep79Z99ZdPZjbZtfBtHaV8HTKyHk8wtsD9RHbpGJ5Mz3SvW' ] }]' http://127.0.0.1:8888/v1/chain/push_tx
+
 ```
 
 ## register_event
@@ -1012,24 +943,28 @@
 |post_url            |string  |路由                           |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/register_event",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account": "name",
-    "post_url": "http://ultrain.natapp1.cc/v1/chain"
-  }
-  )
-}
+
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/register_event';
+  var data = {
+    "account": "ben",
+    "post_url": 'http://[your url]'
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
 ```
 
-#### 返回结果类型
-`Object`
+或者
+
+```
+ curl -X POST -d '{ "account": "ben", "post_url": "http://[your url]"}' http://127.0.0.1:8888/v1/chain/register_event
+
+```
 
 #### 返回结果
 ```json
@@ -1039,6 +974,7 @@
 ```
 
 ## unregister_event
+
 取消订阅Ultrain公链上的事件
 
 #### 参数说明
@@ -1048,20 +984,26 @@
 |post_url            |string  |路由                           |是     |
 
 #### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/unregister_event",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "account": "name",
-    "post_url": "http://ultrain.natapp1.cc/v1/chain"
-  }
-  )
-}
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/unregister_event';
+  var data = {
+    "account": "ben",
+    "post_url": 'http://[your url]'
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '{ "account": "ben", "post_url": "http://[your url]"}' http://127.0.0.1:8888/v1/chain/unregister_event
+
 ```
 
 #### 返回结果类型
@@ -1073,180 +1015,3 @@
     "result": "Success"
 }
 ```
-
-## get_producer_info
-获取账户创建者的相关信息
-
-#### 参数说明
-|参数                 |类型    |说明                            |是否必填|
-| :------------------| :------| :-----------------------------|:-----|
-|owner               |string  |账户创建者                       |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/get_producer_info",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "owner": "ultrainio"
-  }
-  )
-}
-```
-
-#### 返回结果类型
-`Object`
-
-#### 返回结果
-```json
-{
-    "location": "zzzzzzzzzzzzj",
-    "chain_id": "",
-    "genesis_time": "2018-01-01T00:00:00.000",
-    "quit_before_num": 0
-}
-```
-
-## create_user
-创建一个账户
-
-#### 参数说明
-|参数                 |类型    |说明                            |是否必填|
-| :------------------| :------| :-----------------------------|:-----|
-|creator             |string  |账户创建者                       |是     |
-|name                |string  |账户名称                         |是     |
-|owner               |string  |账户主人                         |是     |
-|active              |string  |行为名称                         |是     |
-|updateable          |uint32  |是否可以更新账户                   |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/create_user",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-    "creator": "ben",
-    "name": "anfen",
-    "owner": "UTR1uHKWW5tvmw6eQpbv92cVmkpDFhQ9q7xsee5Da2X2pVeYUNy4D",
-    "active": "UTR1uHKWW5tvmw6eQpbv92cVmkpDFhQ9q7xsee5Da2X2pVeYUNy4D",
-    "updateable": 1
-  }
-  )
-}
-```
-
-## deploy
-将智能合约部署到链上
-
-#### 参数说明
-|参数                 |类型    |说明                            |是否必填|
-| :------------------| :------| :-----------------------------|:-----|
-|contract            |string  |要部署的合约                     |是     |
-|account             |string  |要部署的账户                     |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/deploy",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-   "contract": "/Users/benyasin/demo/contracts/token/token",
-   "account": "ben"
-  }
-  )
-}
-```
-
-## sign
-签名一个为签名的离线事务
-
-#### 参数说明
-|参数                 |类型    |说明                            |是否必填|
-| :------------------| :------| :-----------------------------|:-----|
-|unsigned_transaction|string  |脱机u3操作返回的未签名的事务       |是     |
-|privateKeyOrMnemonic|string  |私钥或助记词                     |是     |
-|chainId             |string  |链的id                          |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/sign",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-   "unsigned_transaction": {
-     "transaction_id": "79a571b56ad6ff39c517caf13532ff6d981518a8c3c8aa24f296c6ec7d12beb2",
-     "broadcast": false,
-     "transaction": {
-       "compression": "none",
-       "transaction": {
-         "expiration": "2018-12-27T03:45:32",
-         "ref_block_num": 4021,
-         "ref_block_prefix": 2905809499,
-         "net_usage_words": 0,
-         "max_cpu_usage_ms": 0,
-         "delay_sec": 0,
-         "actions": [
-           {
-             "account": "bob",
-             "name": "transfer",
-             "authorization": [
-               {
-                 "actor": "bob",
-                 "permission": "active"
-               }
-             ],
-             "data": "0000000000000e3d0000000000855c341027000000000000044b524f5700000000"
-           }
-         ]
-       },
-       "signatures": []
-     }
-   },
-   "privateKeyOrMnemonic": "5KWW4MQbqibqmCihzTpYAck3EMntdiurjaXirHHhaTe7V5x1JQ5",
-   "chainId": "baf8bb9d3636379e3cd6779d2a72e693494670f1040d45154bb61dc8852c8971"
-  }
-  )
-}
-```
-
-## query_resource
-返回账户资源的详细信息
-
-#### 参数说明
-|参数                 |类型    |说明                            |是否必填|
-| :------------------| :------| :-----------------------------|:-----|
-|name                |string  |账户名                          |是     |
-
-#### 参考示例
-```json
-{
-  "method": "post",
-  "url":"http://ultrain.natapp1.cc/v1/chain/query_resource",
-  headers: {
-          'content-type': 'application/json'
-        },
-  body: JSON.stringify(
-  {
-   "name": "du3kwow2bkay"
-  }
-  )
-}
-```
-
-

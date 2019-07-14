@@ -51,7 +51,7 @@ UltrainOne是由超脑团队开发，集钱包、DApp、信任计算节点、资
 <img width="300px" src="https://user-images.githubusercontent.com/44561751/61098659-47e6cf80-a492-11e9-9a37-2f303496ee99.jpg"/>
 
 
-关于UltrainOne的接入API,请参考《DAPP接入规范》中的钱包接入章节。
+关于UltrainOne的接入API,请参考《[DAPP接入规范的](/docs-cn/dapp/wallet.md)》中的钱包接入章节。
  
 #### UltrainOne下载
 

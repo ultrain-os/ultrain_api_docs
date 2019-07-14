@@ -62,8 +62,26 @@ https://user-images.githubusercontent.com/44561751/61096847-8fb62880-a48b-11e9-9
 
 **检测cona是否安装**  
 
-Cona扩展插件会在浏览器注入window.Cona对象，检测window.Cona如果存在则表示用户有安装  
-```nodejs
+Cona会在浏览器注入window.Cona对象，检测window.Cona如果存在则表示用户有安装。
+
+Cona在线安装地址为 https://chrome.google.com/webstore/detail/cona/joopmnkobcdaojgcmohnjhloldhfgfgk
+
+Cona离线下载地址为 https://ultrain-cona.oss-cn-hangzhou.aliyuncs.com/cona.crx.zip
+
+离线包安装方法：
+
+>1.解压出cona.crx文件；
+>
+>2.打开Chrome，在URL中输入 chrome://extensions,同时打开右上角的开发者模式；
+>
+>3.将cona.crx拖拽到该网页中间进行添加；
+
+<img width="80%" src="https://user-images.githubusercontent.com/1866848/61033042-34395b80-a3f5-11e9-8b64-df6f7d65d383.png">
+
+
+检查是否成功安装的方法如下：
+
+```
 window.addEventListener('load', function () {
   if (typeof window.Cona !== 'undefined') {
     console.log('Cona is enabled')
@@ -71,39 +89,8 @@ window.addEventListener('load', function () {
     console.log('Cona is not installed')
   }
 })
-Cona.version
+
 ```
 
-**查看Cona版本号**  
-```nodejs
-window.addEventListener('load', function () {
-  if (typeof window.Cona !== 'undefined') {
-    console.log(window.Cona.version);
-  }
-})
-Cona.send(params)
-```
 
-**发起交易请求**  
->params参数  
-* to: 接收账户，类型为字符串  
-* contract: 交易的合约名称，类型为字符串  
-* quantity: 转账金额，精度请按代币约定填写，如果超出代币的精度则将会被四舍五入，例如UGAS的精度是0.0001，如果传入10.66666，则会被四舍五入为10.6667  
-* symbol: 代币单位  
-* memo: 交易描述文字，可以不填写  
-返回值：方法是一个异步方法，返回一个promise对象，可以在then中获取到链上返回的交易信息。在catch中捕获异常  
-
-```nodejs
-  const to = 'utest1';
-  const contract = 'utrio.token';
-  const quantity = 10;
-  const symbol = 'UGAS';
-  const memo = 'transfer 10.0000 UGAS';
-  window.Cona.send({ to, contract, quantity, symbol, memo }).then((trx) => {
-    // trx为链上返回的交易详情，需要通过u3轮询交易来确认交易结果
-    console.log(trx);
-  }).catch((e) => {
-    // 处理异常
-    console.log(e);
-  })
-```
+Cona还提供了针对DAPP"连接"请求，"鉴权"请求，以及转账，调用智能合约的接口服务。详细的API请参照《[DAPP接入规范的](/docs-cn/dapp/wallet.md)》的钱包接入章节。
