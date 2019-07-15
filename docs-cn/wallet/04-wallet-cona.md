@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/44561751/61096847-8fb62880-a48b-11e9-9
 
 <img width="300px" src="https://user-images.githubusercontent.com/44561751/61096868-a0669e80-a48b-11e9-875e-a816f03c03fc.png"  />
 
-#### API
+#### 安装
 
 **检测cona是否安装**  
 
