@@ -150,7 +150,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ "account_name": "ben" } }' POST http://127.0.0.1:3000/actions/by/account
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"account_name":"ben"}}' http://127.0.0.1:3000/actions/by/account
 
 ```
 
@@ -323,7 +323,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ } }' POST http://127.0.0.1:3000/accounts
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{}}' http://127.0.0.1:3000/accounts
 
 ```
 
@@ -392,7 +392,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ "block.producer":"ultrainio"  } }' POST http://127.0.0.1:3000/blocks
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"block.producer":"ultrainio"}}' http://127.0.0.1:3000/blocks
 
 ```
 
@@ -468,7 +468,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{  } }' POST http://127.0.0.1:3000/tokens
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{}}' http://127.0.0.1:3000/tokens
 
 ```
 
@@ -529,7 +529,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{  } }' POST http://127.0.0.1:3000/txs
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{}}' http://127.0.0.1:3000/txs
 
 ```
 
@@ -746,7 +746,7 @@
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{  } }' POST http://127.0.0.1:3000/contracts
+ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{}}' http://127.0.0.1:3000/contracts
 
 ```
 
@@ -927,7 +927,7 @@ Object
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ "token_symbol":"GLJV" } }' POST http://127.0.0.1:3000/holders/by/symbol
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"token_symbol":"GLJV"}}' http://127.0.0.1:3000/holders/by/symbol
 
 ```
 
@@ -979,7 +979,7 @@ Object
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ "token_symbol":"GLJV" } }' POST http://127.0.0.1:3000/balance/ben
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"token_symbol":"GLJV"}}' http://127.0.0.1:3000/balance/ben
 
 ```
 
@@ -1139,7 +1139,7 @@ Object
 或者
 
 ```
- curl -X -d '{ "page': 1,  "pageSize": 10, "sortParams": { _id: -1 }, "queryParams":{ "block_num": 100 } }' POST http://127.0.0.1:3000/txs/by/blocknum
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"block_num": 100}}' http://127.0.0.1:3000/txs/by/blocknum
 
 ```
 
