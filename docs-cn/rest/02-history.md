@@ -1324,7 +1324,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
 
 
 
-## get_key_accounts
+## getKeyAccounts
 根据公钥获得其对应的账号列表
 
 #### 参数说明
