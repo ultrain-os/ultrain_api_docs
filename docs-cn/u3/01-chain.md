@@ -65,8 +65,7 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 | [getContract](docs-cn/u3/01-chain#getContract)                        |获取智能合约的代码                                            |
 | [getCurrencyBalance](docs-cn/u3/01-chain#getCurrencyBalance)           |获取货币余额                                           |
 | [getCurrencyStats](docs-cn/u3/01-chain#getCurrencyStats)           |获取货币信息                                          |
-| [getRawCodeAndAbi](docs-cn/u3/01-chain#getRawCodeAndAbi)           |获取原始代码和ABI                                          |
-| [getKeyAccounts](docs-cn/u3/01-chain#getKeyAccounts)           |根据公钥获取对应的账户名列表                                          |
+| [getRawCodeAndAbi](docs-cn/u3/01-chain#getRawCodeAndAbi)           |获取原始代码和ABI                                          |                                          |
 | [getTableByScope](docs-cn/u3/01-chain#getTableByScope)           |从命名空间获取智能合约数据                                          |
 | [getTableRecords](docs-cn/u3/01-chain#getTableRecords)           |从智能合约的表中读数据                                          |
 | [resourcelease](docs-cn/u3/01-chain#resourcelease)           |资源购买                                          |
@@ -1077,39 +1076,6 @@ await u3.getRawCodeAndAbi({
     "abi": "EXVsdHJhaW86MS4wOlVJ..."
 }
 ```
-
-
-## getKeyAccounts
-```
-(static) getKeyAccounts(public_key)
-```
-根据公钥获取对应的账户名列表
-
-#### 参数说明
-|参数               |类型          |说明                            |是否必填|
-| :----------------| :------------| :-----------------------------|:-----|
-|public_key           |string       |公钥         |是     |
-
-
-#### 参考示例
-```nodejs
-import {getKeyAccounts} from "u3.js";
-const u3 = createU3(config);
-await u3.getKeyAccounts({
-  "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB"
-});
-```
-
-#### 返回格式
-```
-{
-    "account_names": [
-        "44jn5qcnaa2v",
-        "jack"
-    ]
-}
-```
-
 
 ## getScheduledTransactions
 ```

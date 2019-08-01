@@ -73,6 +73,8 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 | [getTxByTxId](docs-cn/u3/02-history#getTxByTxId) |按交易ID获取交易信息                         |
 | [getTxsByBlockNum](docs-cn/u3/02-history#getTxsByBlockNum) |按块高查询交易信息                         |
 | [getTxTraceByTxid](docs-cn/u3/02-history#getTxTraceByTxid) |按交易ID获取交易跟踪                         |
+| [getKeyAccounts](docs-cn/u3/02-history#getKeyAccounts)     |根据公钥获取对应的账户名列表      |
+| [getAccountByName](docs-cn/u3/02-history#getAccountByName)     |根据账户名获得对应的账户名      |
 
 
 
@@ -192,6 +194,71 @@ json structure:
     "createdAt" : ISODate("2018-08-22T07:33:32.092+0000")
 }
 ```
+
+
+## getKeyAccounts
+```
+(static) getKeyAccounts(public_key)
+```
+根据公钥获取对应的账户名列表
+
+#### 参数说明
+|参数               |类型          |说明                            |是否必填|
+| :----------------| :------------| :-----------------------------|:-----|
+|public_key           |string       |公钥         |是     |
+
+
+#### 参考示例
+```nodejs
+import {getKeyAccounts} from "u3.js";
+const u3 = createU3(config);
+await u3.getKeyAccounts("UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB");
+```
+
+#### 返回格式
+```
+{
+    "account_names": [
+        "44jn5qcnaa2v",
+        "jack"
+    ]
+}
+```
+
+
+
+## getAccountByName
+```
+(static) getAccountByName(name)
+```
+根据公钥获取对应的账户名列表
+
+#### 参数说明
+|参数               |类型          |说明                            |是否必填|
+| :----------------| :------------| :-----------------------------|:-----|
+|name           |string       |账号名         |是     |
+
+
+#### 参考示例
+```nodejs
+import {getAccountByName} from "u3.js";
+const u3 = createU3(config);
+await u3.getAccountByName("jack");
+```
+
+#### 返回格式
+```
+{
+ "_id": "5d09cb5426b4a7ec0b35e878",
+ "name": "jack",
+ "createdAt": "2019-06-19T05:42:44.692Z",
+ "id": "5d09cb5426b4a7ec0b35e878",
+ "activePk": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB",
+ "ownerPk": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB"
+}
+```
+
+
 
 ## getAllBlocks 
 ```

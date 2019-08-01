@@ -53,6 +53,7 @@
 | [getTxByTxId](docs-cn/rest/02-history#getTxByTxId)                          |根据交易id查找相应的交易信息                           |
 | [getTxsByBlockNum](docs-cn/rest/02-history#getTxsByBlockNum)                |根据区块块高查询交易信息                               |
 | [getTxTraceByTxid](docs-cn/rest/02-history#getTxTraceByTxid)                |根据交易id查找交易信息                                |
+| [getKeyAccounts](docs-cn/rest/02-history#getKeyAccounts)                    |根据公钥查询对应的账号列表                             |
 
 
 ## getAccountByName
@@ -1319,4 +1320,41 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
     "ability": "Normal",
     "createdAt": "2019-06-24T09:25:20.312Z"
 }
+```
+
+
+
+## get_key_accounts
+根据公钥获得其对应的账号列表
+
+#### 参数说明
+|参数            |类型    |说明                            |是否必填|
+| :-------------| :------| :-----------------------------|:-----|
+|public_key           |string    |公钥            |是     |
+
+#### 参考示例
+
+```
+  var url = 'http://127.0.0.1:3000/accounts/by/key';
+  var data = {
+    "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB",
+  };
+  await Axios.post(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl -X POST -d '{ "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB"}' http://127.0.0.1:3000/accounts/by/key
+
+```
+
+#### 返回结果
+```
+{ account_names: [ '44jn5qcnaa2v', 'jack' ] }
 ```

@@ -48,8 +48,7 @@
 | [get_raw_code_and_abi](docs-cn/rest/01-chain#get_raw_code_and_abi)            |获取代码和ABI的相关信息                               |
 | [get_table_records](docs-cn/rest/01-chain#get_table_records)                  |从帐户获取智能合约数据                               |
 | [push_tx](docs-cn/rest/01-chain#push_tx)                                      |广播签名后的交易信息                               |
-| [get_table_by_scope](docs-cn/rest/01-chain#get_table_by_scope)                |从帐户获取智能合约数据                               |
-| [get_key_accounts](docs-cn/rest/01-chain#get_key_accounts)                 |根据公钥查询对应的账号列表                            |
+| [get_table_by_scope](docs-cn/rest/01-chain#get_table_by_scope)                |从帐户获取智能合约数据                               |                         |
 | [push_txs](docs-cn/rest/01-chain#push_txs)                                      |尝试将事务推送到挂起队列中                              |
 | [register_event](docs-cn/rest/01-chain#register_event)                           |订阅Ultrain公链上的事件                              |
 | [unregister_event](docs-cn/rest/01-chain#unregister_event)                       |取消订阅Ultrain公链上的事件                              |
@@ -669,44 +668,6 @@
     "more": false
 }
 ```
-
-
-
-## get_key_accounts
-根据公钥获得其对应的账号列表
-
-#### 参数说明
-|参数            |类型    |说明                            |是否必填|
-| :-------------| :------| :-----------------------------|:-----|
-|public_key           |string    |公钥            |是     |
-
-#### 参考示例
-
-```
-  var url = 'http://127.0.0.1:8888/v1/history/get_key_accounts';
-  var data = {
-    "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB",
-  };
-  await Axios.post(url, data).then(response => response.data)
-    .then(response => {
-      console.log('Success:', response);
-    }).catch(error => {
-      console.error('Error:', error);
-  });
-```
-
-或者
-
-```
- curl -X POST -d '{ "public_key": "UTR6rBwNTWJSNMYu4ZLgEigyV5gM8hHiNinqejXT1dNGZa5xsbpCB"}' http://127.0.0.1:8888/v1/history/get_key_accounts
-
-```
-
-#### 返回结果
-```
-{ account_names: [ '44jn5qcnaa2v', 'jack' ] }
-```
-
 
 ## get_table_by_scope
 根据账户获取智能合约数据
