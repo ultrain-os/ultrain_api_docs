@@ -52,7 +52,7 @@ U3Utils.ecc.generateKeyPairByMnemonic("ben john tony jack bob tom jerry alice")
 #### 参考示例
 ```nodejs
 import {U3Utils} from "u3.js";
-U3Utils.ecc.generateKeyPairBySeed("ultrain12345)
+U3Utils.ecc.generateKeyPairBySeed("ultrain12345")
 ```
 
 #### 返回结果类型
