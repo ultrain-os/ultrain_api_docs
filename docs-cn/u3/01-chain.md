@@ -1002,8 +1002,8 @@ await u3.getContract({
 import {getCurrencyBalance} from "u3.js";
 const u3 = createU3(config);
 await u3.getCurrencyBalance({
-  "code": "account",
-  "account": "account",
+  "code": "utrio.token",
+  "account": "ben",
   "symbol": "UGAS"
 });
 ```

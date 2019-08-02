@@ -497,7 +497,7 @@ json structure:
 ```nodejs
 import {createU3} from "u3.js";
 const u3 = createU3(config)
-u3.getBalanceByAccount()
+let b = await u3.getBalanceByAccount('ben')
 
 json structure:
 [
