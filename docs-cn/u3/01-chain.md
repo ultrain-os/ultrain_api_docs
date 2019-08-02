@@ -283,14 +283,14 @@ await u3.createUser({
 
 ## empoweruser
 ```
-(static) empoweruser(account_ame, chain_name, owner_pk, active_pk, updateable)
+(static) empoweruser(user, chain_name, owner_pk, active_pk, updateable)
 ```
 创建一个账户
 
 #### 参数说明
 |参数               |类型          |说明                            |是否必填|
 | :----------------| :------------| :-----------------------------|:-----|
-|account_ame           |account_name  |要同步的账号                       |是     |
+|user           |string  |要同步的账号                       |是     |
 |chain_name              |string  |要同步到的链名                     |是     |
 |owner_pk             |string        |要同步的账号的owner公钥                     |是     |
 |active_pk            |string        |要同步的账号的active公钥               |是     |
