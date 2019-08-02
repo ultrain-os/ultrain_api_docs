@@ -34,9 +34,8 @@ U3的加密方法将帮助你更好了解超脑加密的相关信息
 
 #### 参考示例
 ```nodejs
-import {generateKeyPairByMnemonic} from "u3.js";
-const u3 = createU3(config)
-u3.generateKeyPairByMnemonic({
+import {U3Utils} from "u3.js";
+U3Utils.ecc.generateKeyPairByMnemonic({
     "mnemonic": "ben john tony jack bob tom jerry alice"
 })
 ```
@@ -54,9 +53,8 @@ u3.generateKeyPairByMnemonic({
 
 #### 参考示例
 ```nodejs
-import {generateKeyPairBySeed} from "u3.js";
-const u3 = createU3(config)
-u3.generateKeyPairBySeed({
+import {U3Utils} from "u3.js";
+U3Utils.ecc.generateKeyPairBySeed({
     "seed": "ultrain12345"
 })
 ```
@@ -87,9 +85,8 @@ u3.generateKeyPairBySeed({
 
 #### 参考示例
 ```nodejs
-import {privateToPublic} from "u3.js";
-const u3 = createU3(config)
-u3.privateToPublic({
+import {U3Utils} from "u3.js";
+U3Utils.ecc.privateToPublic({
     "wif": "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 })
 ```
