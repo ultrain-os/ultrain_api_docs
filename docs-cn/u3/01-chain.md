@@ -65,6 +65,7 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 | [getContract](docs-cn/u3/01-chain#getContract)                        |获取智能合约的代码                                            |
 | [getCurrencyBalance](docs-cn/u3/01-chain#getCurrencyBalance)           |获取货币余额                                           |
 | [getCurrencyStats](docs-cn/u3/01-chain#getCurrencyStats)           |获取货币信息                                          |
+| [getTransFee](docs-cn/u3/01-chain#getTransFee)                    |获取交易信息                                          |
 | [getRawCodeAndAbi](docs-cn/u3/01-chain#getRawCodeAndAbi)           |获取原始代码和ABI                                          |                                          |
 | [getTableByScope](docs-cn/u3/01-chain#getTableByScope)           |从命名空间获取智能合约数据                                          |
 | [getTableRecords](docs-cn/u3/01-chain#getTableRecords)           |从智能合约的表中读数据                                          |
@@ -809,6 +810,34 @@ await u3.getAccountInfo({
     "refund_cons": null,
     "producer_info": null,
     "chain_resource": []
+}
+```
+
+
+## getTransFee
+```
+(static) getTransFee(block_height)
+```
+获取某个块的交易费
+
+#### 参数说明
+|参数               |类型          |说明                            |是否必填|
+| :----------------| :------------| :-----------------------------|:-----|
+|block_height           |string       |提供区块高度         |是     |
+
+
+#### 参考示例
+```nodejs
+import {getTransFee} from "u3.js";
+const u3 = createU3(config);
+await u3.getTransFee("1");
+```
+
+#### 返回格式
+
+```
+{
+    "fee": "0.2000 UGAS",
 }
 ```
 

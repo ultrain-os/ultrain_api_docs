@@ -39,6 +39,7 @@
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
 | [get_currency_balance](docs-cn/rest/01-chain#get_currency_balance)            |获取货币余额                                       |
 | [get_currency_stats](docs-cn/rest/01-chain#get_currency_stats)                |获取代币的发行信息                                  |
+| [get_trans_fee](docs-cn/rest/01-chain#get_trans_fee)                          |获取交易费用                                  |
 | [get_scheduled_transactions](docs-cn/rest/01-chain#get_scheduled_transactions)|获取已调度的交易信息                                  |
 | [get_chain_info](docs-cn/rest/01-chain#get_chain_info)                        |获取链的相关信息                                  |
 | [get_block_info](docs-cn/rest/01-chain#get_block_info)                        |获取某个区块的相关信息                                  |
@@ -143,6 +144,39 @@
     }
 }
 ```
+
+## get_trans_fee
+获取交易费用
+
+#### 参考示例
+
+```
+  var url = 'http://127.0.0.1:8888/v1/chain/get_trans_fee';
+  var data = {
+     "block_height": "1",
+  };
+  await Axios.get(url, data).then(response => response.data)
+    .then(response => {
+      console.log('Success:', response);
+    }).catch(error => {
+      console.error('Error:', error);
+  });
+```
+
+或者
+
+```
+ curl http://127.0.0.1:8888/v1/chain/get_trans_fee
+
+```
+
+#### 返回结果
+```json
+{
+    "fee": "0.2000 UGAS"
+}
+```
+
 
 ## get_chain_info
 获取链的相关信息
