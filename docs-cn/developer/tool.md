@@ -9,7 +9,7 @@
 6.	[可选]某些桌面应用，在业务代码中集成浏览器插件Cona完成转账或授权等操作；
 
 
-## 一、Robin
+## Robin
 <img src='https://user-images.githubusercontent.com/44561751/59588824-12f98e00-911b-11e9-94fb-5b03a67fd64d.png' style="zoom:50%">  
 
 当你有了可用的开发环境后，接下来即可使用Robin framework去创建一个Dapp了。
@@ -91,7 +91,7 @@ react-boilerplate 和 react-native-boilerplate（其中前两个模板适用于�
 	robin ui
 
 
-## 二、U3.js
+## U3.js
 
 <img src='https://user-images.githubusercontent.com/44561751/59590088-ded39c80-911d-11e9-9023-eb459de38319.png' style="zoom:50%"> 
 
