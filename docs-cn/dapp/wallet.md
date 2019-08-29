@@ -14,14 +14,45 @@ UltrainOne可以从苹果商店、谷歌商店、小米或华为应用市场以�
 DAPP上架UltrainOne的DAPP市场时，管理员会根据DAPP是否接入钱包来配置用户进入DAPP时是否需要进行钱包状态的检查。
 如果是纯展示类的DAPP,则可以不需要拦截，直接进入DAPP页面。
 如果是接入了钱包的，UltrainOne会在点击DAPP入口时做钱包状态检测，钱包不可用时会被拦截到钱包账号创建或导入页面。
-因此从UltrainOne的DAPP入口经WebView访问DAPP时，跳转的URL中是有含有钱包账户、用户手机等信息的。
+因此从UltrainOne的DAPP入口经WebView访问DAPP时，跳转的URL中是有含有DAPP的ID、钱包账户、用户手机等信息的。
 
 从UltrainOne进入到DAPP时，会默认在DAPP提供的URL的后面拼接上用户ID、用户手机号和账户名，格式如：
-https://xxxx?chainId=rX9r2wf&userId=Xju1da5&phoneNum=008615857169999&accountName=abcdefg12345
-注意：上述四个参数都具有唯一性。
+https://xxxx?dappId=7ht343s&chainId=rX9r2wf&userId=Xju1da5&phoneNum=008615857169999&accountName=abcdefg12345
+注意：上述五个参数都具有唯一性。
 
 如果DAPP需要获取用户的头像、邮箱、姓名等其它信息，则需要通过单独的授权接口请求。开发者在个人中心添加DAPP时，需要选择对应的数据请求接口做授权。
 相关操作流程请参考[流程规范](/docs-cn/dapp/flow.md)章节，相关接口文档请参考[DAPP API](/docs-cn/u3/01-chain.md)。
+
+#### DAPP判断是否位于UltrainOne环境中打开
+
+DAPP的html5访问链接在某些场景下需要知道当前是在UltrainOne的Webview中打开，还是外部浏览器中打开。
+UltrainOne提供了一个判断方法，步骤如下：
+
+1、在开发者个人中心添加dapp时，会生成一个唯一的UltrainId,dapp后台需要妥善存储这个UltrainId;
+
+<img width="80%" src="https://user-images.githubusercontent.com/1866848/63929605-4db96400-ca84-11e9-8297-a21656813364.jpeg">
+
+2、DAPP通过window.postMessage(data)发送的data格式如下：
+  
+  ```
+  {
+   'dappId': this.dappId,   //在url中获取到此dappId，然后作为参数传给UltrainOne
+   'type': 'queryUltrainId' //固定值
+  }
+  ```
+  
+3、监听UltrainOne返回的消息，并判断返回数据中的UltrainId是否与你存储的UltrainId一致
+
+  ```
+      document.addEventListener('message', (e) => {
+        this.data = e.data;
+        //如果判断ultrainId与自己的ultrainId相等，则在UltrainOne中
+        if (JSON.parse(this.data).ultrainId === 'ultrainH7K86xqiz8NDjcZ') {
+          console.log('is in UltrainOne webview');
+        }
+      });
+      this.dappId = this.$route.query.dappId;
+  ```
 
 #### DAPP唤起UltrainOne单笔转账
 
