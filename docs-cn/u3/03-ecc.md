@@ -25,7 +25,7 @@ U3的加密方法将帮助你更好了解超脑加密的相关信息
 ```
 (static) generateKeyPairByMnemonic (mnemonic)
 ```
-生成密钥对符号
+根据助记词找回公私钥（重新生成一样的）
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|
@@ -35,37 +35,73 @@ U3的加密方法将帮助你更好了解超脑加密的相关信息
 #### 参考示例
 ```nodejs
 import {U3Utils} from "u3.js";
-U3Utils.ecc.generateKeyPairByMnemonic("ben john tony jack bob tom jerry alice")
+U3Utils.ecc.generateKeyPairByMnemonic("head practice crowd dad alpha sister dynamic stereo roast virtual ride thumb")
 ```
+
+#### 返回结果
+```
+{
+  mnemonic: 'head practice crowd dad alpha sister dynamic stereo roast virtual ride thumb',
+  public_key: 'UTR8epuoU6cknebRrzq7csJdxUpzwQFVWN8CKY39bzESuUwx6pN9p',
+  private_key: '5JBKqFHH2J6ZzkJBnEFrz3FY77cFSiaMnPgpdqmEPd3A4UBxWWC'
+}
+
+```
+
 
 ## generateKeyPairBySeed 
 ```
 (static) generateKeyPairBySeed(seed)
 ```
-按种子生成密钥对
+按种子生成密钥对，每次生成的密钥对是不一样的
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|
 | :----------------| :------| :-----------------------------|:-----|
-|seed              |string  |种子可以再生相同的密钥对 |是     |
+|seed              |string  |要的种子生成密钥对 |是     |
 
 #### 参考示例
 ```nodejs
 import {U3Utils} from "u3.js";
 U3Utils.ecc.generateKeyPairBySeed("ultrain12345")
+
 ```
 
-#### 返回结果类型
-`Object`
+#### 返回结果
+
+```
+{
+  public_key: 'UTR7Xa8aWbRYeenKHmgEQWEKk1UnBPQYhbKcdG7tLTiZoXBxswqED',
+  private_key: '5K3gLYL3XBRhwSXxQ1WqHbzeLfXGCuAK9VqQuFxXdezkCUVS7Ng'
+}
+
+```
+
 
 ## generateKeyPairWithMnemonic 
 ```
 (static) generateKeyPairWithMnemonic()
 ```
-按助记词生成密钥对
+生成助记词与密钥对
 
-#### 返回结果类型
-`Object`
+
+#### 参考示例
+```nodejs
+import {U3Utils} from "u3.js";
+U3Utils.ecc.generateKeyPairWithMnemonic()
+
+```
+
+#### 返回结果
+```
+{
+  mnemonic: 'flame interest ten wire tilt range indicate adapt girl wreck puppy critic',
+  public_key: 'UTR6STbqZGHXzbT7wp9DCuLA5Ci8RK8SZh5Mu63YTiAWpanFjbuCf',
+  private_key: '5KdEyDCHJxLhMeMAunRJXFCnFksWgduQoBiBr5tBcLidbMT4N1e'
+}
+
+```
+
 
 
 ## privateToPublic 
@@ -82,11 +118,16 @@ U3Utils.ecc.generateKeyPairBySeed("ultrain12345")
 #### 参考示例
 ```nodejs
 import {U3Utils} from "u3.js";
-U3Utils.ecc.privateToPublic("5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+U3Utils.ecc.privateToPublic("5JoTvD8emJDGHNGHyRCjqvpJqRY2jMmn5G6V9j8AifnszK5jKMe")
 ```
 
-#### 返回结果类型
-`String`
+#### 返回结果
+```
+
+UTR74nPcTpvZxoEugKZqXgAMysC7FvBjUAiHCB6TBSh576HNAGXz5
+
+```
+
 
 
 ## isValidPublic
