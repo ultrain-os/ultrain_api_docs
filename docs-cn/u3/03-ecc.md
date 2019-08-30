@@ -7,9 +7,9 @@ U3的加密方法将帮助你更好了解超脑加密的相关信息
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
-| [generateKeyPairByMnemonic](docs-cn/u3/03-ecc#generateKeyPairByMnemonic) |生成密钥对符号                              |
+| [generateKeyPairByMnemonic](docs-cn/u3/03-ecc#generateKeyPairByMnemonic) |根据助记词生成密钥对                            |
 | [generateKeyPairBySeed](docs-cn/u3/03-ecc#generateKeyPairBySeed) |按种子生成密钥对                              |
-| [generateKeyPairWithMnemonic](docs-cn/u3/03-ecc#generateKeyPairWithMnemonic) |用助记键生成密钥对                              |
+| [generateKeyPairWithMnemonic](docs-cn/u3/03-ecc#generateKeyPairWithMnemonic) |生成密钥对与助记词                              |
 | [privateToPublic](docs-cn/u3/03-ecc#privateToPublic) |将私钥转换为公钥                              |                            |
 | [isValidPublic](docs-cn/u3/03-ecc#isValidPublic) |判断是否有效公钥                              |
 | [isValidPrivate](docs-cn/u3/03-ecc#isValidPrivate) |判断是否有效私钥                              |
