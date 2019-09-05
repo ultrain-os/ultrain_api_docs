@@ -57,6 +57,7 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 | [abiJson2bin](docs-cn/u3/01-chain#abi_json2bin)                         |将JSON序列化为二进制十六进制。二进制码通常存储在action.data中 |
 | [createUser](docs-cn/u3/01-chain#createUser)                            |创建一个账户                                             |
 | [empoweruser](docs-cn/u3/01-chain#empoweruser)                           |将账户从主链同步到某一条侧链上                                             |
+| [updateauth](docs-cn/u3/01-chain#updateauth)                           |修改账户的私钥                                             |
 | [deploy](docs-cn/u3/01-chain#deploy)                                    |将合约部署到链上                                             |
 | [getAbi](docs-cn/u3/01-chain#getAbi)                                    |根据账户名查找ABI                                            |
 | [getAccountInfo](docs-cn/u3/01-chain#getAccountInfo)                    |获取帐户基本信息                                            |
@@ -374,6 +375,259 @@ await c.empoweruser({
 }
 
 ```
+
+
+
+## updateauth
+```
+(static) updateauth(account,auth,parent,permission)
+```
+创建一个账户
+
+#### 参数说明
+|参数               |类型          |说明                            |是否必填|
+| :----------------| :------------| :-----------------------------|:-----|
+|account           |string  |要修改的账号                       |是     |
+|auth              |string  |账号权限                     |是     |
+|parent             |string        |父权限                     |是     |
+|permission            |string        |权限级别               |是     |
+
+#### 参考示例
+```nodejs
+import {createUser} from "u3.js";
+const u3 = createU3(config);
+const c = await u3.contract('ultrainio');//系统合约
+
+let account_ = 'ben'
+
+//update active permission of ben
+//sign with ben's active or owner key
+let activeObj = {
+    account: account_,
+    auth: {
+      'threshold': 1,
+      'keys': [{ 'key': 'UTR....', 'weight': 1 }],
+      'accounts': [],
+      'waits': [],
+    },
+    parent: 'owner',
+    permission: 'active',
+};
+await c.updateauth(activeObj, { authorization: [account_ + `@active`] });
+
+
+//update owner permission of ben
+//sign with ben's owner key
+let ownerObj = {
+    account: account_,
+    auth: {
+      'threshold': 1,
+      'keys': [{ 'key': 'UTR...', 'weight': 1 }],
+      'accounts': [],
+      'waits': [],
+    },
+    parent: '',
+    permission: 'owner',
+};
+await c.updateauth(ownerObj, { authorization: [account_ + `@owner`] });
+
+```
+#### 返回格式
+
+```
+{
+    "transaction_id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+    "processed": {
+        "id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+        "receipt": {
+            "status": "executed",
+            "cpu_usage_us": 5768,
+            "net_usage_words": 21
+        },
+        "elapsed": 5768,
+        "net_usage": 168,
+        "scheduled": false,
+        "action_traces": [
+            {
+                "receipt": {
+                    "receiver": "ultrainio",
+                    "act_digest": "c5bf370a7d2ed1c7092c0efefd8ce195653fd3f60ebe7739366011e3a6b2a2a8",
+                    "global_sequence": 5051986,
+                    "recv_sequence": 3413915,
+                    "auth_sequence": [
+                        [
+                            "cona4",
+                            10
+                        ]
+                    ],
+                    "code_sequence": 19,
+                    "abi_sequence": 19
+                },
+                "act": {
+                    "account": "ultrainio",
+                    "name": "updateauth",
+                    "authorization": [
+                        {
+                            "actor": "cona4",
+                            "permission": "active"
+                        }
+                    ],
+                    "data": {
+                        "account": "cona4",
+                        "permission": "active",
+                        "parent": "owner",
+                        "auth": {
+                            "threshold": 1,
+                            "keys": [
+                                {
+                                    "key": "UTR7PgMuL8NBQwMn2brEVmCbWutnHHMVzstLxTtNnWhNqX8mGafFe",
+                                    "weight": 1
+                                }
+                            ],
+                            "accounts": [],
+                            "waits": []
+                        }
+                    },
+                    "hex_data": "000000000062264500000000a8ed32320000000080ab26a70100000001000349abd1c424762b087937c739e5628e1017f0e743c806db3da95f01332f1666a701000000"
+                },
+                "elapsed": 1847,
+                "cpu_usage": 0,
+                "console": "",
+                "total_cpu_usage": 0,
+                "trx_id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+                "return_value": "",
+                "inline_traces": [
+                    {
+                        "receipt": {
+                            "receiver": "utrio.token",
+                            "act_digest": "71e63487fbde72beaa420f7afaf4738151587e36e2d3ed91083930cd88b2e53a",
+                            "global_sequence": 5051987,
+                            "recv_sequence": 291004,
+                            "auth_sequence": [
+                                [
+                                    "cona4",
+                                    11
+                                ]
+                            ],
+                            "code_sequence": 4,
+                            "abi_sequence": 4
+                        },
+                        "act": {
+                            "account": "utrio.token",
+                            "name": "transfer",
+                            "authorization": [
+                                {
+                                    "actor": "cona4",
+                                    "permission": "active"
+                                }
+                            ],
+                            "data": {
+                                "from": "cona4",
+                                "to": "utrio.fee",
+                                "quantity": "1.0000 UGAS",
+                                "memo": "update auth"
+                            },
+                            "hex_data": "00000000006226450000506a01ea6ed6102700000000000004554741530000000b7570646174652061757468"
+                        },
+                        "elapsed": 1367,
+                        "cpu_usage": 0,
+                        "console": "",
+                        "total_cpu_usage": 0,
+                        "trx_id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+                        "return_value": "",
+                        "inline_traces": [
+                            {
+                                "receipt": {
+                                    "receiver": "cona4",
+                                    "act_digest": "71e63487fbde72beaa420f7afaf4738151587e36e2d3ed91083930cd88b2e53a",
+                                    "global_sequence": 5051988,
+                                    "recv_sequence": 4,
+                                    "auth_sequence": [
+                                        [
+                                            "cona4",
+                                            12
+                                        ]
+                                    ],
+                                    "code_sequence": 4,
+                                    "abi_sequence": 4
+                                },
+                                "act": {
+                                    "account": "utrio.token",
+                                    "name": "transfer",
+                                    "authorization": [
+                                        {
+                                            "actor": "cona4",
+                                            "permission": "active"
+                                        }
+                                    ],
+                                    "data": {
+                                        "from": "cona4",
+                                        "to": "utrio.fee",
+                                        "quantity": "1.0000 UGAS",
+                                        "memo": "update auth"
+                                    },
+                                    "hex_data": "00000000006226450000506a01ea6ed6102700000000000004554741530000000b7570646174652061757468"
+                                },
+                                "elapsed": 1071,
+                                "cpu_usage": 0,
+                                "console": "",
+                                "total_cpu_usage": 0,
+                                "trx_id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+                                "return_value": "",
+                                "inline_traces": []
+                            },
+                            {
+                                "receipt": {
+                                    "receiver": "utrio.fee",
+                                    "act_digest": "71e63487fbde72beaa420f7afaf4738151587e36e2d3ed91083930cd88b2e53a",
+                                    "global_sequence": 5051989,
+                                    "recv_sequence": 6,
+                                    "auth_sequence": [
+                                        [
+                                            "cona4",
+                                            13
+                                        ]
+                                    ],
+                                    "code_sequence": 4,
+                                    "abi_sequence": 4
+                                },
+                                "act": {
+                                    "account": "utrio.token",
+                                    "name": "transfer",
+                                    "authorization": [
+                                        {
+                                            "actor": "cona4",
+                                            "permission": "active"
+                                        }
+                                    ],
+                                    "data": {
+                                        "from": "cona4",
+                                        "to": "utrio.fee",
+                                        "quantity": "1.0000 UGAS",
+                                        "memo": "update auth"
+                                    },
+                                    "hex_data": "00000000006226450000506a01ea6ed6102700000000000004554741530000000b7570646174652061757468"
+                                },
+                                "elapsed": 1075,
+                                "cpu_usage": 0,
+                                "console": "",
+                                "total_cpu_usage": 0,
+                                "trx_id": "12383689c08e26ea9675ad9c99064a84117362a383c2d4135013dc0f7336d0af",
+                                "return_value": "",
+                                "inline_traces": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "except": null,
+        "ability": "Normal"
+    }
+}
+
+```
+
 
 ## deploy
 ```
