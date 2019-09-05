@@ -382,7 +382,7 @@ await c.empoweruser({
 ```
 (static) updateauth(account,auth,parent,permission)
 ```
-创建一个账户
+更新账号权限（修改私钥）
 
 #### 参数说明
 |参数               |类型          |说明                            |是否必填|
