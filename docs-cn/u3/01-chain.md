@@ -400,8 +400,8 @@ const c = await u3.contract('ultrainio');//系统合约
 
 let account_ = 'ben'
 
-//update active permission of ben
-//sign with ben's active or owner key
+//更新ben的active权限
+//使用ben的active或owner权限的私钥签名
 let activeObj = {
     account: account_,
     auth: {
@@ -416,8 +416,8 @@ let activeObj = {
 await c.updateauth(activeObj, { authorization: [account_ + `@active`] });
 
 
-//update owner permission of ben
-//sign with ben's owner key
+//更新ben的owner权限
+//必须使用ben的owner权限的私钥签名
 let ownerObj = {
     account: account_,
     auth: {
