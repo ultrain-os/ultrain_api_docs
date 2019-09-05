@@ -326,7 +326,7 @@ let params = {
     owner: 'UTR6r...',
     active: 'UTR6r...',
 };
-const unsigned_transaction = await u3_offline.createUser(params, {
+const unsigned_transaction = await u3_offline.createU3(params, {
     sign: false,
     broadcast: false,
     authorization: [`ben@active`],

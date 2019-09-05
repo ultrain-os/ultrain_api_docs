@@ -148,7 +148,7 @@ await u3.abiJson2bin({
 
 #### 参考示例
 ```nodejs
-import {createUser} from "u3.js";
+import {createU3} from "u3.js";
 const u3 = createU3(config);
 await u3.createUser({
   "creator": "ben",
@@ -300,7 +300,7 @@ await u3.createUser({
 
 #### 参考示例
 ```nodejs
-import {createUser} from "u3.js";
+import {createU3} from "u3.js";
 const u3 = createU3(config);
 const c = await u3.contract('ultrainio');//系统合约
 await c.empoweruser({
@@ -394,11 +394,15 @@ await c.empoweruser({
 
 #### 参考示例
 ```nodejs
-import {createUser} from "u3.js";
-const u3 = createU3(config);
+import {createU3} from "u3.js";
+const u3 = createU3({
+  keyProvider:'5JUCw...' //active或owner权限的私钥
+});
 const c = await u3.contract('ultrainio');//系统合约
 
-let account_ = 'ben'
+let account_ = 'ben';
+let activePublicKey = 'UTRxy1....';
+let ownerPublicKey = 'UTRew2....';
 
 //更新某账号的active权限
 //使用该账号的active或owner权限的私钥签名
@@ -406,7 +410,7 @@ let activeObj = {
     account: account_,
     auth: {
       'threshold': 1,
-      'keys': [{ 'key': 'UTR....', 'weight': 1 }],
+      'keys': [{ 'key': activePublicKey, 'weight': 1 }],
       'accounts': [],
       'waits': [],
     },
@@ -422,7 +426,7 @@ let ownerObj = {
     account: account_,
     auth: {
       'threshold': 1,
-      'keys': [{ 'key': 'UTR...', 'weight': 1 }],
+      'keys': [{ 'key': ownerPublicKey, 'weight': 1 }],
       'accounts': [],
       'waits': [],
     },
