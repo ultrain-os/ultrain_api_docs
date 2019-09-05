@@ -388,7 +388,7 @@ await c.empoweruser({
 |参数               |类型          |说明                            |是否必填|
 | :----------------| :------------| :-----------------------------|:-----|
 |account           |string  |要修改的账号                       |是     |
-|auth              |string  |账号权限                     |是     |
+|auth              |object  |账号权限                     |是     |
 |parent             |string        |父权限                     |是     |
 |permission            |string        |权限级别               |是     |
 
