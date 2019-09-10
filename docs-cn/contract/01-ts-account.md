@@ -10,7 +10,7 @@
 
 #### 使用示例
 ```nodejs
-import { Account } from "ultrain-contract/src/account";
+import { Account } from "ultrain-ts-lib/src/account";
 ```
 
 ## 方法列表
@@ -36,7 +36,7 @@ import { Account } from "ultrain-contract/src/account";
 
 #### 参考示例
 ```nodejs
-import { ACCOUNT } from "ultrain-contract/src/account";
+import { ACCOUNT } from "ultrain-ts-lib/src/account";
  let ceo = ACCOUNT("jack.ma");
  let employ = ACCOUNT("miny");
  ceo.transfer(employ.code, "1000.000 UGS", "your annual award.");
@@ -61,7 +61,7 @@ import { ACCOUNT } from "ultrain-contract/src/account";
 
 #### 参考示例
 ```nodejs
-import { NAME } from "ultrain-contract/src/account";
+import { NAME } from "ultrain-ts-lib/src/account";
 ```
 
 #### 返回结果类型
@@ -82,7 +82,7 @@ import { NAME } from "ultrain-contract/src/account";
 
 #### 参考示例
 ```nodejs
-import { RNAME } from "ultrain-contract/src/account";
+import { RNAME } from "ultrain-ts-lib/src/account";
 ```
 
 #### 返回结果类型

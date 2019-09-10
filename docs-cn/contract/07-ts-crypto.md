@@ -21,7 +21,7 @@
 
 #### 使用示例
 ```nodejs
-import { Ripemd160 } from "ultrain-contract/src/crypto";
+import { Ripemd160 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## SHA1
@@ -29,7 +29,7 @@ import { Ripemd160 } from "ultrain-contract/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA1 } from "ultrain-contract/src/crypto";
+import { SHA1 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## SHA256
@@ -37,7 +37,7 @@ import { SHA1 } from "ultrain-contract/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA256 } from "ultrain-contract/src/crypto";
+import { SHA256 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## SHA512
@@ -45,7 +45,7 @@ import { SHA256 } from "ultrain-contract/src/crypto";
 
 #### 使用示例
 ```nodejs
-import { SHA512 } from "ultrain-contract/src/crypto";
+import { SHA512 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## 方法列表
@@ -78,7 +78,7 @@ import { SHA512 } from "ultrain-contract/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_ripemd160 } from "ultrain-contract/src/crypto";
+import { assert_ripemd160 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## assert_sha1
@@ -95,7 +95,7 @@ import { assert_ripemd160 } from "ultrain-contract/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha1 } from "ultrain-contract/src/crypto";
+import { assert_sha1 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## assert_sha256
@@ -112,7 +112,7 @@ import { assert_sha1 } from "ultrain-contract/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha256 } from "ultrain-contract/src/crypto";
+import { assert_sha256 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## assert_sha512
@@ -129,7 +129,7 @@ import { assert_sha256 } from "ultrain-contract/src/crypto";
 
 #### 参考示例
 ```nodejs
-import { assert_sha512 } from "ultrain-contract/src/crypto";
+import { assert_sha512 } from "ultrain-ts-lib/src/crypto";
 ```
 
 ## charcode_to_digital
@@ -213,7 +213,7 @@ to_hex(buffer: usize, buffersize: u32)
 
 #### 参考示例
 ```nodejs
-import { verify_with_pk } from "ultrain-contract/src/crypto";
+import { verify_with_pk } from "ultrain-ts-lib/src/crypto";
 ```
 
 

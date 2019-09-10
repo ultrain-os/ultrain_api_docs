@@ -14,7 +14,7 @@
 
 #### 使用示例
 ```nodejs
-import { Action } from "ultrain-contract/src/action";
+import { Action } from "ultrain-ts-lib/src/action";
 ```
 
 ## ActionImpl
@@ -22,7 +22,7 @@ import { Action } from "ultrain-contract/src/action";
 
 #### 使用示例
 ```nodejs
-import { ActionImpl } from "ultrain-contract/src/action";
+import { ActionImpl } from "ultrain-ts-lib/src/action";
 ```
 
 ## PermissionLevel
@@ -38,7 +38,7 @@ import { ActionImpl } from "ultrain-contract/src/action";
 
 #### 使用示例
 ```nodejs
-import { TransferParams } from "ultrain-contract/src/action";
+import { TransferParams } from "ultrain-ts-lib/src/action";
 ```
 
 ## 方法列表
@@ -65,7 +65,7 @@ import { TransferParams } from "ultrain-contract/src/action";
 
 #### 参考示例
 ```nodejs
-import { ACTION } from "ultrain-contract/src/action";
+import { ACTION } from "ultrain-ts-lib/src/action";
 ```
 
 #### 返回结果类型

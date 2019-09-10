@@ -10,7 +10,7 @@
 
 #### 使用示例
 ```nodejs
-import { Asset } from "ultrain-contract/src/asset";
+import { Asset } from "ultrain-ts-lib/src/asset";
 ```
 
 ## 方法列表
@@ -37,7 +37,7 @@ StringToSymbol(precision: u8, str: string)
 
 #### 参考示例
 ```nodejs
-import { StringToSymbol } from "ultrain-contract/src/asset";
+import { StringToSymbol } from "ultrain-ts-lib/src/asset";
 ```
 
 #### 返回结果类型

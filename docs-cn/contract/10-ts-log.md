@@ -27,5 +27,5 @@ Log: Logger = new Logger()
 
 #### 参考示例
 ```nodejs
-import { Log } from "ultrain-contract/src/log";
+import { Log } from "ultrain-ts-lib/src/log";
 ```

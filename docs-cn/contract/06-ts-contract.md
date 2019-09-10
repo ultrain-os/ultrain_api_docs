@@ -10,7 +10,7 @@
 
 #### 使用示例
 ```nodejs
-import { Contract } from "ultrain-contract/src/contract";
+import { Contract } from "ultrain-ts-lib/src/contract";
 ```
 
 ## 方法列表
@@ -30,7 +30,7 @@ DataStreamFromCurrentAction()
 
 #### 参考示例
 ```nodejs
-import { DataStreamFromCurrentAction } from "ultrain-contract/src/contract";
+import { DataStreamFromCurrentAction } from "ultrain-ts-lib/src/contract";
 ```
 
 #### 返回结果类型

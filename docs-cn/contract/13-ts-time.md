@@ -21,7 +21,7 @@ gmt time代表格林威治时间
 
 #### 参考示例
 ```nodejs
-import { GmtTime } from "ultrain-contract/src/time;"
+import { GmtTime } from "ultrain-ts-lib/src/time;"
 ```
 
 ## LocalTime
@@ -29,7 +29,7 @@ import { GmtTime } from "ultrain-contract/src/time;"
 
 #### 参考示例
 ```nodejs
-import { LocalTime } from "ultrain-contract/src/time;"
+import { LocalTime } from "ultrain-ts-lib/src/time;"
 ```
 
 ## Microseconds
@@ -46,7 +46,7 @@ import { LocalTime } from "ultrain-contract/src/time;"
 
 #### 参考示例
 ```nodejs
-import { TimeUtil } from "ultrain-contract/src/time;"
+import { TimeUtil } from "ultrain-ts-lib/src/time;"
 ```
 
 ## TimeZone
@@ -149,7 +149,7 @@ now
 
 #### 参考示例
 ```nodejs
-import { now } from "ultrain-contract/src/time";
+import { now } from "ultrain-ts-lib/src/time";
 ```
 
 

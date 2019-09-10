@@ -23,7 +23,7 @@ intToString(_int: u64, leftPadWith0?: u32)
 
 #### 参考示例
 ```nodejs
-import { intToString } from "ultrain-contract/src/utils";
+import { intToString } from "ultrain-ts-lib/src/utils";
 ```
 
 #### 返回结果类型
@@ -42,7 +42,7 @@ printstr(str: string)
 
 #### 参考示例
 ```nodejs
-import { printstr } from "ultrain-contract/src/utils";
+import { printstr } from "ultrain-ts-lib/src/utils";
 ```
 
 #### 返回结果类型
@@ -61,7 +61,7 @@ string2cstr(str: string)
 
 #### 参考示例
 ```nodejs
-import { string2cstr } from "ultrain-contract/src/utils";
+import { string2cstr } from "ultrain-ts-lib/src/utils";
 ```
 
 #### 返回结果类型
@@ -80,7 +80,7 @@ toUTF8Array(str: string)
 
 #### 参考示例
 ```nodejs
-import { toUTF8Array } from "ultrain-contract/src/utils";
+import { toUTF8Array } from "ultrain-ts-lib/src/utils";
 ```
 
 #### 返回结果类型

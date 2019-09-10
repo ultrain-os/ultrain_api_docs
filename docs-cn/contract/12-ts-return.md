@@ -23,7 +23,7 @@ Return<T>(val: T)
 
 #### 参考示例
 ```nodejs
-import { Return } from "ultrain-contract/src/return";
+import { Return } from "ultrain-ts-lib/src/return";
 ```
 
 #### 返回结果类型
@@ -41,7 +41,7 @@ ReturnArray<T>(val: T[])
 
 #### 参考示例
 ```nodejs
-import { ReturnArray } from "ultrain-contract/src/return";
+import { ReturnArray } from "ultrain-ts-lib/src/return";
 ```
 
 #### 返回结果类型

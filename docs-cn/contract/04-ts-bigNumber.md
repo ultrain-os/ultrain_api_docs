@@ -25,7 +25,7 @@
 
 #### 参考示例
 ```nodejs
-import { bn_cmp } from "ultrain-contract/src/big_number";
+import { bn_cmp } from "ultrain-ts-lib/src/big_number";
 ```
 
 ## bn_gcd
@@ -43,7 +43,7 @@ import { bn_cmp } from "ultrain-contract/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_gcd } from "ultrain-contract/src/big_number";
+import { bn_gcd } from "ultrain-ts-lib/src/big_number";
 ```
 
 ## bn_is_probab_prime
@@ -61,7 +61,7 @@ import { bn_gcd } from "ultrain-contract/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_is_probab_prime } from "ultrain-contract/src/big_number";
+import { bn_is_probab_prime } from "ultrain-ts-lib/src/big_number";
 ```
 
 ## bn_mul
@@ -79,7 +79,7 @@ import { bn_is_probab_prime } from "ultrain-contract/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_mul } from "ultrain-contract/src/big_number";
+import { bn_mul } from "ultrain-ts-lib/src/big_number";
 ```
 
 ## bn_pow_mod
@@ -98,5 +98,5 @@ import { bn_mul } from "ultrain-contract/src/big_number";
 
 #### 参考示例
 ```nodejs
-import { bn_pow_mod } from "ultrain-contract/src/big_number";
+import { bn_pow_mod } from "ultrain-ts-lib/src/big_number";
 ```

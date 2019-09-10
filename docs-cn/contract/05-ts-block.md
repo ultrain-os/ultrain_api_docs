@@ -10,6 +10,6 @@
 
 #### 使用示例
 ```nodejs
-import { Block } from "ultrain-contract/src/block";
+import { Block } from "ultrain-ts-lib/src/block";
 ```
 
