@@ -20,16 +20,16 @@
 主网环境（多链）
 
 **主链**
-> https://ultrain.services
+> https://ultrainio.ultrain.info
 
 **侧链poineer**
-> https://pioneer.ultrain.services  
+> https://pioneer.ultrain.info  
 
 **侧链unitopia**
-> https://unitopia.ultrain.services 
+> https://unitopia.ultrain.info 
 
 **侧链new-retail**
-> https://new-retail.ultrain.services 
+> https://newretail.ultrain.info 
 
 ## 方法列表
 

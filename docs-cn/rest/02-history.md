@@ -20,16 +20,16 @@
 ### 主网环境（多链）
 
 **主链**
-> https://history.ultrain.services
+> https://history-ultrainio.ultrain.info
 
 **侧链poineer**
-> https://history-pioneer.ultrain.services
+> https://history-pioneer.ultrain.info
 
 **侧链unitopia**
-> https://history-unitopia.ultrain.services
+> https://history-unitopia.ultrain.info
 
 **侧链new-retail**
-> https://history-new-retail.ultrain.services
+> https://history-newretail.ultrain.info
 
 ## 方法列表
 

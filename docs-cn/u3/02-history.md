@@ -2,51 +2,72 @@
 
 U3接口的配置信息如下
 
-#### 开发环境（单链）
-
-> httpEndpoint: "http://127.0.0.1:8888",  
+### 开发环境（单链）
+```
+httpEndpoint: "http://127.0.0.1:8888",  
 httpEndpointHistory: "http://127.0.0.1:3000",  
 chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
+```
   
-#### 测试网环境（多链）
+### 测试网环境（多链）
 
 **主链**
-> httpEndpoint:"http://ultrain.natapp1.cc",  
+
+```
+ httpEndpoint:"http://ultrain.natapp1.cc",  
  httpEndpointHistory:"http://ultrain-history.natapp1.cc",  
  chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
+```
 
 **侧链11**
-> httpEndpoint:"http://pioneer.natapp1.cc",  
+
+```
+ httpEndpoint:"http://pioneer.natapp1.cc",  
  httpEndpointHistory:"http://pioneer-history.natapp1.cc",  
  chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
+```
 
 **侧链12**
-> httpEndpoint:"http://power.natapp1.cc",  
+
+```
+ httpEndpoint:"http://power.natapp1.cc",  
  httpEndpointHistory:"http://power-history.natapp1.cc",  
  chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
+```
 
-#### 主网环境（多链）
+### 主网环境（多链）
 
-**主链**
-> httpEndpoint:"https://ultrain.services",  
- httpEndpointHistory:"https://history.ultrain.services",  
+**主链ultrainio**
+
+```
+ httpEndpoint:"https://ultrainio.ultrain.info",  
+ httpEndpointHistory:"https://history-ultrainio.ultrain.info",  
  chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
+```
 
 **侧链poineer**
-> httpEndpoint:"https://pioneer.ultrain.services",  
- httpEndpointHistory:"https://history-pioneer.ultrain.services",  
+
+```
+ httpEndpoint:"https://pioneer.ultrain.info",  
+ httpEndpointHistory:"https://history-pioneer.ultrain.info",  
  chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
+```
 
 **侧链unitopia**
-> httpEndpoint:"https://unitopia.ultrain.services",  
- httpEndpointHistory:"https://history-unitopia.ultrain.services",  
+
+```
+ httpEndpoint:"https://unitopia.ultrain.info",  
+ httpEndpointHistory:"https://history-unitopia.ultrain.info",  
  chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
+```
 
-**侧链new-retail**
-> httpEndpoint:"https://new-retail.ultrain.services",  
- httpEndpointHistory:"https://history-new-retail.ultrain.services",  
+**侧链newretail**
+
+```
+ httpEndpoint:"https://newretail.ultrain.info",  
+ httpEndpointHistory:"https://history-newretail.ultrain.info",  
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
-
+```
 ## 方法列表
 
 超脑U3相关的历史方法如下表所示。
