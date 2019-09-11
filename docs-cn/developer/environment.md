@@ -85,23 +85,23 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 ### 主网环境（多链）
 
 **主链**
-> httpEndpoint:"https://ultrain.services",  
- httpEndpointHistory:"https://history.ultrain.services",  
+> httpEndpoint:"https://ultrainio.ultrain.info",  
+ httpEndpointHistory:"https://history-ultrainio.ultrain.info",  
  chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
 
 **侧链poineer**
-> httpEndpoint:"https://pioneer.ultrain.services",  
- httpEndpointHistory:"https://history-pioneer.ultrain.services",  
+> httpEndpoint:"https://pioneer.ultrain.info",  
+ httpEndpointHistory:"https://history-pioneer.ultrain.info",  
  chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
 
 **侧链unitopia**
-> httpEndpoint:"https://unitopia.ultrain.services",  
- httpEndpointHistory:"https://history-unitopia.ultrain.services",  
+> httpEndpoint:"https://unitopia.ultrain.info",  
+ httpEndpointHistory:"https://history-unitopia.ultrain.info",  
  chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
 
 **侧链new-retail**
-> httpEndpoint:"https://new-retail.ultrain.services",  
- httpEndpointHistory:"https://history-new-retail.ultrain.services",  
+> httpEndpoint:"https://newretail.ultrain.info",  
+ httpEndpointHistory:"https://history-newretail.ultrain.info",  
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 
 ### 测试账户
