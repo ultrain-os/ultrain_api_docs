@@ -72,7 +72,7 @@ list-style:none;
 <div>欢迎来到超脑开发者文档中心。借助此开发者文档，你可以快速了解超脑的技术和工具，以帮助你更加容易地实现一个DAPP。</div>
 <div>
 </br></br>
-<h4>开发指南</h4>
+    <h4>开发指南</h4>
     <div class="content-container" style="background-color: #f4f4f4;padding: 1.2rem 1.2rem 2.4rem;margin: 2.4rem 0;">
         <div class="row content-row">
             <div class="col-sm-6 col-xs-12">
@@ -101,6 +101,9 @@ list-style:none;
                         </div>
                         <div>
                             <a href="#/docs-cn/developer/demo.md">DAPP示例</a>
+                        </div>
+                        <div>
+                            <a href="#/docs-cn/developer/keypair.md">生成公私钥</a>
                         </div>
                     </div>
                 </div>

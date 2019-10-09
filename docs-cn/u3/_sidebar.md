@@ -7,6 +7,7 @@
     - [智能合约](docs-cn/developer/contract.md)
     - [中间件](docs-cn/developer/middleware.md)
     - [DAPP示例](docs-cn/developer/demo.md)
+    - [生成公私钥](docs-cn/developer/keypair.md)
 
 - DAPP接入规范
     - [流程规范](docs-cn/dapp/flow.md)
