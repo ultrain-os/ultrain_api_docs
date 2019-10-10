@@ -148,7 +148,7 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 }
 ```
 
-#### DAPP唤起UltrainOne调用合约方法（非转账类）
+#### DAPP唤起UltrainOne单次调用合约方法（非转账类）
 
 UltrainOne针对非转账类的合约方法调用提供一个通用的接口。
 DAPP在html5中通过window.postMessage接口向UltrainOne的Webview发送数据，
@@ -170,6 +170,40 @@ DAPP通过window.postMessage(data)发送的data格式如下：
       "msg": ""                             
     }
 }
+```
+
+
+#### DAPP唤起UltrainOne批量调用合约方法（非转账类）
+
+需要注意的是批量调用合约方法时，需要是同一个contract下的不同action。暂不支持跨合约多方法调用。
+
+DAPP通过window.postMessage(data)发送的data格式如下：
+
+```
+[{
+    "chainId": "HJiRph6xN",                 //[必填],链ID,从url的参数中获取后回填至此
+    "contract": "benyasin1112",             //[必填],值为具体合约的owner账号, 比如"ben"
+    "action": "doAction",                   //[必填],值为合约中具体的某个方法名，比如"doAction"
+    "type": "contract",                     //[必填],合约调用的固定值为"contract"
+    "bizId": "86534135672411",              //[必填],业务id,数组中多个action的bizId应该相同
+    "data": {                               //[必填],data固定，其内容为合约中方法的具体入参，以下仅为举例
+      "name": "bob",                        
+      "age": 30,                            
+      "msg": "sth."                             
+    }
+},
+{
+      "chainId": "HJiRph6xN",                 //[必填],链ID,从url的参数中获取后回填至此
+      "contract": "benyasin1112",             //[必填],值为具体合约的owner账号, 比如"ben"
+      "action": "doAction",                   //[必填],值为合约中具体的某个方法名，比如"doAction"
+      "type": "contract",                     //[必填],合约调用的固定值为"contract"
+      "bizId": "86534135672411",              //[必填],业务id,数组中多个action的bizId应该相同
+      "data": {                               //[必填],data固定，其内容为合约中方法的具体入参，以下仅为举例
+        "name": "ben",                        
+        "age": 22,                            
+        "msg": "sth. else"                             
+      }
+}]
 ```
 
 UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
