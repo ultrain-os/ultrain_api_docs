@@ -76,7 +76,7 @@ https://history-newretail.ultrain.info
 | [getTxByTxId](docs-cn/rest/02-history#getTxByTxId)                          |根据交易id查找相应的交易信息                           |
 | [getTxsByBlockNum](docs-cn/rest/02-history#getTxsByBlockNum)                |根据区块块高查询交易信息                               |
 | [getTxTraceByTxid](docs-cn/rest/02-history#getTxTraceByTxid)                |根据交易id查找交易信息                                |
-| [getKeyAccounts](docs-cn/rest/02-history#getKeyAccounts)                    |根据公钥查询对应的账号列表                             |
+| [getAccountsByKey](docs-cn/rest/02-history#getAccountsByKey)                    |根据公钥查询对应的账号列表                             |
 
 
 ## getAccountByName
@@ -1347,7 +1347,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
 
 
 
-## getKeyAccounts
+## getAccountsByKey
 根据公钥获得其对应的账号列表
 
 #### 参数说明
