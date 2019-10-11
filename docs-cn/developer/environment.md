@@ -127,6 +127,14 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 ```
 
+**侧链australia**
+
+```
+ httpEndpoint:"https://australia.ultrain.info",  
+ httpEndpointHistory:"https://history-australia.ultrain.info",  
+ chainId:"0f8d90bbaa66cb74cbc6bdc61992189c80ad3b0436b5d572c8c9246f410dcfcb",
+```
+
 ### 测试账户
 
 本地环境为开发者默认创建了八个测试账号，这些账号分别拥有1000.0000UGAS和拥有无限的资源使用权。
