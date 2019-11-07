@@ -3,17 +3,19 @@
 超脑对外提供的数据接口，需要DAPP通过访问授权接口获取token，并将token信息放在headers的x-access-token属性中带过来。
 
 默认情况下，```对外接口``` 
-正式环境接口域名为[https://dev.ultrain.io/api/user/[methodName]](https://dev.ultrain.io/api/user/[methodName])。
-测试环境接口域名为[https://testnet-dev.ultrain.io/api/user/[methodName]](https://testnet-dev.ultrain.io/api/user/[methodName])。
-
+正式环境接口域名前缀为[https://dev.ultrain.io/api/](https://dev.ultrain.io/api/)。
+测试环境接口域名前缀为[https://testnet-dev.ultrain.io/api/](https://testnet-dev.ultrain.io/api/)。
+ 
 ## 方法列表
 
 对外接口所支持的方法如下表所示。
+
 
 | 方法                                                                                           | 描述                                             |
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
 | [asyncOutsideUser](docs-cn/dapi/02-async#asyncOutsideUser)            |同步外部回流进来的用户【第三方dapp授权访问】                                      |
 | [getUserBasicInfo](docs-cn/dapi/02-async#getUserBasicInfo)            |返回用户基础信息【第三方dapp授权访问】                                      |
+| [getChainList](docs-cn/dapi/02-async#getChainList)            |返回链列表【第三方dapp授权访问】                                      |
 
 
 ## asyncOutsideUser
@@ -115,5 +117,81 @@
         "date": "2019-07-12 15:44:24",
         "id": "-79**9k_s"
     }
+}
+```
+
+
+
+## getChainList
+```
+(static) getChainList(req, res, next)
+```
+返回用户基础信息【第三方dapp授权访问】
+
+#### 参数说明
+|参数               |类型    |说明                            |是否必填|
+| :----------------| :------| :-----------------------------|:-----|
+| network         |String  |	测试网或主网（MainNet|TestNet），默认主网		                    |否     |
+
+#### 参考示例
+
+```nodejs
+{
+  "method": "get",
+  "url":"https://dev.ultrain.io/api/chain/getList?network=TestNet,
+  headers: {'content-type': 'application/x-www-form-urlencoded',
+    'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
+}
+```
+ 
+#### 返回结果类型  
+`Object`
+
+#### 返回结果
+![1573119589761 (1)](https://user-images.githubusercontent.com/1866848/68377710-dc81e580-0185-11ea-8d40-0f83c180c30d.jpg)
+```
+{
+    "state": "success",
+    "data": [
+        {
+            "locale": {
+                "zh-CN": "测试网动力链",
+                "en": "Testnet Power"
+            },
+            "httpEndpoint": "http://power.natapp1.cc",
+            "httpEndpointHistory": "http://power-history.natapp1.cc",
+            "network": "TestNet",
+            "isSideChain": true,
+            "_id": "2hNhi3NqT",
+            "name": "12",
+            "chainId": "0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf"
+        },
+        {
+            "locale": {
+                "zh-CN": "测试网先锋链",
+                "en": "Testnet Pioneer"
+            },
+            "httpEndpoint": "http://pioneer.natapp1.cc",
+            "httpEndpointHistory": "http://pioneer-history.natapp1.cc",
+            "network": "TestNet",
+            "isSideChain": true,
+            "_id": "M2WL3lbih",
+            "name": "11",
+            "chainId": "20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f"
+        },
+        {
+            "locale": {
+                "zh-CN": "测试网主链",
+                "en": "Testnet MainChain"
+            },
+            "httpEndpoint": "http://ultrain.natapp1.cc",
+            "httpEndpointHistory": "http://ultrain-history.natapp1.cc",
+            "network": "TestNet",
+            "isSideChain": false,
+            "_id": "psnW5_1sQ",
+            "name": "ultrainio",
+            "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2"
+        }
+    ]
 }
 ```
