@@ -6,12 +6,12 @@
 
 ## 注册开发者
 
->想要成为Ultrain上的一名开发者，首先你需要拥有一个属于自己的开发者账号。进入[开发者注册](https://developer.ultrain.io/join)进行账号的创建，如下图所示：  
+>想要成为Ultrain上的一名开发者，首先你需要拥有一个属于自己的开发者账号。进入[开发者注册](https://developer.ultrain.info/join)进行账号的创建，如下图所示：  
 
 <img  width="800px" src="https://user-images.githubusercontent.com/44561751/61032243-a5780f00-a3f3-11e9-8715-43e665910636.png" />
 
 >超脑秉承者对用户友好尊重的观念，为用户提供手机注册和邮箱两种注册方式.  
-如果你已经拥有账号，那么直接进入[开发者登陆](https://developer.ultrain.io/login)登陆即可。
+如果你已经拥有账号，那么直接进入[开发者登陆](https://developer.ultrain.info/login)登陆即可。
 
 <img  width="800px" src="https://user-images.githubusercontent.com/44561751/61033452-1d473900-a3f6-11e9-8fe1-0d3070319cb8.png"/>
 

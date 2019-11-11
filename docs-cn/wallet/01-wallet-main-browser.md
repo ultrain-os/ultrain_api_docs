@@ -10,7 +10,7 @@ Ultrain主网提供一个多链的环境，主要为Ultrain的用户提供查询
 
 ### 部署合约步骤  
 
-进入Ultrain浏览器：http://explorer.ultrain.io ，右上角选择部署合约所在的网络（测试网或企业网），点击菜单【工具-部署合约】，进入部署合约流程。
+进入Ultrain浏览器：http://explorer.ultrain.info ，右上角选择部署合约所在的网络（测试网或企业网），点击菜单【工具-部署合约】，进入部署合约流程。
 
 ![image](https://user-images.githubusercontent.com/44561751/61106285-3cee6800-a4af-11e9-8170-190f4e28fb8d.png)
 
@@ -42,7 +42,7 @@ Ultrain主网提供一个多链的环境，主要为Ultrain的用户提供查询
 
 ### 调用合约步骤
 
-进入Ultrain浏览器：http://explorer.ultrain.io ，右上角选择部署合约所在的网络（测试网或企业网），点击菜单【工具-调用合约】，进入调用合约流程。
+进入Ultrain浏览器：http://explorer.ultrain.info ，右上角选择部署合约所在的网络（测试网或企业网），点击菜单【工具-调用合约】，进入调用合约流程。
 
 ![image](https://user-images.githubusercontent.com/44561751/61106285-3cee6800-a4af-11e9-8170-190f4e28fb8d.png)
 

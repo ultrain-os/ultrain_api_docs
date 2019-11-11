@@ -7,7 +7,7 @@ UltrainOne是用ReactNative实现的钱包综合APP, 其中UltrainOne的DAPP应�
 
 <img width="50%" src="https://user-images.githubusercontent.com/1866848/60152198-2939d500-9812-11e9-96d9-8c4a058f0197.jpeg">
 
-UltrainOne可以从苹果商店、谷歌商店、小米或华为应用市场以及[Ultrain官网](https://ultrain.io/)下载。
+UltrainOne可以从苹果商店、谷歌商店、小米或华为应用市场以及[Ultrain官网](https://ultrain.info/)下载。
 
 #### DAPP获取账户或用户信息
 

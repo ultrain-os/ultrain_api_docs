@@ -7,8 +7,8 @@ ultrainId一经生成就不能改变，而secretId可以再次重置。
 
 所谓访问授权，就是开发者将ultrainId与secretId传输给超脑开放平台而获得一个token的过程。token有效期为一天。
 
-默认情况下，```授权访问``` 接口的正式环境地址为[https://dev.ultrain.io/api/dapp/getAccessToken](https://dev.ultrain.io/api/dapp/getAccessToken)，
-测试环境地址为[https://testnet-dev.ultrain.io/api/dapp/getAccessToken](https://testnet-dev.ultrain.io/api/dapp/getAccessToken)。
+默认情况下，```授权访问``` 接口的正式环境地址为[https://dev.ultrain.info/api/dapp/getAccessToken](https://dev.ultrain.info/api/dapp/getAccessToken)，
+测试环境地址为[https://testnet-dev.ultrain.info/api/dapp/getAccessToken](https://testnet-dev.ultrain.info/api/dapp/getAccessToken)。
 
 ## 方法列表
 
@@ -35,7 +35,7 @@ ultrainId一经生成就不能改变，而secretId可以再次重置。
 ```nodejs
 {
   "method": "post",
-  "url":"https://dev.ultrain.io/api/dapp/getAccessToken",
+  "url":"https://dev.ultrain.info/api/dapp/getAccessToken",
   headers: {'content-type': 'application/x-www-form-urlencoded'},
   body: JSON.stringify(
       {

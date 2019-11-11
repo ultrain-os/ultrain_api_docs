@@ -3,8 +3,8 @@
 超脑对外提供的数据接口，需要DAPP通过访问授权接口获取token，并将token信息放在headers的x-access-token属性中带过来。
 
 默认情况下，```对外接口``` 
-正式环境接口域名前缀为[https://dev.ultrain.io/api/](https://dev.ultrain.io/api/)。
-测试环境接口域名前缀为[https://testnet-dev.ultrain.io/api/](https://testnet-dev.ultrain.io/api/)。
+正式环境接口域名前缀为[https://dev.ultrain.info/api/](https://dev.ultrain.info/api/)。
+测试环境接口域名前缀为[https://testnet-dev.ultrain.info/api/](https://testnet-dev.ultrain.info/api/)。
  
 ## 方法列表
 
@@ -38,13 +38,13 @@
 ```nodejs
 {
   "method": "post",
-  "url":"https://dev.ultrain.io/api/user/asyncOutsideUser",
+  "url":"https://dev.ultrain.info/api/user/asyncOutsideUser",
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
   body: JSON.stringify(
       {
         "phoneNum": "0086177*****560",
-        "logo":"https://developer.ultrain.io/upload/213432fasd.png",
+        "logo":"https://developer.ultrain.info/upload/213432fasd.png",
         "name": "ben",
         "email":"98******62@qq.com"
       }
@@ -61,7 +61,7 @@
 {
     "state": "success",
     "doc": {
-        "logo": "https://developer.ultrain.io/upload/213432fasd.png",
+        "logo": "https://developer.ultrain.info/upload/213432fasd.png",
         "inWhiteList": false,
         "phoneNum": "1771*******7169467",
         "name": "anfen",
@@ -94,7 +94,7 @@
 ```nodejs
 {
   "method": "get",
-  "url":"https://dev.ultrain.io/api/user/getUserBasicInfo?phoneNum=00569****1570,
+  "url":"https://dev.ultrain.info/api/user/getUserBasicInfo?phoneNum=00569****1570,
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
 }
@@ -138,7 +138,7 @@
 ```nodejs
 {
   "method": "get",
-  "url":"https://dev.ultrain.io/api/chain/getList?network=TestNet,
+  "url":"https://dev.ultrain.info/api/chain/getList?network=TestNet,
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
 }

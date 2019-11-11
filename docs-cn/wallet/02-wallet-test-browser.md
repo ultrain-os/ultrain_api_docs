@@ -13,7 +13,7 @@ ultrain测试网提供一个和ultrain主网类似的多链环境。主要为ult
 - ultrain测试网的服务地址：
   - 测试网主链地址：[http://ultrain.natapp1.cc](http://ultrain.natapp1.cc)
   - 测试网主链history服务地址：[http://history.ultrain.natapp1.cc](http://history.ultrain.natapp1.cc)
-- ultrain测试网浏览器地址： [https://testnet-explorer.ultrain.io](https://testnet-explorer.ultrain.io)
+- ultrain测试网浏览器地址： [https://testnet-explorer.ultrain.info](https://testnet-explorer.ultrain.info)
 
 
 
@@ -22,7 +22,7 @@ ultrain测试网提供一个和ultrain主网类似的多链环境。主要为ult
 
 步骤如下：
 
-  1. 进入ultrain测试网浏览器的账户创建页面[https://testnet-explorer.ultrain.io/ultrainio/account-new](https://testnet-explorer.ultrain.io/ultrainio/account-new)。账户名称文本框输入你要创建的账户名称（名称规则为：请输入5-12位字符，小写字母和数字1-5的组合）, 验证通过后，点击“创建“按钮。
+  1. 进入ultrain测试网浏览器的账户创建页面[https://testnet-explorer.ultrain.info/ultrainio/account-new](https://testnet-explorer.ultrain.info/ultrainio/account-new)。账户名称文本框输入你要创建的账户名称（名称规则为：请输入5-12位字符，小写字母和数字1-5的组合）, 验证通过后，点击“创建“按钮。
    
    <img src="https://user-images.githubusercontent.com/44561751/61099792-2851a600-a496-11e9-9a2b-44e90c800399.jpg"/>
    
@@ -45,14 +45,14 @@ ultrain测试网提供一个和ultrain主网类似的多链环境。主要为ult
 
 ### 资源的作用
 
->**UGAS**：用于Ultrain测试网服务计费结算的工具，可用于申请资源，目前可以直接通过充值获取，充值地址：http://explorer.ultrain.io/account-recharge  
-**SYS**：用于企业网服务计费阶段的工具，可用于申请资源，目前可以直接通过充值获取，充值地址：http://explorer.ultrain.io/account-recharge  
+>**UGAS**：用于Ultrain测试网服务计费结算的工具，可用于申请资源，目前可以直接通过充值获取，充值地址：http://explorer.ultrain.info/account-recharge  
+**SYS**：用于企业网服务计费阶段的工具，可用于申请资源，目前可以直接通过充值获取，充值地址：http://explorer.ultrain.info/account-recharge  
 **RAM**：存储资源，创建账户等交易时需使用该资源，可以使用UGAS/SYS购买RAM。  
 **NET**：通信资源，部署和调用智能合约时需占用该资源，可以通过抵押UGAS/SYS获取NET，目前暂不支持赎回操作。  
 **CPU**：计算资源，部署和调用智能合约时需占用该资源，可以通过抵押UGAS/SYS获取CPU，目前暂不支持赎回操作。  
 
 
-> ultrain使用资源套餐的模式(详细介绍见：[资源套餐介绍](https://developer.ultrain.io/tutorial/resourceIntroduce)章节)。在ultrain测试网创建好账户后，需要给账户申请资源套餐，才能将dapp合约部署到ultrain测试网。
+> ultrain使用资源套餐的模式(详细介绍见：[资源套餐介绍](https://developer.ultrain.info/tutorial/resourceIntroduce)章节)。在ultrain测试网创建好账户后，需要给账户申请资源套餐，才能将dapp合约部署到ultrain测试网。
 
 步骤如下
 

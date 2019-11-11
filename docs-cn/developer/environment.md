@@ -20,7 +20,7 @@ Longclaw是基于Docker来构建的，所以需要你在本机上提前安装并
 
 ### Longclaw的使用步骤
 
-- 下载安装Longclaw，从开发者网站[下载Longclaw](https://developer.ultrain.io/tools);
+- 下载安装Longclaw，从开发者网站[下载Longclaw](https://developer.ultrain.info/tools);
 - 启动Longclaw，点击mac应用中心的Longclaw应用，即可启动;
 
 > 注意：Longclaw第一次初始化环境可能要花费几分钟，请您耐心等待，当出现以下界面，则说明Longclaw
@@ -135,6 +135,14 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
  chainId:"0f8d90bbaa66cb74cbc6bdc61992189c80ad3b0436b5d572c8c9246f410dcfcb",
 ```
 
+**侧链safari**
+
+```
+ httpEndpoint:"https://safari.ultrain.info",  
+ httpEndpointHistory:"https://history-safari.ultrain.info",  
+ chainId:"efc908b75a4b5c486802541dff2247e0b585f36cbd63cc23a9a4c6860f342dae",
+```
+
 ### 测试账户
 
 本地环境为开发者默认创建了八个测试账号，这些账号分别拥有1000.0000UGAS和拥有无限的资源使用权。
@@ -159,19 +167,19 @@ Ultrain平台环境可以分为线下开发环境、线上测试网环境与线�
 
 ### 创建账号
 
-创建账号有多种方式，可以使用[`测试网浏览器`](https://testnet-explorer.ultrain.io/ultrainio/account-recharge)或[Cona](https://developer.ultrain.io/tutorial/cona_introduce)
+创建账号有多种方式，可以使用[`测试网浏览器`](https://testnet-explorer.ultrain.info/ultrainio/account-recharge)或[Cona](https://developer.ultrain.info/tutorial/cona_introduce)
 直接申请创建，也可以使用u3.js在代码中创建，前提是有一个账号作为creator，相关操作请参见u3.js
 中账号创建的部分文档。
 
 ### 同步账号
 
-账号需要同步到某一条侧链上才能进行相关的业务操作，如部署合约、发行代币等。账号同步可以使用[Cona](https://developer.ultrain.io/tutorial/cona_introduce)
+账号需要同步到某一条侧链上才能进行相关的业务操作，如部署合约、发行代币等。账号同步可以使用[Cona](https://developer.ultrain.info/tutorial/cona_introduce)
 直接进行账号同步或使用u3.js在代码中同步，相关操作请参见u3.js中账号同步的部分文档
 
 ### 资源套餐的购买
 
-在部署合约前，需要为账号购买一定的资源套餐,你可以通过[测试网浏览器](https://testnet-explorer.ultrain.io/ultrainio/account-recharge)提供的相关资源套餐进行购买。
+在部署合约前，需要为账号购买一定的资源套餐,你可以通过[测试网浏览器](https://testnet-explorer.ultrain.info/ultrainio/account-recharge)提供的相关资源套餐进行购买。
 注意，资源套餐过期后，合约将自动回收，意味着合约中的数据将会被删除，所以如果
 希望合约一直可用，必须在资源套餐过期前，对套餐的过期时间进行延长。购买或延长资源套餐需要消耗UGAS，除了自己为自己购买外，
 也可以使用另一个账号进行购买，即可以为他人进行购买相关的资源套餐。前提是签名账号（即付费账号）必须要有足够的
-UGAS。除了使用测试网浏览器进行资源套餐的购买之外，也可以通过[`开发者网站`](https://developer.ultrain.io/resources)上选择合适的资源套餐并进行购买
+UGAS。除了使用测试网浏览器进行资源套餐的购买之外，也可以通过[`开发者网站`](https://developer.ultrain.info/resources)上选择合适的资源套餐并进行购买
