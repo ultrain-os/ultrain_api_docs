@@ -85,6 +85,7 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 {
     "bizId": "86534135672411",              //业务id
     "transactionId": "09a695e7d40ccd12a7590404e16ed130f6584ae44fa4501f0faea24926d83741",  //交易id
+    "returnValue": 'abc'                    //合约中Return的值
     "success": true                         //业务执行结果
     "msg": "",                              //消息，成功时为空，失败时有具体原因
 }
@@ -143,6 +144,7 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 {
     "bizId": "86534135672411",              //业务id
     "transactionId": "09a695e7d40ccd12a7590404e16ed130f6584ae44fa4501f0faea24926d83741",  //交易id
+    "returnValue": 'abc'                    //合约中Return的值
     "success": true                         //业务执行结果
     "msg": "",                              //消息，成功时为空，失败时有具体原因
 }
@@ -212,6 +214,7 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 {
     "bizId": "86534135672411",              //业务id
     "transactionId": "09a695e7d40ccd12a7590404e16ed130f6584ae44fa4501f0faea24926d83741",  //交易id
+    "returnValue": 'abc'                    //合约中Return的值
     "success": true                         //业务执行结果
     "msg": "",                              //消息，成功时为空，失败时有具体原因
 }
