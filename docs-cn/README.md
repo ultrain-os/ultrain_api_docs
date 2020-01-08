@@ -242,6 +242,9 @@ list-style:none;
                     <div>
                         <a href="#/docs-cn/dapi/02-async">对外接口</a>
                     </div>
+                    <div>
+                        <a href="#/docs-cn/dapi/03-interactive">Native交互</a>
+                    </div>
                 </div>
             </div>
         </div>
