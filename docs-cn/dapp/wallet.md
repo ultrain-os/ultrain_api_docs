@@ -1,4 +1,4 @@
-# 钱包接入
+ 钱包接入
 
 ## 一、移动端钱包 UltrainOne
 
@@ -662,8 +662,8 @@ Cona.send(params)
                 "SIG_K1_Ki12M9wGLdxbyZHmEY45b85imnE4L2ccZMAfWPzmR6Qz6nBtgG5bq27xP4pzykdvaXiL8BKK2Gx8XA9mcV8MdfVjZCWdiY"
             ]
         },
-        "httpEndpoint": "http://pioneer.natapp1.cc",
-        "httpEndpointHistory": "http://pioneer-history.natapp1.cc",
+        "httpEndpoint": "https://test-pioneer.ultrain.info",
+        "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
         "chainId": "20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
         "name": "11",
         "network": "TestNet",
@@ -732,8 +732,8 @@ if(result.success){
                 "zh-CN": "测试网主链",
                 "en": "Testnet MainChain"
             },
-            "httpEndpoint": "http://ultrain.natapp1.cc",
-            "httpEndpointHistory": "http://ultrain-history.natapp1.cc",
+            "httpEndpoint": "https://test-main.ultrain.info",
+            "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
             "network": "TestNet",
             "isSideChain": false,
             "_id": "psnW5_1sQ",
@@ -745,8 +745,8 @@ if(result.success){
                 "zh-CN": "测试网先锋链",
                 "en": "Testnet Pioneer"
             },
-            "httpEndpoint": "http://pioneer.natapp1.cc",
-            "httpEndpointHistory": "http://pioneer-history.natapp1.cc",
+            "httpEndpoint": "https://test-pioneer.ultrain.info",
+            "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "M2WL3lbih",
@@ -758,8 +758,8 @@ if(result.success){
                 "zh-CN": "测试网动力链",
                 "en": "Testnet Power"
             },
-            "httpEndpoint": "http://power.natapp1.cc",
-            "httpEndpointHistory": "http://power-history.natapp1.cc",
+            "httpEndpoint": "https://test-power.ultrain.info",
+            "httpEndpointHistory": "https://history-test-power.ultrain.info",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "2hNhi3NqT",
@@ -894,8 +894,8 @@ Cona.callContract(params)
             ]
         },
         "name": "TestNet",
-        "httpEndpoint": "http://ultrain.natapp1.cc",
-        "httpEndpointHistory": "http://ultrain-history.natapp1.cc",
+        "httpEndpoint": "https://test-main.ultrain.info",
+        "httpEndpointHistory": "https://history-test-ultrain.ultrain.info",
         "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
         "symbol": "UGAS",
         "locale": {
@@ -909,8 +909,8 @@ Cona.callContract(params)
                     "zh-CN": "测试网主链",
                     "en": "Testnet MainChain"
                 },
-                "httpEndpoint": "http://ultrain.natapp1.cc",
-                "httpEndpointHistory": "http://ultrain-history.natapp1.cc",
+                "httpEndpoint": "https://test-main.ultrain.info",
+                "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
                 "network": "TestNet",
                 "isSideChain": false,
                 "_id": "psnW5_1sQ",
@@ -922,8 +922,8 @@ Cona.callContract(params)
                     "zh-CN": "测试网先锋链",
                     "en": "Testnet Pioneer"
                 },
-                "httpEndpoint": "http://pioneer.natapp1.cc",
-                "httpEndpointHistory": "http://pioneer-history.natapp1.cc",
+                "httpEndpoint": "https://test-pioneer.ultrain.info",
+                "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
                 "network": "TestNet",
                 "isSideChain": true,
                 "_id": "M2WL3lbih",
@@ -935,8 +935,8 @@ Cona.callContract(params)
                     "zh-CN": "测试网动力链",
                     "en": "Testnet Power"
                 },
-                "httpEndpoint": "http://power.natapp1.cc",
-                "httpEndpointHistory": "http://power-history.natapp1.cc",
+                "httpEndpoint": "https://test-power.ultrain.info",
+                "httpEndpointHistory": "https://history-test-power.ultrain.info",
                 "network": "TestNet",
                 "isSideChain": true,
                 "_id": "2hNhi3NqT",

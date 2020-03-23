@@ -13,19 +13,21 @@ http://127.0.0.1:8888
 **主链ultrainio**
 
 ```
-http://ultrain.natapp1.cc 
+https://test-main.ultrain.info/
 ```
 
 **侧链11**
 
 ```
-http://pioneer.natapp1.cc 
+https://test-pioneer.ultrain.info/
+
 ```
 
 **侧链12**
 
 ```
-http://power.natapp1.cc
+https://test-power.ultrain.info/
+
 ```
 
 主网环境（多链）

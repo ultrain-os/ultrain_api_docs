@@ -13,19 +13,21 @@ http://127.0.0.1:3000
 **主链ultrainio**
 
 ```
-http://ultrain-history.natapp1.cc
+https://history-test-ultrainio.ultrain.info
 ```
 
 **侧链11**
 
 ```
-http://pioneer-history.natapp1.cc
+https://history-test-pioneer.ultrain.info
+
 ```
 
 **侧链12**
 
 ```
-http://power-history.natapp1.cc
+https://history-test-power.ultrain.info
+
 ```
 
 ### 主网环境（多链）

@@ -11,8 +11,8 @@ ultrain测试网提供一个和ultrain主网类似的多链环境。主要为ult
 - ultrain测试网浏览器：给用户查看ultrain测试网数据的网站，可以查看ultrain测试网的区块、交易信息，以及进行账户创建、资源套餐申请、合约部署及调用等。
   
 - ultrain测试网的服务地址：
-  - 测试网主链地址：[http://ultrain.natapp1.cc](http://ultrain.natapp1.cc)
-  - 测试网主链history服务地址：[http://history.ultrain.natapp1.cc](http://history.ultrain.natapp1.cc)
+  - 测试网主链地址：[https://test-main.ultrain.info](https://test-main.ultrain.info)
+  - 测试网主链history服务地址：[https://history-test-ultrainio.ultrain.info](https://history-test-ultrainio.ultrain.info)
 - ultrain测试网浏览器地址： [https://testnet-explorer.ultrain.info](https://testnet-explorer.ultrain.info)
 
 

@@ -14,24 +14,24 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 **主链ultrainio**
 
 ```
- httpEndpoint:"http://ultrain.natapp1.cc",  
- httpEndpointHistory:"http://ultrain-history.natapp1.cc",  
+ httpEndpoint:"https://test-main.ultrain.info/",
+ httpEndpointHistory:"https://history-test-ultrainio.ultrain.info/",
  chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
 ```
 
 **侧链11**
 
 ```
- httpEndpoint:"http://pioneer.natapp1.cc",  
- httpEndpointHistory:"http://pioneer-history.natapp1.cc",  
+ httpEndpoint:"https://test-pioneer.ultrain.info/",
+ httpEndpointHistory:"https://history-test-pioneer.ultrain.info/",
  chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
 ```
 
 **侧链12**
 
 ```
- httpEndpoint:"http://power.natapp1.cc",  
- httpEndpointHistory:"http://power-history.natapp1.cc",  
+ httpEndpoint:"https://test-power.ultrain.info/",
+ httpEndpointHistory:"https://history-test-power.ultrain.info/",
  chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
 ```
 

@@ -158,8 +158,8 @@
                 "zh-CN": "测试网动力链",
                 "en": "Testnet Power"
             },
-            "httpEndpoint": "http://power.natapp1.cc",
-            "httpEndpointHistory": "http://power-history.natapp1.cc",
+            "httpEndpoint": "https://test-power.ultrain.info",
+            "httpEndpointHistory": "https://history-test-power.ultrain.info",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "2hNhi3NqT",
@@ -171,8 +171,8 @@
                 "zh-CN": "测试网先锋链",
                 "en": "Testnet Pioneer"
             },
-            "httpEndpoint": "http://pioneer.natapp1.cc",
-            "httpEndpointHistory": "http://pioneer-history.natapp1.cc",
+            "httpEndpoint": "https://test-pioneer.ultrain.info",
+            "httpEndpointHistory": "http://history-test-pioneer.ultrain.info",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "M2WL3lbih",
@@ -184,8 +184,8 @@
                 "zh-CN": "测试网主链",
                 "en": "Testnet MainChain"
             },
-            "httpEndpoint": "http://ultrain.natapp1.cc",
-            "httpEndpointHistory": "http://ultrain-history.natapp1.cc",
+            "httpEndpoint": "https://test-main.ultrain.info",
+            "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
             "network": "TestNet",
             "isSideChain": false,
             "_id": "psnW5_1sQ",
