@@ -94,8 +94,8 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 | [resourcelease](docs-cn/u3/01-chain#resourcelease)           |资源购买                                          |
 | [pushTx](docs-cn/u3/01-chain#pushTx)           |尝试将事务推入挂起队列                                          |
 | [pushTxs](docs-cn/u3/01-chain#pushTxs)           |尝试将多个事务推入挂起队列                                          |
-| [registerEvent](docs-cn/u3/01-chain#registerEvent)           |订阅UltraIn链事件                                          |
-| [unregisterEvent](docs-cn/u3/01-chain#unregisterEvent)           |取消订阅UltraIn链事件                                         |
+| [registerEvent](docs-cn/u3/01-chain#registerEvent)           |订阅链化未来链事件                                          |
+| [unregisterEvent](docs-cn/u3/01-chain#unregisterEvent)           |取消订阅链化未来链事件                                         |
 | [sign](docs-cn/u3/01-chain#sign) |针对待上链的未签名交易进行离线签名  
 
 
