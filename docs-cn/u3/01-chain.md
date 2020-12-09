@@ -11,66 +11,66 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
   
 ### 测试网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
- httpEndpoint:"https://test-main.ultrain.info/",
- httpEndpointHistory:"https://history-test-ultrainio.ultrain.info/",
+ httpEndpoint:"https://test-main.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-chain2futureinfo/",
  chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
 ```
 
 **侧链11**
 
 ```
- httpEndpoint:"https://test-pioneer.ultrain.info/",
- httpEndpointHistory:"https://history-test-pioneer.ultrain.info/",
+ httpEndpoint:"https://test-pioneer.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-pioneer.chain2futureinfo/",
  chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
 ```
 
 **侧链12**
 
 ```
- httpEndpoint:"https://test-power.ultrain.info/",
- httpEndpointHistory:"https://history-test-power.ultrain.info/",
+ httpEndpoint:"https://test-power.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-power.chain2futureinfo/",
  chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
 ```
 
 ### 主网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
- httpEndpoint:"https://ultrainio.ultrain.info",  
- httpEndpointHistory:"https://history-ultrainio.ultrain.info",  
+ httpEndpoint:"https://chain2futureinfo",  
+ httpEndpointHistory:"https://history-chain2futureinfo",  
  chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
 ```
 
 **侧链poineer**
 
 ```
- httpEndpoint:"https://pioneer.ultrain.info",  
- httpEndpointHistory:"https://history-pioneer.ultrain.info",  
+ httpEndpoint:"https://pioneer.chain2futureinfo",  
+ httpEndpointHistory:"https://history-pioneer.chain2futureinfo",  
  chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
 ```
 
 **侧链unitopia**
 
 ```
- httpEndpoint:"https://unitopia.ultrain.info",  
- httpEndpointHistory:"https://history-unitopia.ultrain.info",  
+ httpEndpoint:"https://unitopia.chain2futureinfo",  
+ httpEndpointHistory:"https://history-unitopia.chain2futureinfo",  
  chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
 ```
 
 **侧链newretail**
 
 ```
- httpEndpoint:"https://newretail.ultrain.info",  
- httpEndpointHistory:"https://history-newretail.ultrain.info",  
+ httpEndpoint:"https://newretail.chain2futureinfo",  
+ httpEndpointHistory:"https://history-newretail.chain2futureinfo",  
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 ```
 ## 方法列表
 
-超脑U3链上所支持的方法如下表所示。
+链化未来U3链上所支持的方法如下表所示。
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
@@ -196,7 +196,7 @@ await u3.createUser({
         "action_traces": [
             {
                 "receipt": {
-                    "receiver": "ultrainio",
+                    "receiver": "chain2future",
                     "act_digest": "997311d5873f3bc77a91c9b926539098f4e54fc15bc640d93704946366769626",
                     "global_sequence": 249,
                     "recv_sequence": 231,
@@ -210,7 +210,7 @@ await u3.createUser({
                     "abi_sequence": 1
                 },
                 "act": {
-                    "account": "ultrainio",
+                    "account": "chain2future",
                     "name": "newaccount",
                     "authorization": [
                         {
@@ -323,7 +323,7 @@ await u3.createUser({
 ```nodejs
 import {createU3} from "u3.js";
 const u3 = createU3(config);
-const c = await u3.contract('ultrainio');//系统合约
+const c = await u3.contract('chain2future');//系统合约
 await c.empoweruser({
   user: 'cona1',
   chain_name: '11', //pioneer sidechain name
@@ -350,7 +350,7 @@ await c.empoweruser({
         "action_traces": [
             {
                 "receipt": {
-                    "receiver": "ultrainio",
+                    "receiver": "chain2future",
                     "act_digest": "3471723b44cc90f5a060afd399720e977b74809e8eab8134d9fdaf5e01aedba9",
                     "global_sequence": 3321018,
                     "recv_sequence": 1777087,
@@ -364,7 +364,7 @@ await c.empoweruser({
                     "abi_sequence": 8
                 },
                 "act": {
-                    "account": "ultrainio",
+                    "account": "chain2future",
                     "name": "empoweruser",
                     "authorization": [
                         {
@@ -419,7 +419,7 @@ import {createU3} from "u3.js";
 const u3 = createU3({
   keyProvider:'5JUCw...' //active或owner权限的私钥
 });
-const c = await u3.contract('ultrainio');//系统合约
+const c = await u3.contract('chain2future');//系统合约
 
 let account_ = 'ben';
 let activePublicKey = 'UTRxy1....';
@@ -475,7 +475,7 @@ await c.updateauth(ownerObj, { authorization: [account_ + `@owner`] });
         "action_traces": [
             {
                 "receipt": {
-                    "receiver": "ultrainio",
+                    "receiver": "chain2future",
                     "act_digest": "c5bf370a7d2ed1c7092c0efefd8ce195653fd3f60ebe7739366011e3a6b2a2a8",
                     "global_sequence": 5051986,
                     "recv_sequence": 3413915,
@@ -489,7 +489,7 @@ await c.updateauth(ownerObj, { authorization: [account_ + `@owner`] });
                     "abi_sequence": 19
                 },
                 "act": {
-                    "account": "ultrainio",
+                    "account": "chain2future",
                     "name": "updateauth",
                     "authorization": [
                         {
@@ -703,7 +703,7 @@ await u3.deploy({
         "action_traces": [
             {
                 "receipt": {
-                    "receiver": "ultrainio",
+                    "receiver": "chain2future",
                     "act_digest": "933460bec99bdd3d164737b2fde334aff32674933f5b56d5f8d2865dbf24356d",
                     "global_sequence": 456,
                     "recv_sequence": 437,
@@ -717,7 +717,7 @@ await u3.deploy({
                     "abi_sequence": 1
                 },
                 "act": {
-                    "account": "ultrainio",
+                    "account": "chain2future",
                     "name": "setcode",
                     "authorization": [
                         {
@@ -743,7 +743,7 @@ await u3.deploy({
             },
             {
                 "receipt": {
-                    "receiver": "ultrainio",
+                    "receiver": "chain2future",
                     "act_digest": "cd31826fba290d52c45b7f098b271065a04c5db379374276d86705e8df967bb0",
                     "global_sequence": 457,
                     "recv_sequence": 438,
@@ -757,7 +757,7 @@ await u3.deploy({
                     "abi_sequence": 1
                 },
                 "act": {
-                    "account": "ultrainio",
+                    "account": "chain2future",
                     "name": "setabi",
                     "authorization": [
                         {
@@ -1350,7 +1350,7 @@ await u3.getCurrencyStats({
     "UGAS": {
         "supply": "1000000000.0000 UGAS",
         "max_supply": "8000000000.0000 UGAS",
-        "issuer": "ultrainio"
+        "issuer": "chain2future"
     }
 }
 ```
@@ -1521,7 +1521,7 @@ await u3.getTableRecords({
 ```nodejs
 import {getScheduledTransactions} from "u3.js";
 const u3 = createU3(config);
-const c = await u3.contract("ultrainio");
+const c = await u3.contract("chain2future");
 
 //lease 1 slot for 365 days.
 //the last parameter should be the name of the side chain.
@@ -1556,7 +1556,7 @@ await c.resourcelease('ben', 'bob', 1, 365, "pioneer");
 ```
 (static) registerEvent(account, post_url)
 ```
-订阅Ultrain链事件
+订阅链化未来链事件
 
 #### 参数说明
 |参数               |类型          |说明                            |是否必填|
@@ -1578,7 +1578,7 @@ await u3.registerEvent({
 ```
 (static) unregisterEvent(account, post_url)
 ```
-取消订阅Ultrain链事件
+取消订阅链化未来链事件
 
 #### 参数说明
 |参数               |类型          |说明                            |是否必填|

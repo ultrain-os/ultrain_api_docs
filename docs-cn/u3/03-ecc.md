@@ -1,9 +1,9 @@
 ## 简介
-U3的加密方法将帮助你更好了解超脑加密的相关信息
+U3的加密方法将帮助你更好了解链化未来加密的相关信息
 
 
 ## 方法列表
-超脑U3加密相关的方法如下表所示。
+链化未来U3加密相关的方法如下表所示。
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
@@ -63,7 +63,7 @@ U3Utils.ecc.generateKeyPairByMnemonic("head practice crowd dad alpha sister dyna
 #### 参考示例
 ```nodejs
 import {U3Utils} from "u3.js";
-U3Utils.ecc.generateKeyPairBySeed("ultrain12345")
+U3Utils.ecc.generateKeyPairBySeed("chain2future12345")
 
 ```
 

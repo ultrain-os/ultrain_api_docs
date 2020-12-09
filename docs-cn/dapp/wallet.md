@@ -1,34 +1,34 @@
  钱包接入
 
-## 一、移动端钱包 UltrainOne
+## 一、移动端钱包 Chain2Future
 
-UltrainOne是用ReactNative实现的钱包综合APP, 其中UltrainOne的DAPP应用市场汇集了若干第三方应用，
-针对html5实现的第三方web应用，UltrainOne采用Webview的形式直接打开应用并与产生数据交互。
+Chain2Future是用ReactNative实现的钱包综合APP, 其中Chain2Future的DAPP应用市场汇集了若干第三方应用，
+针对html5实现的第三方web应用，Chain2Future采用Webview的形式直接打开应用并与产生数据交互。
 
 <img width="50%" src="https://user-images.githubusercontent.com/1866848/60152198-2939d500-9812-11e9-96d9-8c4a058f0197.jpeg">
 
-UltrainOne可以从苹果商店、谷歌商店、小米或华为应用市场以及[Ultrain官网](https://ultrain.info/)下载。
+Chain2Future可以从苹果商店、谷歌商店、小米或华为应用市场以及[链化未来官网](https://chain2future.info/)下载。
 
 #### DAPP获取账户或用户信息
 
-DAPP上架UltrainOne的DAPP市场时，管理员会根据DAPP是否接入钱包来配置用户进入DAPP时是否需要进行钱包状态的检查。
+DAPP上架Chain2Future的DAPP市场时，管理员会根据DAPP是否接入钱包来配置用户进入DAPP时是否需要进行钱包状态的检查。
 如果是纯展示类的DAPP,则可以不需要拦截，直接进入DAPP页面。
-如果是接入了钱包的，UltrainOne会在点击DAPP入口时做钱包状态检测，钱包不可用时会被拦截到钱包账号创建或导入页面。
-因此从UltrainOne的DAPP入口经WebView访问DAPP时，跳转的URL中是有含有DAPP的ID、钱包账户、用户手机等信息的。
+如果是接入了钱包的，Chain2Future会在点击DAPP入口时做钱包状态检测，钱包不可用时会被拦截到钱包账号创建或导入页面。
+因此从Chain2Future的DAPP入口经WebView访问DAPP时，跳转的URL中是有含有DAPP的ID、钱包账户、用户手机等信息的。
 
-从UltrainOne进入到DAPP时，会默认在DAPP提供的URL的后面拼接上用户ID、用户手机号和账户名，格式如：
+从Chain2Future进入到DAPP时，会默认在DAPP提供的URL的后面拼接上用户ID、用户手机号和账户名，格式如：
 https://xxxx?dappId=7ht343s&chainId=rX9r2wf&userId=Xju1da5&phoneNum=008615857169999&accountName=abcdefg12345
 注意：上述五个参数都具有唯一性。
 
 如果DAPP需要获取用户的头像、邮箱、姓名等其它信息，则需要通过单独的授权接口请求。开发者在个人中心添加DAPP时，需要选择对应的数据请求接口做授权。
 相关操作流程请参考[流程规范](/docs-cn/dapp/flow.md)章节，相关接口文档请参考[DAPP API](/docs-cn/u3/01-chain.md)。
 
-#### DAPP判断是否位于UltrainOne环境中打开
+#### DAPP判断是否位于Chain2Future环境中打开
 
-DAPP的html5访问链接在某些场景下需要知道当前是在UltrainOne的Webview中打开，还是外部浏览器中打开。
-UltrainOne提供了一个判断方法，步骤如下：
+DAPP的html5访问链接在某些场景下需要知道当前是在Chain2Future的Webview中打开，还是外部浏览器中打开。
+Chain2Future提供了一个判断方法，步骤如下：
 
-1、在开发者个人中心添加dapp时，会生成一个唯一的UltrainId,dapp后台需要妥善存储这个UltrainId;
+1、在开发者个人中心添加dapp时，会生成一个唯一的链化未来Id,dapp后台需要妥善存储这个链化未来Id;
 
 <img width="80%" src="https://user-images.githubusercontent.com/1866848/63929605-4db96400-ca84-11e9-8297-a21656813364.jpeg">
 
@@ -36,31 +36,31 @@ UltrainOne提供了一个判断方法，步骤如下：
   
   ```
   {
-   'dappId': this.dappId,   //在url中获取到此dappId，然后作为参数传给UltrainOne
-   'type': 'queryUltrainId' //固定值
+   'dappId': this.dappId,   //在url中获取到此dappId，然后作为参数传给Chain2Future
+   'type': 'query链化未来Id' //固定值
   }
   ```
   
-3、监听UltrainOne返回的消息，并判断返回数据中的UltrainId是否与你存储的UltrainId一致
+3、监听Chain2Future返回的消息，并判断返回数据中的链化未来Id是否与你存储的链化未来Id一致
 
   ```
       document.addEventListener('message', (e) => {
         this.data = e.data;
-        //如果判断ultrainId与自己的ultrainId相等，则在UltrainOne中
-        if (JSON.parse(this.data).ultrainId === 'ultrainH7K86xqiz8NDjcZ') {
-          console.log('is in UltrainOne webview');
+        //如果判断chain2futureId与自己的chain2futureId相等，则在Chain2Future中
+        if (JSON.parse(this.data).chain2futureId === 'chain2futureH7K86xqiz8NDjcZ') {
+          console.log('is in Chain2Future webview');
         }
       });
       this.dappId = this.$route.query.dappId;
   ```
 
-#### DAPP唤起UltrainOne单笔转账
+#### DAPP唤起Chain2Future单笔转账
 
-DAPP在html5中通过window.postMessage接口向UltrainOne的Webview发送数据，
-UltrainOne接收到付款请求的数据后，唤起app付款界面确认，构建转账逻辑，由用户自行签名并完成付款，
+DAPP在html5中通过window.postMessage接口向Chain2Future的Webview发送数据，
+Chain2Future接收到付款请求的数据后，唤起app付款界面确认，构建转账逻辑，由用户自行签名并完成付款，
 付款完成后并通过webview.postMessage接口向html5发送回执消息。
 
-> 注意：如果DAPP重复发送相同bizId的请求，UltrainOne会忽略，不做处理。
+> 注意：如果DAPP重复发送相同bizId的请求，Chain2Future会忽略，不做处理。
 
 DAPP通过window.postMessage(data)发送的data格式如下：
 
@@ -79,7 +79,7 @@ DAPP通过window.postMessage(data)发送的data格式如下：
 }
 ```
 
-UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
+Chain2Future通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
 
 ```
 {
@@ -102,9 +102,9 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 
 ```
 
-#### DAPP唤起UltrainOne批量转账
+#### DAPP唤起Chain2Future批量转账
 
-UltrainOne支持用户单次签名发生多笔转账的场景。比如，用户在一个猜涨跌的竞猜游戏中，支付20个UGAS时，其中18个UGAS进入奖池，剩下2个UGAS作为手续费进入商家收益账号。
+Chain2Future支持用户单次签名发生多笔转账的场景。比如，用户在一个猜涨跌的竞猜游戏中，支付20个UGAS时，其中18个UGAS进入奖池，剩下2个UGAS作为手续费进入商家收益账号。
 在这种场景下，用户只需要发起一次签名，就能够同时发起以上两笔转账。
 
 > 注意：该接口只支持最多同时两笔的转账需求，且要求两笔交易的chainId、contract、bizId必须相同，即要求批量操作的是同一条链上的同一个合约。
@@ -114,7 +114,7 @@ DAPP通过window.postMessage(data)发送一个数组data，格式如下：
 ```
 [{
     "chainId": "HJiRph6xN",                 //[必填],链ID,从url的参数中获取后回填至此
-    "contract": "ultrainpoint",             //[必填],如果转账UGAS,则值为"utrio.token"，否则值为具体的发币合约的owner账号
+    "contract": "chain2futurepoint",             //[必填],如果转账UGAS,则值为"utrio.token"，否则值为具体的发币合约的owner账号
     "action": "transfer",                   //[必填],转账业务，值为固定的值"transfer"
     "type": "transfer",                     //[必填],转账业务的固定值为"transfer"
     "bizId": "86534135672411",              //[必填],业务id,用来保证同一业务不会重复转账
@@ -126,7 +126,7 @@ DAPP通过window.postMessage(data)发送一个数组data，格式如下：
 },
 {
     "chainId": "HJiRph6xN",                 //[必填],链ID,从url的参数中获取后回填至此
-    "contract": "ultrainpoint",             //[必填],如果转账UGAS,则值为"utrio.token"，否则值为具体的发币合约的owner账号
+    "contract": "chain2futurepoint",             //[必填],如果转账UGAS,则值为"utrio.token"，否则值为具体的发币合约的owner账号
     "action": "transfer",                   //[必填],转账业务，值为固定的值"transfer"
     "type": "transfer",                     //[必填],转账业务的固定值为"transfer"
     "bizId": "86534135672411",              //[必填],业务id,用来保证同一业务不会重复转账
@@ -138,7 +138,7 @@ DAPP通过window.postMessage(data)发送一个数组data，格式如下：
 }]
 ```
 
-UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
+Chain2Future通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
 
 ```
 {
@@ -150,11 +150,11 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 }
 ```
 
-#### DAPP唤起UltrainOne单次调用合约方法（非转账类）
+#### DAPP唤起Chain2Future单次调用合约方法（非转账类）
 
-UltrainOne针对非转账类的合约方法调用提供一个通用的接口。
-DAPP在html5中通过window.postMessage接口向UltrainOne的Webview发送数据，
-UltrainOne接收到调用合约方法的请求后，唤起app的合约方法调用界面进行确认，构建方法调用逻辑，由用户自行签名并完成方法调用，
+Chain2Future针对非转账类的合约方法调用提供一个通用的接口。
+DAPP在html5中通过window.postMessage接口向Chain2Future的Webview发送数据，
+Chain2Future接收到调用合约方法的请求后，唤起app的合约方法调用界面进行确认，构建方法调用逻辑，由用户自行签名并完成方法调用，
 方法调用完成后并通过webview.postMessage接口向html5发送回执消息。
 
 DAPP通过window.postMessage(data)发送的data格式如下：
@@ -175,7 +175,7 @@ DAPP通过window.postMessage(data)发送的data格式如下：
 ```
 
 
-#### DAPP唤起UltrainOne批量调用合约方法（非转账类）
+#### DAPP唤起Chain2Future批量调用合约方法（非转账类）
 
 需要注意的是批量调用合约方法时，需要是同一个contract下的不同action。暂不支持跨合约多方法调用。
 
@@ -208,7 +208,7 @@ DAPP通过window.postMessage(data)发送的data格式如下：
 }]
 ```
 
-UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
+Chain2Future通过webview.postMessage(data)发送给第三方DAPP html5的回执消息格式如下：
 
 ```
 {
@@ -233,19 +233,19 @@ UltrainOne通过webview.postMessage(data)发送给第三方DAPP html5的回执�
 
 注意：调用合约中的某个方法，用法上类型于转账，除了type参数为contract不同之外，data中的key也是不固定，
 data的具体内容取决于调用的方法的入参，依次罗列即可，所有参数不能缺失，即使值为空，也要保证有这个Key。
-如果DAPP重复发送相同bizId的请求，UltrainOne会忽略，不做处理。
+如果DAPP重复发送相同bizId的请求，Chain2Future会忽略，不做处理。
 
-以下给出一个Vue编写的集成UltrainOne的h5示例。
+以下给出一个Vue编写的集成Chain2Future的h5示例。
 ```
 <template>
   <div style="text-align: center;margin: 50px 0; font-size: 26px">
     <button v-on:click="handleTransferClick">调钱包转账接口</button>
-    <p style="text-align: center">收到UltrainOne发送的数据: <span id="data">{{data}}</span></p>
+    <p style="text-align: center">收到Chain2Future发送的数据: <span id="data">{{data}}</span></p>
   </div>
 
   <div style="text-align: center;margin: 100px 0; font-size: 26px">
     <button v-on:click="handleContractClick">调合约某个接口</button>
-    <p style="text-align: center">收到UltrainOne发送的数据: <span id="data2">{{data}}</span></p>
+    <p style="text-align: center">收到Chain2Future发送的数据: <span id="data2">{{data}}</span></p>
   </div>
 </template>
 <script>
@@ -271,7 +271,7 @@ data的具体内容取决于调用的方法的入参，依次罗列即可，所�
       handleTransferClick() {
         this.sendData(JSON.stringify({
           'chainId': this.chainId,
-          'contract': 'ultrainpoint',
+          'contract': 'chain2futurepoint',
           'action': 'transfer',
           'type': 'transfer',
           'bizId': Math.random() * 10000,
@@ -316,8 +316,8 @@ data的具体内容取决于调用的方法的入参，依次罗列即可，所�
 
 ## 二、桌面端插件钱包 Cona
 
-Cona是一款基于浏览器插件的超脑链轻钱包，涵盖转账、收款、账号同步、连接与授权认证等功能，可以让你在浏览器环境
-中运行超脑链的DApp。
+Cona是一款基于浏览器插件的链化未来链轻钱包，涵盖转账、收款、账号同步、连接与授权认证等功能，可以让你在浏览器环境
+中运行链化未来链的DApp。
 
 <img width="50%" src="https://user-images.githubusercontent.com/1866848/60158890-8d659480-9824-11e9-8a46-f97599600b08.jpg">
 
@@ -327,7 +327,7 @@ Cona会在浏览器注入window.Cona对象，检测window.Cona如果存在则表
 
 Cona在线安装地址为 https://chrome.google.com/webstore/detail/cona/joopmnkobcdaojgcmohnjhloldhfgfgk
 
-Cona离线下载地址为 https://ultrain-cona.oss-cn-hangzhou.aliyuncs.com/cona.crx.zip
+Cona离线下载地址为 https://chain2future-cona.oss-cn-hangzhou.aliyuncs.com/cona.crx.zip
 
 离线包安装方法：
 
@@ -509,7 +509,7 @@ Cona.send(params)
             "action_traces": [
                 {
                     "receipt": {
-                        "receiver": "ultrainpoint",
+                        "receiver": "chain2futurepoint",
                         "act_digest": "5ac71c493603800aff262fc6534edf750caaa8ab1b5d744926035499c1e74c09",
                         "global_sequence": 1314168,
                         "recv_sequence": 54,
@@ -523,7 +523,7 @@ Cona.send(params)
                         "abi_sequence": 1
                     },
                     "act": {
-                        "account": "ultrainpoint",
+                        "account": "chain2futurepoint",
                         "name": "transfer",
                         "authorization": [
                             {
@@ -562,7 +562,7 @@ Cona.send(params)
                                 "abi_sequence": 1
                             },
                             "act": {
-                                "account": "ultrainpoint",
+                                "account": "chain2futurepoint",
                                 "name": "transfer",
                                 "authorization": [
                                     {
@@ -602,7 +602,7 @@ Cona.send(params)
                                 "abi_sequence": 1
                             },
                             "act": {
-                                "account": "ultrainpoint",
+                                "account": "chain2futurepoint",
                                 "name": "transfer",
                                 "authorization": [
                                     {
@@ -645,7 +645,7 @@ Cona.send(params)
                 "context_free_actions": [],
                 "actions": [
                     {
-                        "account": "ultrainpoint",
+                        "account": "chain2futurepoint",
                         "name": "transfer",
                         "authorization": [
                             {
@@ -662,8 +662,8 @@ Cona.send(params)
                 "SIG_K1_Ki12M9wGLdxbyZHmEY45b85imnE4L2ccZMAfWPzmR6Qz6nBtgG5bq27xP4pzykdvaXiL8BKK2Gx8XA9mcV8MdfVjZCWdiY"
             ]
         },
-        "httpEndpoint": "https://test-pioneer.ultrain.info",
-        "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
+        "httpEndpoint": "https://test-pioneer.chain2futureinfo",
+        "httpEndpointHistory": "https://history-test-pioneer.chain2futureinfo",
         "chainId": "20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
         "name": "11",
         "network": "TestNet",
@@ -732,12 +732,12 @@ if(result.success){
                 "zh-CN": "测试网主链",
                 "en": "Testnet MainChain"
             },
-            "httpEndpoint": "https://test-main.ultrain.info",
-            "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
+            "httpEndpoint": "https://test-main.chain2futureinfo",
+            "httpEndpointHistory": "https://history-test-chain2futureinfo",
             "network": "TestNet",
             "isSideChain": false,
             "_id": "psnW5_1sQ",
-            "name": "ultrainio",
+            "name": "chain2future",
             "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2"
         },
         {
@@ -745,8 +745,8 @@ if(result.success){
                 "zh-CN": "测试网先锋链",
                 "en": "Testnet Pioneer"
             },
-            "httpEndpoint": "https://test-pioneer.ultrain.info",
-            "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
+            "httpEndpoint": "https://test-pioneer.chain2futureinfo",
+            "httpEndpointHistory": "https://history-test-pioneer.chain2futureinfo",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "M2WL3lbih",
@@ -758,8 +758,8 @@ if(result.success){
                 "zh-CN": "测试网动力链",
                 "en": "Testnet Power"
             },
-            "httpEndpoint": "https://test-power.ultrain.info",
-            "httpEndpointHistory": "https://history-test-power.ultrain.info",
+            "httpEndpoint": "https://test-power.chain2futureinfo",
+            "httpEndpointHistory": "https://history-test-power.chain2futureinfo",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "2hNhi3NqT",
@@ -894,8 +894,8 @@ Cona.callContract(params)
             ]
         },
         "name": "TestNet",
-        "httpEndpoint": "https://test-main.ultrain.info",
-        "httpEndpointHistory": "https://history-test-ultrain.ultrain.info",
+        "httpEndpoint": "https://test-main.chain2futureinfo",
+        "httpEndpointHistory": "https://history-test-chain2future.chain2futureinfo",
         "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
         "symbol": "UGAS",
         "locale": {
@@ -909,12 +909,12 @@ Cona.callContract(params)
                     "zh-CN": "测试网主链",
                     "en": "Testnet MainChain"
                 },
-                "httpEndpoint": "https://test-main.ultrain.info",
-                "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
+                "httpEndpoint": "https://test-main.chain2futureinfo",
+                "httpEndpointHistory": "https://history-test-chain2futureinfo",
                 "network": "TestNet",
                 "isSideChain": false,
                 "_id": "psnW5_1sQ",
-                "name": "ultrainio",
+                "name": "chain2future",
                 "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2"
             },
             {
@@ -922,8 +922,8 @@ Cona.callContract(params)
                     "zh-CN": "测试网先锋链",
                     "en": "Testnet Pioneer"
                 },
-                "httpEndpoint": "https://test-pioneer.ultrain.info",
-                "httpEndpointHistory": "https://history-test-pioneer.ultrain.info",
+                "httpEndpoint": "https://test-pioneer.chain2futureinfo",
+                "httpEndpointHistory": "https://history-test-pioneer.chain2futureinfo",
                 "network": "TestNet",
                 "isSideChain": true,
                 "_id": "M2WL3lbih",
@@ -935,8 +935,8 @@ Cona.callContract(params)
                     "zh-CN": "测试网动力链",
                     "en": "Testnet Power"
                 },
-                "httpEndpoint": "https://test-power.ultrain.info",
-                "httpEndpointHistory": "https://history-test-power.ultrain.info",
+                "httpEndpoint": "https://test-power.chain2futureinfo",
+                "httpEndpointHistory": "https://history-test-power.chain2futureinfo",
                 "network": "TestNet",
                 "isSideChain": true,
                 "_id": "2hNhi3NqT",

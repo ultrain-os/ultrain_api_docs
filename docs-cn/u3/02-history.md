@@ -14,63 +14,63 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 **主链**
 
 ```
- httpEndpoint:"https://test-main.ultrain.info/",
- httpEndpointHistory:"https://history-test-ultrainio.ultrain.info/",
+ httpEndpoint:"https://test-main.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-chain2futureinfo/",
  chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
 ```
 
 **侧链11**
 
 ```
- httpEndpoint:"https://test-pioneer.ultrain.info/",
- httpEndpointHistory:"https://history-test-pioneer.ultrain.info/",
+ httpEndpoint:"https://test-pioneer.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-pioneer.chain2futureinfo/",
  chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
 ```
 
 **侧链12**
 
 ```
- httpEndpoint:"https://test-power.ultrain.info/",
- httpEndpointHistory:"https://history-test-power.ultrain.info/",
+ httpEndpoint:"https://test-power.chain2futureinfo/",
+ httpEndpointHistory:"https://history-test-power.chain2futureinfo/",
  chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
 ```
 
 ### 主网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
- httpEndpoint:"https://ultrainio.ultrain.info",  
- httpEndpointHistory:"https://history-ultrainio.ultrain.info",  
+ httpEndpoint:"https://chain2futureinfo",  
+ httpEndpointHistory:"https://history-chain2futureinfo",  
  chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
 ```
 
 **侧链poineer**
 
 ```
- httpEndpoint:"https://pioneer.ultrain.info",  
- httpEndpointHistory:"https://history-pioneer.ultrain.info",  
+ httpEndpoint:"https://pioneer.chain2futureinfo",  
+ httpEndpointHistory:"https://history-pioneer.chain2futureinfo",  
  chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
 ```
 
 **侧链unitopia**
 
 ```
- httpEndpoint:"https://unitopia.ultrain.info",  
- httpEndpointHistory:"https://history-unitopia.ultrain.info",  
+ httpEndpoint:"https://unitopia.chain2futureinfo",  
+ httpEndpointHistory:"https://history-unitopia.chain2futureinfo",  
  chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
 ```
 
 **侧链newretail**
 
 ```
- httpEndpoint:"https://newretail.ultrain.info",  
- httpEndpointHistory:"https://history-newretail.ultrain.info",  
+ httpEndpoint:"https://newretail.chain2futureinfo",  
+ httpEndpointHistory:"https://history-newretail.chain2futureinfo",  
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 ```
 ## 方法列表
 
-超脑U3相关的历史方法如下表所示。
+链化未来U3相关的历史方法如下表所示。
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
@@ -120,7 +120,7 @@ const u3 = createU3(config)
 u3.getActionsByAccount({
      'page': 1,
      'pageSize': 10,
-     'queryParams': {account:'ultrainio'},
+     'queryParams': {account:'chain2future'},
      'sortParams': { _id: -1 }
 })
 
@@ -130,11 +130,11 @@ json structure:
     "action_num" : NumberInt(0), 
     "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
     "cfa" : false, 
-    "account" : "ultrainio", 
+    "account" : "chain2future", 
     "name" : "onblock", 
     "authorization" : [
         {
-            "actor" : "ultrainio", 
+            "actor" : "chain2future", 
             "permission" : "active"
         }
     ], 
@@ -168,11 +168,11 @@ json structure:
     "action_num" : NumberInt(0), 
     "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
     "cfa" : false, 
-    "account" : "ultrainio", 
+    "account" : "chain2future", 
     "name" : "onblock", 
     "authorization" : [
         {
-            "actor" : "ultrainio", 
+            "actor" : "chain2future", 
             "permission" : "active"
         }
     ], 
@@ -303,7 +303,7 @@ const u3 = createU3(config)
 u3.getAllBlocks({
     'page': 1,
     'pageSize': 10,
-    'queryParams': {"block.producer":"ultrainio"},
+    'queryParams': {"block.producer":"chain2future"},
     'sortParams': { _id: -1 }
 })
 
@@ -313,7 +313,7 @@ json structure:
     "block_id" : "00000002d99f33473ee5553e0993f6b821f68ce12787c7d5e8ba90393eb1f6e6", 
     "block" : {
         "timestamp" : "2018-08-22T07:33:13.000", 
-        "producer" : "ultrainio", 
+        "producer" : "chain2future", 
         "confirmed" : NumberInt(0), 
         "previous" : "00000001bcf2f448225d099685f14da76803028926af04d2607eafcf609c265c", 
         "transaction_mroot" : "0000000000000000000000000000000000000000000000000000000000000000", 
@@ -476,11 +476,11 @@ json structure:
             "action_num" : NumberInt(0), 
             "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
             "cfa" : false, 
-            "account" : "ultrainio", 
+            "account" : "chain2future", 
             "name" : "onblock", 
             "authorization" : [
                 {
-                    "actor" : "ultrainio", 
+                    "actor" : "chain2future", 
                     "permission" : "active"
                 }
             ], 
@@ -586,7 +586,7 @@ import {getBlocksByContract} from "u3.js";
 const u3 = createU3(config)
 u3.getBlocksByContract({
     'block_num': 1,
-    'account': "ultrainio",
+    'account': "chain2future",
     'contract': "utrio.token",
     'contract_method': "transfer"
 })
@@ -597,7 +597,7 @@ json structure:
     "block_id" : "00000002d99f33473ee5553e0993f6b821f68ce12787c7d5e8ba90393eb1f6e6", 
     "block" : {
         "timestamp" : "2018-08-22T07:33:13.000", 
-        "producer" : "ultrainio", 
+        "producer" : "chain2future", 
         "confirmed" : NumberInt(0), 
         "previous" : "00000001bcf2f448225d099685f14da76803028926af04d2607eafcf609c265c", 
         "transaction_mroot" : "0000000000000000000000000000000000000000000000000000000000000000", 
@@ -647,7 +647,7 @@ json structure:
     "name" : "utrio.code",
     "createdAt" : ISODate("2018-10-26T10:11:00.683+0000"),
     "abi" : {
-        "version" : "ultrainio::abi/1.0",
+        "version" : "chain2future::abi/1.0",
         "types" : [...],
         "structs" : [...],
         "actions" : [...],
@@ -689,10 +689,10 @@ u3.getContracts({
 json structure:
  {
     "_id" : ObjectId("5bd2e8347705c6005a6f4d12"),
-    "name" : "ultrainio",
+    "name" : "chain2future",
     "createdAt" : ISODate("2018-10-26T10:11:00.683+0000"),
     "abi" : {
-        "version" : "ultrainio::abi/1.0",
+        "version" : "chain2future::abi/1.0",
         "types" : [...],
         "structs" : [...],
         "actions" : [...],
@@ -909,11 +909,11 @@ json structure:
             "action_num" : NumberInt(0), 
             "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
             "cfa" : false, 
-            "account" : "ultrainio", 
+            "account" : "chain2future", 
             "name" : "onblock", 
             "authorization" : [
                 {
-                    "actor" : "ultrainio", 
+                    "actor" : "chain2future", 
                     "permission" : "active"
                 }
             ], 
@@ -980,11 +980,11 @@ json structure:
             "action_num" : NumberInt(0), 
             "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
             "cfa" : false, 
-            "account" : "ultrainio", 
+            "account" : "chain2future", 
             "name" : "onblock", 
             "authorization" : [
                 {
-                    "actor" : "ultrainio", 
+                    "actor" : "chain2future", 
                     "permission" : "active"
                 }
             ], 
@@ -1044,11 +1044,11 @@ json structure:
             "action_num" : NumberInt(0), 
             "trx_id" : "40ed51618da80804373fd84015548c8343da8c7ade8af00548ada4952d3e38b9", 
             "cfa" : false, 
-            "account" : "ultrainio", 
+            "account" : "chain2future", 
             "name" : "onblock", 
             "authorization" : [
                 {
-                    "actor" : "ultrainio", 
+                    "actor" : "chain2future", 
                     "permission" : "active"
                 }
             ], 

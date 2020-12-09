@@ -1,6 +1,6 @@
 ## 简介
 
-超脑对Dapp提供的可以调用UltrainOne内部功能交互方法，通过```postMessage```与UltrainOne进行交互
+链化未来对Dapp提供的可以调用Chain2Future内部功能交互方法，通过```postMessage```与Chain2Future进行交互
  
 ## 方法列表
 
@@ -9,10 +9,10 @@
 
 | 方法                                                                                           | 描述                                             |
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
-| [outLink](docs-cn/dapi/03-interactive#outLink)            |通过UltrainOne唤起外部应用打开一个url链接，比如唤起手机内置浏览器或AppStore等                                      |
-| [externalShare](docs-cn/dapi/03-interactive#externalShare)            |唤起UltrainOne内部分享功能或直接调用分享组件中的菜单，如分享至微信或截屏等                                      |
-| [route](docs-cn/dapi/03-interactive#route)            |调用UltrainOne导航组件，可以使app内部回退返回上一个请求的页面，不会关闭当前dapp                                      |
-| [downloadImg](docs-cn/dapi/03-interactive#downloadImg)            |调用UltrainOne内部图片下载功能                                      |
+| [outLink](docs-cn/dapi/03-interactive#outLink)            |通过Chain2Future唤起外部应用打开一个url链接，比如唤起手机内置浏览器或AppStore等                                      |
+| [externalShare](docs-cn/dapi/03-interactive#externalShare)            |唤起Chain2Future内部分享功能或直接调用分享组件中的菜单，如分享至微信或截屏等                                      |
+| [route](docs-cn/dapi/03-interactive#route)            |调用Chain2Future导航组件，可以使app内部回退返回上一个请求的页面，不会关闭当前dapp                                      |
+| [downloadImg](docs-cn/dapi/03-interactive#downloadImg)            |调用Chain2Future内部图片下载功能                                      |
 
 
 ## outLink
@@ -21,7 +21,7 @@
     outLink: outLink
   }));
 ```
-在H5中，通过UltrainOne唤起外部应用打开一个url链接，比如唤起手机内置浏览器或AppStore等 
+在H5中，通过Chain2Future唤起外部应用打开一个url链接，比如唤起手机内置浏览器或AppStore等 
 
 #### 参数说明  
 |参数               |类型    |说明                            |是否必填|
@@ -35,7 +35,7 @@
 
   // 唤起浏览器打开外部链接
   window.postMessage(JSON.stringify({
-    outLink: 'https://developer.ultrain.info/ShareSoftware'
+    outLink: 'https://developer.chain2futureinfo/ShareSoftware'
   }));
 
   // 跳转到 App Store
@@ -50,7 +50,7 @@
     externalShare: externalShare
   }));
 ```
-唤起UltrainOne内部分享功能或直接调用分享组件中的菜单，如分享到微信朋友圈或截屏
+唤起Chain2Future内部分享功能或直接调用分享组件中的菜单，如分享到微信朋友圈或截屏
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|
@@ -103,7 +103,7 @@
     name: name
   }));
 ```
-调用UltrainOnen导航组件，可以使app内部回退返回上一个请求的页面，不会关闭当前dapp
+调用Chain2Futuren导航组件，可以使app内部回退返回上一个请求的页面，不会关闭当前dapp
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|
@@ -131,7 +131,7 @@
     downloadImg: imageUrl
   }));
 ```
-调用UltrainOne内部图片下载功能，将图片下载到本地
+调用Chain2Future内部图片下载功能，将图片下载到本地
 
 #### 参数说明
 |参数               |类型    |说明                            |是否必填|

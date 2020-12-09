@@ -10,55 +10,55 @@ http://127.0.0.1:3000
   
 ### 测试网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
-https://history-test-ultrainio.ultrain.info
+https://history-test-chain2futureinfo
 ```
 
 **侧链11**
 
 ```
-https://history-test-pioneer.ultrain.info
+https://history-test-pioneer.chain2futureinfo
 
 ```
 
 **侧链12**
 
 ```
-https://history-test-power.ultrain.info
+https://history-test-power.chain2futureinfo
 
 ```
 
 ### 主网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
-https://history-ultrainio.ultrain.info
+https://history-chain2futureinfo
 ```
 
 **侧链poineer**
 
 ```
-https://history-pioneer.ultrain.info
+https://history-pioneer.chain2futureinfo
 ```
 
 **侧链unitopia**
 
 ```
-https://history-unitopia.ultrain.info
+https://history-unitopia.chain2futureinfo
 ```
 
 **侧链newretail**
 
 ```
-https://history-newretail.ultrain.info
+https://history-newretail.chain2futureinfo
 ```
 
 ## 方法列表
 
-超脑历史 REST 接口所支持的方法如下表所示。
+链化未来历史 REST 接口所支持的方法如下表所示。
 
 | 方法                                                                                        | 描述                                             |
 | :------------------------------------------------------------------------------------------| :------------------------------------------------|
@@ -193,7 +193,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
        action_num: 0,
        trx_id: 'd3f084f023af7b187dbd0acdc4bc083e00c3162b9fb5c1f6f3d987d7038d6eaa',
        cfa: false,
-       account: 'ultrainio',
+       account: 'chain2future',
        name: 'resourcelease',
        authorization: [Array],
        data: [Object],
@@ -226,7 +226,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
        action_num: 0,
        trx_id: 'f8b426780499d8b0561331d61acba73d73b549164cc2bd9dd429242845775164',
        cfa: false,
-       account: 'ultrainio',
+       account: 'chain2future',
        name: 'newaccount',
        authorization: [Array],
        data: [Object],
@@ -237,7 +237,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
        action_num: 1,
        trx_id: 'ba952e3c3f035b875a660bc7d9e573ac3e4c828765a534d0522b544b4128e683',
        cfa: false,
-       account: 'ultrainio',
+       account: 'chain2future',
        name: 'setabi',
        authorization: [Array],
        data: [Object],
@@ -248,7 +248,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
        action_num: 0,
        trx_id: 'ba952e3c3f035b875a660bc7d9e573ac3e4c828765a534d0522b544b4128e683',
        cfa: false,
-       account: 'ultrainio',
+       account: 'chain2future',
        name: 'setcode',
        authorization: [Array],
        data: [Object],
@@ -305,7 +305,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
     action_num: 0,
     trx_id: 'd3f084f023af7b187dbd0acdc4bc083e00c3162b9fb5c1f6f3d987d7038d6eaa',
     cfa: false,
-    account: 'ultrainio',
+    account: 'chain2future',
     name: 'resourcelease',
     authorization: [ [Object] ],
     data: 
@@ -313,7 +313,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
        receiver: 'bob',
        combosize: 1,
        days: 2,
-       location: 'ultrainio' },
+       location: 'chain2future' },
     id: '5d29ea68f988c000544c0331' } ]
 ```
 
@@ -405,7 +405,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
     'page': 1,
     'pageSize': 10,
     'sortParams': { _id: -1 },
-    "queryParams":{ "block.producer":"ultrainio" }
+    "queryParams":{ "block.producer":"chain2future" }
   }
   await Axios.post(url,data).then(response => response.data)
     .then(response => {
@@ -418,7 +418,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
 或者
 
 ```
-curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"block.producer":"ultrainio"}}' http://127.0.0.1:3000/blocks
+curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sortParams":{"_id":-1},"queryParams":{"block.producer":"chain2future"}}' http://127.0.0.1:3000/blocks
 
 ```
 
@@ -655,7 +655,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
     "name": "utrio.bank",
     "createdAt": "2019-05-24T02:48:12.338Z",
     "abi": {
-        "version": "ultrainio::abi/1.0",
+        "version": "chain2future::abi/1.0",
         "types": [
             {
                 "new_type_name": "account_name",
@@ -791,7 +791,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
             "name": "utrio.bank",
             "createdAt": "2019-05-24T02:48:12.338Z",
             "abi": {
-                "version": "ultrainio::abi/1.0",
+                "version": "chain2future::abi/1.0",
                 "types": [
                     {
                         "new_type_name": "account_name",
@@ -1281,7 +1281,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
     "action_traces": [
         {
             "receipt": {
-                "receiver": "ultrainio",
+                "receiver": "chain2future",
                 "act_digest": "f3f1d99ccbd679543615a29f308d5264cad3bda798e9e6064dd13b127fa1c5a5",
                 "global_sequence": 2604049,
                 "recv_sequence": 1193084,
@@ -1295,7 +1295,7 @@ curl -H "Content-Type:application/json" -X POST -d '{"page":1,"pageSize":10,"sor
                 "abi_sequence": 7
             },
             "act": {
-                "account": "ultrainio",
+                "account": "chain2future",
                 "name": "acceptheader",
                 "authorization": [
                     {

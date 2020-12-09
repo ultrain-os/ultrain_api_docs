@@ -1,5 +1,5 @@
 
-Cona是一款基于浏览器插件的超脑链轻钱包，涵盖转账、收款、账号同步及授权认证等功能，可以让你在浏览器环境中运行超脑链的dApp  
+Cona是一款基于浏览器插件的链化未来链轻钱包，涵盖转账、收款、账号同步及授权认证等功能，可以让你在浏览器环境中运行链化未来链的dApp  
 
 ## 主要特性
 
@@ -60,7 +60,7 @@ Cona会在浏览器注入window.Cona对象，检测window.Cona如果存在则表
 
 Cona在线安装地址为 https://chrome.google.com/webstore/detail/cona/joopmnkobcdaojgcmohnjhloldhfgfgk
 
-Cona离线下载地址为 https://ultrain-cona.oss-cn-hangzhou.aliyuncs.com/cona.crx.zip
+Cona离线下载地址为 https://chain2future-cona.oss-cn-hangzhou.aliyuncs.com/cona.crx.zip
 
 离线包安装方法：
 

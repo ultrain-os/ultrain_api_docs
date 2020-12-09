@@ -10,55 +10,55 @@ http://127.0.0.1:8888
   
 测试网环境（多链）
 
-**主链ultrainio**
+**主链chain2future**
 
 ```
-https://test-main.ultrain.info/
+https://test-main.chain2futureinfo/
 ```
 
 **侧链11**
 
 ```
-https://test-pioneer.ultrain.info/
+https://test-pioneer.chain2futureinfo/
 
 ```
 
 **侧链12**
 
 ```
-https://test-power.ultrain.info/
+https://test-power.chain2futureinfo/
 
 ```
 
 主网环境（多链）
 
-**主链ultrainio**
+**主链chain2future**
 
 ```
-https://ultrainio.ultrain.info
+https://chain2futureinfo
 ```
 
 **侧链poineer**
 
 ```
-https://pioneer.ultrain.info  
+https://pioneer.chain2futureinfo  
 ```
 
 **侧链unitopia**
 
 ```
-https://unitopia.ultrain.info 
+https://unitopia.chain2futureinfo 
 ```
 
 **侧链newretail**
 
 ```
-https://newretail.ultrain.info 
+https://newretail.chain2futureinfo 
 ```
 
 ## 方法列表
 
-超脑线上 REST 接口所支持的方法如下表所示。
+链化未来线上 REST 接口所支持的方法如下表所示。
 
 | 方法                                                                                           | 描述                                             |
 | :---------------------------------------------------------------------------------------------| :-----------------------------------------------|
@@ -76,8 +76,8 @@ https://newretail.ultrain.info
 | [push_tx](docs-cn/rest/01-chain#push_tx)                                      |广播签名后的交易信息                               |
 | [get_table_by_scope](docs-cn/rest/01-chain#get_table_by_scope)                |从帐户获取智能合约数据                               |                         |
 | [push_txs](docs-cn/rest/01-chain#push_txs)                                      |尝试将事务推送到挂起队列中                              |
-| [register_event](docs-cn/rest/01-chain#register_event)                           |订阅Ultrain公链上的事件                              |
-| [unregister_event](docs-cn/rest/01-chain#unregister_event)                       |取消订阅Ultrain公链上的事件                              |
+| [register_event](docs-cn/rest/01-chain#register_event)                           |订阅链化未来公链上的事件                              |
+| [unregister_event](docs-cn/rest/01-chain#unregister_event)                       |取消订阅链化未来公链上的事件                              |
 
 
 
@@ -165,7 +165,7 @@ https://newretail.ultrain.info
     "UGAS": {
         "supply": "900620417.9000 UGAS",
         "max_supply": "1000000000.0000 UGAS",
-        "issuer": "ultrainio"
+        "issuer": "chain2future"
     }
 }
 ```
@@ -328,7 +328,7 @@ https://newretail.ultrain.info
 #### 返回结果
 ```json
 {
-    "account_name": "ultrainio",
+    "account_name": "chain2future",
     "head_block_num": 448906,
     "head_block_time": "2019-06-26T02:44:40.000",
     "privileged": true,
@@ -423,12 +423,12 @@ https://newretail.ultrain.info
 #### 返回结果
 ```
 {
-    "account_name": "ultrainio",
+    "account_name": "chain2future",
     "code_hash": "3dc9db161d1b37d768d0122950105daa3035cc74111872f36863f4d3c90a2d0d",
     "wast":"..."，
 	"wasm": "...",
     "abi": {
-        "version": "ultrainio::abi/1.0/1501af",
+        "version": "chain2future::abi/1.0/1501af",
         "types": [
             {
                 "new_type_name": "account_name",
@@ -457,7 +457,7 @@ https://newretail.ultrain.info
         ],
         "structs":[
 			{
-                "name": "ultrainio_system_params",
+                "name": "chain2future_system_params",
                 "base": "",
                 "fields": [
                     {
@@ -551,7 +551,7 @@ https://newretail.ultrain.info
 {
     "account_name": "utrio.bank",
     "abi": {
-        "version": "ultrainio::abi/1.0",
+        "version": "chain2future::abi/1.0",
         "types": [
             {
                 "new_type_name": "account_name",
@@ -696,7 +696,7 @@ https://newretail.ultrain.info
   var url = 'http://127.0.0.1:8888/v1/chain/get_table_records';
   var data = {
     "code": "utrio.token",
-    "scope": "ultrainio",
+    "scope": "chain2future",
     "table": "accounts",
     "json": true
   };
@@ -711,7 +711,7 @@ https://newretail.ultrain.info
 或者
 
 ```
- curl -X POST -d '{ "code": "utrio.token","scope": "ultrainio","table": "accounts","json": true}' http://127.0.0.1:8888/v1/chain/get_table_records
+ curl -X POST -d '{ "code": "utrio.token","scope": "chain2future","table": "accounts","json": true}' http://127.0.0.1:8888/v1/chain/get_table_records
 
 ```
 
@@ -954,7 +954,7 @@ https://newretail.ultrain.info
 ```
 
 ## register_event
-订阅Ultrain公链上的事件
+订阅链化未来公链上的事件
 
 #### 参数说明
 |参数                 |类型    |说明                            |是否必填|
@@ -995,7 +995,7 @@ https://newretail.ultrain.info
 
 ## unregister_event
 
-取消订阅Ultrain公链上的事件
+取消订阅链化未来公链上的事件
 
 #### 参数说明
 |参数                 |类型    |说明                            |是否必填|

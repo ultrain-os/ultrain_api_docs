@@ -1,4 +1,4 @@
-如前文所述，超脑链为开发者提供了一整套开发工具与教程。详细的工具使用与文档教程请浏览开发者网站。
+如前文所述，链化未来链为开发者提供了一整套开发工具与教程。详细的工具使用与文档教程请浏览开发者网站。
 
 关于工具与文档的配合使用，我们以一个完整DApp的开发为例来讲解，通常分为几下几个步骤：
 >1.	使用Longclaw或基于docker的命令行中构建本地开发环境；
@@ -15,7 +15,7 @@
 当你有了可用的开发环境后，接下来即可使用Robin framework去创建一个Dapp了。
 
 ### Robin的介绍
-这是一款基于超脑链，能够快速进行智能合约开发、全局命令行式的开发测试集成框架。  
+这是一款基于链化未来链，能够快速进行智能合约开发、全局命令行式的开发测试集成框架。  
 Robin框架还提供如下服务：
 
 >1、一键式合约初始化、编译与部署;  
@@ -71,7 +71,7 @@ Linux、MacOS、Windows
 	robin build
 	
 #### 部署合约
-更新配置文件 config.js 和 migrate.js, 确保你已正确连接上一个超脑节点. 如果你正在使用 longclaw 初始化的
+更新配置文件 config.js 和 migrate.js, 确保你已正确连接上一个链化未来节点. 如果你正在使用 longclaw 初始化的
 本地环境，那么使用默认配置即可。如果您的 只需进入项目的根目录并执行：  
 	
 	robin deploy
@@ -176,7 +176,7 @@ u3.getChainInfo((err, info) => {
 	+ httpEndpointHistory string - 链历史API的http或https地址.如果是在浏览器环境中使用u3，请注意配置相同的域名.
 	+ chainId 链唯一的ID. 链ID可以通过 [httpEndpoint]/v1/chain/get_chain_info获得.
 	+ keyProvider [array|string|function] - 提供私钥用来签名交易. 提供用于签名事务的私钥。如果提供了多个私钥，不能确定使用哪个私钥，可以使用调用get_required_keysAPI 获取要使用签名的密钥。如果是函数，那么每一个交易都将会使用该函数。如果这里不提供keyProvider,那么它可能会Options配置项提供在每一个action或每一个transaction中
-	+ expireInSeconds number - 事务到期前的秒数，时间基于nodultrain的时间.
+	+ expireInSeconds number - 事务到期前的秒数，时间基于nodchain2future的时间.
 	+ broadcast [boolean=true] - 默认是true。使用true将交易发布到区块链，使用false将获取签名的事务.
 	+ sign [boolean=true] - 默认是true。使用私钥签名交易。保留未签名的交易避免了提供私钥的需要.
 	+ logger - 默认日志配置下
@@ -234,7 +234,7 @@ await u3.createUser(params);
 empoweruser(user,chain_name,owner_pk,active_pk,updateable)
 
 const u3 = createU3(config);
-const c = await u3.contract("ultrainio");
+const c = await u3.contract("chain2future");
 await c.empoweruser({
   user: 'tester1',
   chain_name: 'pioneer', // pioneer is one of the sidechain name
@@ -281,13 +281,13 @@ return tx && tx.irreversible;
 ```
   const u3_offline = createU3({ sign: false, broadcast: false });
   const c = u3_offline.contract('utrio.token');
-  let unsigned_transaction = await c.transfer('ultrainio', 'ben', '1 UGAS', 'uu');
+  let unsigned_transaction = await c.transfer('chain2future', 'ben', '1 UGAS', 'uu');
 ```
 
 如果你把 `httpEndpoint` 设为null, u3将不发送网络请求
 那么你需要像下面这样传入 `transactionHeaders` 参数.
 其中`abi` 是可选的, 如果你忽略它, 那么u3会从本地目录下查找缓存文件.
-本地缓存文件只有 'ultrainio' and 'utrio.token' 两个系统合约的abi
+本地缓存文件只有 'chain2future' and 'utrio.token' 两个系统合约的abi
 注意最大`expiration`时间是一个小时，也就是值为3600.
 你可以通过`u3.getBlockInfo` 或者 rest 接口 `http://xxx/v1/chain/get_block_info` 来获取 `ref_block_num` 和 `ref_block_prefix` 的值 
 
@@ -348,15 +348,15 @@ const unsigned_transaction = await u3_offline.createU3(params, {
 
 **资源**  
 调用合约只会消耗合约Owner的资源，如果你想部署一个合约，请先购买一些资源。  
-主网环境下,请至[`开发者网站`](https://developer.ultrain.info/resources)上选择合适的资源套餐并进行购买  
-测试网环境下,请至[`测试网浏览器`](https://testnet-explorer.ultrain.info/ultrainio/account-recharge)自行进行账号充值与资源购买。
+主网环境下,请至[`开发者网站`](https://developer.chain2futureinfo/resources)上选择合适的资源套餐并进行购买  
+测试网环境下,请至[`测试网浏览器`](https://testnet-explorer.chain2futureinfo/chain2future/account-recharge)自行进行账号充值与资源购买。
 ```
 resourcelease(payer,receiver,slot,days,location)
 location is the chain name you to use your resource
 const u3 = createU3(config);
-const c = await u3.contract('ultrainio')
+const c = await u3.contract('chain2future')
 
-await c.resourcelease('ben', 'bob', 1, 10, "ultrainio");// 1 slot for 10 days on the side chain named ultrainio
+await c.resourcelease('ben', 'bob', 1, 10, "chain2future");// 1 slot for 10 days on the side chain named chain2future
 ```
 通过以下方法查询资源详情:
 ```
@@ -391,7 +391,7 @@ await u3.transaction(['ben', 'bob'], ({sm1, sm2}) => {
 ```
 
 **发行代币**   
-智能合约中需实现UIP06或UIP09的接口，具体例子请参照[项目模板](https://github.com/ultrain-os/robin-template)
+智能合约中需实现UIP06或UIP09的接口，具体例子请参照[项目模板](https://github.com/chain2future-os/robin-template)
 ```
 const u3 = createU3(config);
 const account = 'bob';
@@ -405,7 +405,7 @@ console.log('currency balance', balance)
 ```
 
 **事件**
-Ultrain提供了一个事件注册监听机制用来解决异步场景下业务需求。客户端首先订阅一个事件，
+链化未来提供了一个事件注册监听机制用来解决异步场景下业务需求。客户端首先订阅一个事件，
 提供一个用来接收消息的地址，当合约中的某个方法触发时，该地址会收到来自链的推送消息。  
 + 订阅/取消订阅
 	+ registerEvent(deployer, listen_url)

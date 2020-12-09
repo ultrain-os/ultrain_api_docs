@@ -1,14 +1,14 @@
 ## 简介
-DAPP与超脑之间的数据交互，需要首先通过访问授权。
+DAPP与链化未来之间的数据交互，需要首先通过访问授权。
 
-所有DAPP在超脑DAPP开放平台中都会被分配一个唯一的ultrainId和一个secretId。这两个属性作为DAPP在超脑平台唯一标识。
-DAPP开发者在开放平台添加一个DAPP时，系统会自动生成ultrainId和secretId，并返回给开发者。
-ultrainId一经生成就不能改变，而secretId可以再次重置。
+所有DAPP在链化未来DAPP开放平台中都会被分配一个唯一的chain2futureId和一个secretId。这两个属性作为DAPP在链化未来平台唯一标识。
+DAPP开发者在开放平台添加一个DAPP时，系统会自动生成chain2futureId和secretId，并返回给开发者。
+chain2futureId一经生成就不能改变，而secretId可以再次重置。
 
-所谓访问授权，就是开发者将ultrainId与secretId传输给超脑开放平台而获得一个token的过程。token有效期为一天。
+所谓访问授权，就是开发者将chain2futureId与secretId传输给链化未来开放平台而获得一个token的过程。token有效期为一天。
 
-默认情况下，```授权访问``` 接口的正式环境地址为[https://dev.ultrain.info/api/dapp/getAccessToken](https://dev.ultrain.info/api/dapp/getAccessToken)，
-测试环境地址为[https://testnet-dev.ultrain.info/api/dapp/getAccessToken](https://testnet-dev.ultrain.info/api/dapp/getAccessToken)。
+默认情况下，```授权访问``` 接口的正式环境地址为[https://dev.chain2futureinfo/api/dapp/getAccessToken](https://dev.chain2futureinfo/api/dapp/getAccessToken)，
+测试环境地址为[https://testnet-dev.chain2futureinfo/api/dapp/getAccessToken](https://testnet-dev.chain2futureinfo/api/dapp/getAccessToken)。
 
 ## 方法列表
 
@@ -27,7 +27,7 @@ ultrainId一经生成就不能改变，而secretId可以再次重置。
 #### 参数说明  
 |参数               |类型    |说明                            |是否必填|
 | :----------------| :------| :-----------------------------|:-----|
-| ultrainId         |String  |	dapp所拥有的唯一开放平台id		                    |是     |
+| chain2futureId         |String  |	dapp所拥有的唯一开放平台id		                    |是     |
 | secretId          |String  |	dapp所拥有的开放平台密钥		                    |是     |
 
 #### 参考示例
@@ -35,11 +35,11 @@ ultrainId一经生成就不能改变，而secretId可以再次重置。
 ```nodejs
 {
   "method": "post",
-  "url":"https://dev.ultrain.info/api/dapp/getAccessToken",
+  "url":"https://dev.chain2futureinfo/api/dapp/getAccessToken",
   headers: {'content-type': 'application/x-www-form-urlencoded'},
   body: JSON.stringify(
       {
-        "ultrainId": "ultrain****************fvZVK",
+        "chain2futureId": "chain2future****************fvZVK",
         "secretId":"JdjaLrjR2****************ot47Ygq3kG"
       }
   )

@@ -20,7 +20,7 @@ Longclaw是基于Docker来构建的，所以需要你在本机上提前安装并
 
 ### Longclaw的使用步骤
 
-- 下载安装Longclaw，从开发者网站[下载Longclaw](https://developer.ultrain.info/tools);
+- 下载安装Longclaw，从开发者网站[下载Longclaw](https://developer.chain2futureinfo/tools);
 - 启动Longclaw，点击mac应用中心的Longclaw应用，即可启动;
 
 > 注意：Longclaw第一次初始化环境可能要花费几分钟，请您耐心等待，当出现以下界面，则说明Longclaw
@@ -38,11 +38,11 @@ Linux下的共识网络环境同样依赖于Docker，关于Linux下的docker环�
 
 **操作步骤：**
 
-  - 下载U3.js源码`git clone https://github.com/ultrain-os/u3.js.git`;
+  - 下载U3.js源码`git clone https://github.com/chain2future-os/u3.js.git`;
   
   - 进入U3.js/docker目录，执行`cd ./u3.js/docker`;
   
-  - 下载ultraind镜像并启动，执行`./start.sh`;
+  - 下载chain2futured镜像并启动，执行`./start.sh`;
   
 如果命令行输出以下内容，则证明本地镜像启动成功。
 
@@ -69,77 +69,77 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
   
 ### 测试网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
- httpEndpoint:"https://test-main.ultrain.info/",  
- httpEndpointHistory:"https://history-test-ultrainio.ultrain.info/",  
+ httpEndpoint:"https://test-main.chain2futureinfo/",  
+ httpEndpointHistory:"https://history-test-chain2futureinfo/",  
  chainId:"1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2",
 ```
 
 **侧链11**
 
 ```
- httpEndpoint:"https://test-pioneer.ultrain.info/",  
- httpEndpointHistory:"https://history-test-pioneer.ultrain.info/",  
+ httpEndpoint:"https://test-pioneer.chain2futureinfo/",  
+ httpEndpointHistory:"https://history-test-pioneer.chain2futureinfo/",  
  chainId:"20c35b993c10b5ea1007014857bb2b8832fb8ae22e9dcfdc61dacf336af4450f",
 ```
 
 **侧链12**
 
 ```
- httpEndpoint:"https://test-power.ultrain.info/",  
- httpEndpointHistory:"https://history-test-power.ultrain.info/",  
+ httpEndpoint:"https://test-power.chain2futureinfo/",  
+ httpEndpointHistory:"https://history-test-power.chain2futureinfo/",  
  chainId:"0120d06d4a73b60357a5ed24a9145c967308738d70397c25eeedcbb736166ccf",
 ```
 
 ### 主网环境（多链）
 
-**主链ultrainio**
+**主链chain2futureio**
 
 ```
- httpEndpoint:"https://ultrainio.ultrain.info",  
- httpEndpointHistory:"https://history-ultrainio.ultrain.info",  
+ httpEndpoint:"https://chain2futureinfo",  
+ httpEndpointHistory:"https://history-chain2futureinfo",  
  chainId:"99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef",
 ```
 
 **侧链poineer**
 
 ```
- httpEndpoint:"https://pioneer.ultrain.info",  
- httpEndpointHistory:"https://history-pioneer.ultrain.info",  
+ httpEndpoint:"https://pioneer.chain2futureinfo",  
+ httpEndpointHistory:"https://history-pioneer.chain2futureinfo",  
  chainId:"13c654dcffbed7b6d615aa92b75ebf1a3049ff74ffe73fdeafb9113be6b6fe22",
 ```
 
 **侧链unitopia**
 
 ```
- httpEndpoint:"https://unitopia.ultrain.info",  
- httpEndpointHistory:"https://history-unitopia.ultrain.info",  
+ httpEndpoint:"https://unitopia.chain2futureinfo",  
+ httpEndpointHistory:"https://history-unitopia.chain2futureinfo",  
  chainId:"7c3040786b0d1de5af5bdba73800acb1767fbdea402da0613ba8601f3a1a2acb",
 ```
 
 **侧链newretail**
 
 ```
- httpEndpoint:"https://newretail.ultrain.info",  
- httpEndpointHistory:"https://history-newretail.ultrain.info",  
+ httpEndpoint:"https://newretail.chain2futureinfo",  
+ httpEndpointHistory:"https://history-newretail.chain2futureinfo",  
  chainId:"23b412f2ab81a33c1a3aabfa550984475accdd1d2906c26d77cabb17f53d24ac",
 ```
 
 **侧链australia**
 
 ```
- httpEndpoint:"https://australia.ultrain.info",  
- httpEndpointHistory:"https://history-australia.ultrain.info",  
+ httpEndpoint:"https://australia.chain2futureinfo",  
+ httpEndpointHistory:"https://history-australia.chain2futureinfo",  
  chainId:"0f8d90bbaa66cb74cbc6bdc61992189c80ad3b0436b5d572c8c9246f410dcfcb",
 ```
 
 **侧链safari**
 
 ```
- httpEndpoint:"https://safari.ultrain.info",  
- httpEndpointHistory:"https://history-safari.ultrain.info",  
+ httpEndpoint:"https://safari.chain2futureinfo",  
+ httpEndpointHistory:"https://history-safari.chain2futureinfo",  
  chainId:"efc908b75a4b5c486802541dff2247e0b585f36cbd63cc23a9a4c6860f342dae",
 ```
 
@@ -161,25 +161,25 @@ chainId: "80a5d6aa3e0c2e2052c3df1cc6b591b90b8307fb102bd174805e06c8b8b16ec1",
 
 ## 浏览器
 
-Ultrain平台环境可以分为线下开发环境、线上测试网环境与线上主网环境。其中，线上主网环境需要购买资源套餐后方可使用，
+链化未来平台环境可以分为线下开发环境、线上测试网环境与线上主网环境。其中，线上主网环境需要购买资源套餐后方可使用，
 线上测试网环境可到测试网账户充值后使用，线下开发环境是指在本地自行构建的网络共识环境。以下篇幅重点介绍线上开发环境
 需要使用浏览器进行的相关操作。
 
 ### 创建账号
 
-创建账号有多种方式，可以使用[`测试网浏览器`](https://testnet-explorer.ultrain.info/ultrainio/account-recharge)或[Cona](https://developer.ultrain.info/tutorial/cona_introduce)
+创建账号有多种方式，可以使用[`测试网浏览器`](https://testnet-explorer.chain2futureinfo/chain2future/account-recharge)或[Cona](https://developer.chain2futureinfo/tutorial/cona_introduce)
 直接申请创建，也可以使用u3.js在代码中创建，前提是有一个账号作为creator，相关操作请参见u3.js
 中账号创建的部分文档。
 
 ### 同步账号
 
-账号需要同步到某一条侧链上才能进行相关的业务操作，如部署合约、发行代币等。账号同步可以使用[Cona](https://developer.ultrain.info/tutorial/cona_introduce)
+账号需要同步到某一条侧链上才能进行相关的业务操作，如部署合约、发行代币等。账号同步可以使用[Cona](https://developer.chain2futureinfo/tutorial/cona_introduce)
 直接进行账号同步或使用u3.js在代码中同步，相关操作请参见u3.js中账号同步的部分文档
 
 ### 资源套餐的购买
 
-在部署合约前，需要为账号购买一定的资源套餐,你可以通过[测试网浏览器](https://testnet-explorer.ultrain.info/ultrainio/account-recharge)提供的相关资源套餐进行购买。
+在部署合约前，需要为账号购买一定的资源套餐,你可以通过[测试网浏览器](https://testnet-explorer.chain2futureinfo/chain2future/account-recharge)提供的相关资源套餐进行购买。
 注意，资源套餐过期后，合约将自动回收，意味着合约中的数据将会被删除，所以如果
 希望合约一直可用，必须在资源套餐过期前，对套餐的过期时间进行延长。购买或延长资源套餐需要消耗UGAS，除了自己为自己购买外，
 也可以使用另一个账号进行购买，即可以为他人进行购买相关的资源套餐。前提是签名账号（即付费账号）必须要有足够的
-UGAS。除了使用测试网浏览器进行资源套餐的购买之外，也可以通过[`开发者网站`](https://developer.ultrain.info/resources)上选择合适的资源套餐并进行购买
+UGAS。除了使用测试网浏览器进行资源套餐的购买之外，也可以通过[`开发者网站`](https://developer.chain2futureinfo/resources)上选择合适的资源套餐并进行购买

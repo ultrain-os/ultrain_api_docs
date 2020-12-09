@@ -1,6 +1,6 @@
 ## 一、TsLib
 
-Ultrain（超脑链）使用类JavaScript的语言来编写智能合约，该语言以TypeScript为原型，通过扩展的数据类型标志符来达到强类型语言的编程语法.
+链化未来（链化未来链）使用类JavaScript的语言来编写智能合约，该语言以TypeScript为原型，通过扩展的数据类型标志符来达到强类型语言的编程语法.
 
 ## 系统内置的方法
 * **function NAME(str: string): u64**  
@@ -92,9 +92,9 @@ class HelloContract extends Contract {
 执行正常的情况下，Return的结果是`hi, I am here!`
 
 ## 资产查询和转移
-在合约中，可以查询一个帐号在ultrainio.token合约中的资产，即ultrain平台资产。查询资产使用如下方法：  
+在合约中，可以查询一个帐号在token合约中的资产，即chain2future平台资产。查询资产使用如下方法：  
 		**`Asset.balanceOf(who: account_name): Asset`**  
-转移ultrain平台资产，可以使用如下方法：  
+转移chain2future平台资产，可以使用如下方法：  
 		**`Asset.transfer(from: account_name, to: account_name, val: Asset, memo: string): void`**
 
 使用详情请参考[balance示例](https://github.com/ultrain-os/ultrain-ts-lib/blob/master/example/balance/balance.ts)  
@@ -157,12 +157,12 @@ class HelloWorld extends Contract{
 `EventObject`对象序列化之后的数据长度是有限制的，如果需要配置数据长度，可以在`config.ini`文件中配置`contract-emit-string-length`的大小，默认值为128.
 
 * 客户端订阅事件
-客户端可以选择向Ultrain的结点注册监听事件，当ultrain结点中有事件发生时，将会信息post到注册的地址。
+客户端可以选择向链化未来的结点注册监听事件，当chain2future结点中有事件发生时，将会信息post到注册的地址。
 （以下示例中的*localhost*和*8888*分别表示节点的IP和port，在实际使用中需要替换成真实的地址和端口）
 > **IMPORTANT:** 节点post事件消息时，默认启用keep-alive头信息，所以接收事件的服务端，也要支持keep-alive，否则会丢失事件。
 
 **订阅**
-> 客户端通过post请求向Ultrain的节点注册事件监听  
+> 客户端通过post请求向链化未来的节点注册事件监听  
  url:  `http://[host]:[port]/v1/chain/register_event`  
  post的数据如下：
  ```
@@ -171,7 +171,7 @@ class HelloWorld extends Contract{
  ```
 
 **取消订阅**
-> 客户端通过post请求向Ultrain的节点取消事件监听  
+> 客户端通过post请求向链化未来的节点取消事件监听  
  url:  `http://[host]:[port]/v1/chain/unregister_event`  
  post的数据如下：
  ```
@@ -244,7 +244,7 @@ console.log('Listening at http://' + host + ':' + port);
 ```
 
 ## 持久化存储
-   Ultrain的智能合约提供了DBManager来存储合约数据到数据库中。不同于以太坊会自动保存数据，Ultrain需要明确的调用API来保存、读取数据。
+   链化未来的智能合约提供了DBManager来存储合约数据到数据库中。不同于以太坊会自动保存数据，链化未来需要明确的调用API来保存、读取数据。
 ### Serializable接口
 Serializable是一个Interface， 定义以下三个方法：
 

@@ -1,10 +1,10 @@
 ## 简介
 
-超脑对外提供的数据接口，需要DAPP通过访问授权接口获取token，并将token信息放在headers的x-access-token属性中带过来。
+链化未来对外提供的数据接口，需要DAPP通过访问授权接口获取token，并将token信息放在headers的x-access-token属性中带过来。
 
 默认情况下，```对外接口``` 
-正式环境接口域名前缀为[https://dev.ultrain.info/api/](https://dev.ultrain.info/api/)。
-测试环境接口域名前缀为[https://testnet-dev.ultrain.info/api/](https://testnet-dev.ultrain.info/api/)。
+正式环境接口域名前缀为[https://dev.chain2futureinfo/api/](https://dev.chain2futureinfo/api/)。
+测试环境接口域名前缀为[https://testnet-dev.chain2futureinfo/api/](https://testnet-dev.chain2futureinfo/api/)。
  
 ## 方法列表
 
@@ -38,13 +38,13 @@
 ```nodejs
 {
   "method": "post",
-  "url":"https://dev.ultrain.info/api/user/asyncOutsideUser",
+  "url":"https://dev.chain2futureinfo/api/user/asyncOutsideUser",
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
   body: JSON.stringify(
       {
         "phoneNum": "0086177*****560",
-        "logo":"https://developer.ultrain.info/upload/213432fasd.png",
+        "logo":"https://developer.chain2futureinfo/upload/213432fasd.png",
         "name": "ben",
         "email":"98******62@qq.com"
       }
@@ -61,7 +61,7 @@
 {
     "state": "success",
     "doc": {
-        "logo": "https://developer.ultrain.info/upload/213432fasd.png",
+        "logo": "https://developer.chain2futureinfo/upload/213432fasd.png",
         "inWhiteList": false,
         "phoneNum": "1771*******7169467",
         "name": "anfen",
@@ -94,7 +94,7 @@
 ```nodejs
 {
   "method": "get",
-  "url":"https://dev.ultrain.info/api/user/getUserBasicInfo?phoneNum=00569****1570,
+  "url":"https://dev.chain2futureinfo/api/user/getUserBasicInfo?phoneNum=00569****1570,
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
 }
@@ -138,7 +138,7 @@
 ```nodejs
 {
   "method": "get",
-  "url":"https://dev.ultrain.info/api/chain/getList?network=TestNet,
+  "url":"https://dev.chain2futureinfo/api/chain/getList?network=TestNet,
   headers: {'content-type': 'application/x-www-form-urlencoded',
     'x-access-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey***********************Z6T3dKVm55ZnZaVksiLCJpYXQiOjE1NjI5MTc1NzUsImV4cCI6MTU2MzAwMzk3NX0.YmdR984lsUPuekaGtmk3aanfQlLNfHtlebXOfxdGjhY'},
 }
@@ -158,8 +158,8 @@
                 "zh-CN": "测试网动力链",
                 "en": "Testnet Power"
             },
-            "httpEndpoint": "https://test-power.ultrain.info",
-            "httpEndpointHistory": "https://history-test-power.ultrain.info",
+            "httpEndpoint": "https://test-power.chain2futureinfo",
+            "httpEndpointHistory": "https://history-test-power.chain2futureinfo",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "2hNhi3NqT",
@@ -171,8 +171,8 @@
                 "zh-CN": "测试网先锋链",
                 "en": "Testnet Pioneer"
             },
-            "httpEndpoint": "https://test-pioneer.ultrain.info",
-            "httpEndpointHistory": "http://history-test-pioneer.ultrain.info",
+            "httpEndpoint": "https://test-pioneer.chain2futureinfo",
+            "httpEndpointHistory": "http://history-test-pioneer.chain2futureinfo",
             "network": "TestNet",
             "isSideChain": true,
             "_id": "M2WL3lbih",
@@ -184,12 +184,12 @@
                 "zh-CN": "测试网主链",
                 "en": "Testnet MainChain"
             },
-            "httpEndpoint": "https://test-main.ultrain.info",
-            "httpEndpointHistory": "https://history-test-ultrainio.ultrain.info",
+            "httpEndpoint": "https://test-main.chain2futureinfo",
+            "httpEndpointHistory": "https://history-test-chain2futureinfo",
             "network": "TestNet",
             "isSideChain": false,
             "_id": "psnW5_1sQ",
-            "name": "ultrainio",
+            "name": "chain2future",
             "chainId": "1f1155433d9097e0f67de63a48369916da91f19cb1feff6ba8eca2e5d978a2b2"
         }
     ]

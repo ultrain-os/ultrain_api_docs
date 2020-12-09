@@ -1,10 +1,10 @@
 ## 简介
-U3工具的相关方法将帮助你更好了解超脑技术的相关信息
+U3工具的相关方法将帮助你更好了解链化未来技术的相关信息
 
 
 ## 方法列表
 
-超脑U3工具类相关的方法如下表所示。
+链化未来U3工具类相关的方法如下表所示。
 
 | 方法                                                                                        | 描述                                                 |
 | :------------------------------------------------------------------------------------------| :----------------------------------------------------|
@@ -116,7 +116,7 @@ assert.equals(format.DecimalUnimply(10000, 4),'1.0000')
 #### 参考示例
 ```nodejs
 import {format} from "u3.js";
-assert.equal(format.decodeName(format.encodeName('ultrain')), 'ultrain')
+assert.equal(format.decodeName(format.encodeName('chain2future')), 'chain2future')
       
 ```
 
@@ -139,7 +139,7 @@ u64类型的账户名解码的扩展方法
 #### 参考示例
 ```nodejs
 import {format} from "u3.js";
- assert.equal(format.decodeNameHex(format.encodeNameHex("ultrain")), 'ultrain')
+ assert.equal(format.decodeNameHex(format.encodeNameHex("chain2future")), 'chain2future')
 ```
 
 #### 返回结果类型
@@ -176,7 +176,7 @@ import {format} from "u3.js";
 #### 参考示例
 ```nodejs
 import {format} from "u3.js";
-format.encodeName('ultrain')
+format.encodeName('chain2future')
 ```
 
 #### 返回结果类型
@@ -197,7 +197,7 @@ format.encodeName('ultrain')
 #### 参考示例
 ```nodejs
 import {format} from "u3.js";
-format.encodeNameEx('ultrain')
+format.encodeNameEx('chain2future')
 ```
 
 #### 返回结果类型
@@ -218,7 +218,7 @@ format.encodeNameEx('ultrain')
 #### 参考示例
 ```nodejs
 import {format} from "u3.js";
-format.isName('ultrain')
+format.isName('chain2future')
 ```
 
 #### 返回结果类型

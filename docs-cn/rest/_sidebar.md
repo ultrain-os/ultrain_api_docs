@@ -18,7 +18,7 @@
 - 浏览器钱包
   - [主网浏览器](docs-cn/wallet/01-wallet-main-browser.md)
   - [测试网浏览器](docs-cn/wallet/02-wallet-test-browser.md)
-  - [UltrainOne](docs-cn/wallet/03-wallet-ultrainOne.md)
+  - [Chain2Future](docs-cn/wallet/03-wallet-chain2future.md)
   - [Cona插件钱包](docs-cn/wallet/04-wallet-cona.md)
 
 - Contract API

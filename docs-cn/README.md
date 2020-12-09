@@ -69,7 +69,7 @@ list-style:none;
 <body>
 <h1 align="center">开发者文档中心</h1>
 
-<div>欢迎来到超脑开发者文档中心。借助此开发者文档，你可以快速了解超脑的技术和工具，以帮助你更加容易地实现一个DAPP。</div>
+<div>欢迎来到链化未来开发者文档中心。借助此开发者文档，你可以快速了解链化未来的技术和工具，以帮助你更加容易地实现一个DAPP。</div>
 <div>
 </br></br>
     <h4>开发指南</h4>
@@ -135,7 +135,7 @@ list-style:none;
                         <a href="#/docs-cn/wallet/02-wallet-test-browser.md">测试网浏览器</a>
                     </div>
                     <div>
-                        <a href="#/docs-cn/wallet/03-wallet-ultrainOne.md">UltrainOne</a>
+                        <a href="#/docs-cn/wallet/03-wallet-chain2future.md">Chain2Future</a>
                     </div>
                     <div>
                         <a href="#/docs-cn/wallet/04-wallet-cona.md">Cona插件钱包</a>
