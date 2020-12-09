@@ -1,6 +1,5 @@
 
 - 开发者指南
-    - [基础介绍](docs-cn/developer/foundation.md)
     - [架构设计](docs-cn/developer/architecture.md)
     - [环境配置](docs-cn/developer/environment.md)
     - [开发工具](docs-cn/developer/tool.md)
