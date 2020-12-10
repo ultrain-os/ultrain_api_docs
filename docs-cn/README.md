@@ -193,20 +193,6 @@ list-style:none;
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <p class="content-title" style="border-bottom: 1px solid #979797;">DApp API</p>
-                <div>
-                    <div>
-                        <a href="#/docs-cn/dapi/01-access">访问授权</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/dapi/02-async">对外接口</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/dapi/03-interactive">Native交互</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

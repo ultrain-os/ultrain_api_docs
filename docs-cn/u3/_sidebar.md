@@ -34,7 +34,3 @@
     - [CHAIN](docs-cn/rest/01-chain.md)
     - [HISTORY](docs-cn/rest/02-history.md)
     
-- DAPP API
-    - [访问授权](docs-cn/dapi/01-access.md)
-    - [对外接口](docs-cn/dapi/02-async.md)
-    - [Native交互](docs-cn/dapi/03-interactive.md)
