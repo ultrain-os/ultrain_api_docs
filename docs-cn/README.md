@@ -80,9 +80,6 @@ list-style:none;
                 <div class="row content-row">
                     <div class="col-sm-6 col-xs-12">
                         <div>
-                            <a href="#/docs-cn/developer/architecture.md">架构设计</a>
-                        </div>
-                        <div>
                             <a href="#/docs-cn/developer/environment.md">环境配置</a>
                         </div>
                         <div>
