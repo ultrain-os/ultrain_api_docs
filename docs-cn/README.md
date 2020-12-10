@@ -105,40 +105,6 @@ list-style:none;
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-12">
-                <p class="content-title" style="border-bottom: 1px solid #979797;">DApp接入规范</p>
-                <div>
-                    <div>
-                        <a href="#/docs-cn/dapp/flow.md">流程规范</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/dapp/wallet.md">钱包接入</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/dapp/operation.md">运营规范</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/dapp/service.md">服务条款</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-xs-12">
-                <p class="content-title" style="border-bottom: 1px solid #979797;">浏览器钱包</p>
-                <div>
-                    <div>
-                        <a href="#/docs-cn/wallet/01-wallet-main-browser.md">主网浏览器</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/wallet/02-wallet-test-browser.md">测试网浏览器</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/wallet/03-wallet-chain2future.md">Chain2Future</a>
-                    </div>
-                    <div>
-                        <a href="#/docs-cn/wallet/04-wallet-cona.md">Cona插件钱包</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <h4>API文档</h4>

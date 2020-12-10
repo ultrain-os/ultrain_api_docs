@@ -8,18 +8,6 @@
     - [DAPP示例](docs-cn/developer/demo.md)
     - [生成公私钥](docs-cn/developer/keypair.md)
 
-- DAPP接入规范
-    - [流程规范](docs-cn/dapp/flow.md)
-    - [钱包接入](docs-cn/dapp/wallet.md)
-    - [运营规范](docs-cn/dapp/operation.md)
-    - [服务条款](docs-cn/dapp/service.md)
-  
-- 浏览器钱包
-  - [主网浏览器](docs-cn/wallet/01-wallet-main-browser.md)
-  - [测试网浏览器](docs-cn/wallet/02-wallet-test-browser.md)
-  - [Chain2Future](docs-cn/wallet/03-wallet-chain2future.md)
-  - [Cona插件钱包](docs-cn/wallet/04-wallet-cona.md)
-
 - Contract API
     - [ACCOUNT](docs-cn/contract/01-ts-account.md)
     - [ACTION](docs-cn/contract/02-ts-action.md)
